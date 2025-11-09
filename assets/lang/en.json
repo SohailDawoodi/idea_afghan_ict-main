@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Idea Afghan – Digital Systems & Creative Solutions",
+    "description": "At Idea Afghan, we turn concepts into powerful digital systems. We specialize in building reliable accounting systems, business websites, mobile apps, and custom dashboards that help companies operate smarter, faster, and with full control over their data.",
+    "cta": "Get Started"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Our team blends technology with creativity, offering complete branding and visual design services that shape strong identities and elevate your digital presence.",
+    "mission": "To empower businesses with innovative systems, high-quality design, and technology that makes their work easier, faster, and more efficient.",
+    "vision": "To become a leading digital solutions company in the region — known for reliability, creativity, and delivering technology that shapes the future of business operations."
+  },
+  "services": {
+    "title": "What We Do",
+    "accounting": "Accounting Systems",
+    "accounting_desc": "Modern, efficient, and fully customized accounting solutions designed to simplify financial management and improve decision-making.",
+    "website": "Website Design & Development", 
+    "website_desc": "Professional, responsive websites that are fast, secure, and tailored to your brand's identity and business goals.",
+    "mobile": "Mobile Apps & Web Apps",
+    "mobile_desc": "High-performance applications built with a focus on usability, scalability, and clean user experience.",
+    "dashboard": "Dashboards & Management Systems",
+    "dashboard_desc": "Smart dashboards that transform complex data into clear insights, helping businesses monitor performance and make informed decisions.",
+    "branding": "Branding & Design",
+    "branding_desc": "Complete branding services that communicate who you are and help you stand out."
+  },
+  "values": {
+    "quality": "Quality: We deliver work that meets professional standards and lasting value.",
+    "innovation": "Innovation: We embrace new ideas and modern technologies.", 
+    "partnership": "Partnership: We aim for long-term relationships, not just transactions.",
+    "trust": "Trust: Honest communication and dependable service are at the heart of what we do.",
+    "growth": "Growth: We help our clients grow — and grow with them."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "address": "Address",
+    "phone": "Phone", 
+    "email": "Email"
+  }
+}
