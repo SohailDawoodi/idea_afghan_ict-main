@@ -95,30 +95,34 @@
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- js links  -->
+    <script src="./assets/js/loading.js" defer></script>
   </head>
 
   <body>
     <!-- Page loading -->
-    <div
-      class="page-loading fixed top-0 bottom-0 left-0 right-0 z-[99999] flex items-center justify-center bg-primary-light-1 dark:bg-primary-dark-1 opacity-100 visible pointer-events-auto"
-      role="status"
-      aria-live="polite"
-      aria-atomic="true"
-      aria-label="Loading..."
-    >
-      <div class="grid-loader">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+     <div class="loading-page" id="loadingPage">
+        <div class="animated-bg"></div>
+        <div class="loader-container">
+            <div class="loader"></div>
+            <div class="loader"></div>
+            <div class="loader"></div>
+            <div class="loader"></div>
+            <div class="pulse" id="percentageCenter">0%</div>
+        </div>
+        
+        <div class="loading-text">
+            Loading
+            <span class="loading-dots"></span>
+        </div>
+        
+        <div class="loading-percentage" id="loadingPercentage">0%</div>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
     </div>
-
     <!-- Navbar -->
     <header
       class="ic-navbar absolute left-0 top-0 z-40 flex w-full items-center bg-transparent"
@@ -203,14 +207,6 @@
                 aria-label="Switch theme"
                 data-web-trigger="web-theme"
               ></button>
-              <div class="hidden sm:flex">
-                <a
-                  href="javascript:void(0)"
-                  class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary"
-                  role="button"
-                  >Get Started</a
-                >
-              </div>
             </div>
           </div>
         </div>
