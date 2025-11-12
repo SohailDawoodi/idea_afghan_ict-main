@@ -811,7 +811,7 @@ p+p {
   user-select: none !important;
   opacity: 0.6 !important;
 }
-
+/* 
 .page-loading {
   background-image: radial-gradient(circle at top right,
       rgba(61, 99, 221, 0.1) 0%,
@@ -916,7 +916,8 @@ p+p {
   50% {
     opacity: 0.5;
   }
-}
+} */
+/* for responsive header */
 
 .ic-navbar {
   border-width: 0px;

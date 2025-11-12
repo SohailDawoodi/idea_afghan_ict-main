@@ -8,7 +8,7 @@
     <meta http-equiv="content-language" content="en, fa" />
     <meta name="robots" content="index, follow" />
     <meta name="copyright" content="IDEA AFG" />
-    
+
     <meta name="author" content="IDEA AFG" />
     <meta name="rating" content="general" />
     <meta name="application-name" content="IDEA AFG" />
@@ -96,123 +96,205 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+    />
+
     <!-- js links  -->
     <script src="./assets/js/loading.js" defer></script>
   </head>
 
   <body>
     <!-- Page loading -->
-     <div class="loading-page" id="loadingPage">
-        <div class="animated-bg"></div>
-        <div class="loader-container">
-            <div class="loader"></div>
-            <div class="loader"></div>
-            <div class="loader"></div>
-            <div class="loader"></div>
-            <div class="pulse" id="percentageCenter">0%</div>
-        </div>
-        
-        <div class="loading-text">
-            Loading
-            <span class="loading-dots"></span>
-        </div>
-        
-        <div class="loading-percentage" id="loadingPercentage">0%</div>
-        
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
+    <div class="loading-page" id="loadingPage">
+      <div class="animated-bg"></div>
+      <div class="loader-container">
+        <div class="loader"></div>
+        <div class="loader"></div>
+        <div class="loader"></div>
+        <div class="loader"></div>
+        <div class="pulse" id="percentageCenter"></div>
+      </div>
+
+      <div class="loading-text">
+        Loading
+        <span class="loading-dots"></span>
+      </div>
+
+      <div class="loading-percentage" id="loadingPercentage">0%</div>
+
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
     </div>
+
     <!-- Navbar -->
-    <header
+     <header
       class="ic-navbar absolute left-0 top-0 z-40 flex w-full items-center bg-transparent"
       role="banner"
       aria-label="Navigation bar"
     >
       <div class="container">
         <div
-          class="ic-navbar-container relative -mx-5 flex items-center justify-between"
+          class="ic-navbar-container relative -mx-3 md:-mx-5 flex items-center justify-between"
         >
-          <div class="flex w-full items-center justify-between px-5">
-            <div>
-              <button
-                type="button"
-                class="ic-navbar-toggler absolute right-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-[6px] text-[22px]/none text-primary-color ring-primary focus:ring-2 lg:hidden"
-                data-web-toggle="navbar-collapse"
-                data-web-target="navbarMenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation menu"
-              >
-                <i class="lni lni-menu"></i>
-              </button>
-              <nav
-                id="navbarMenu"
-                class="ic-navbar-collapse absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-primary-light-1 py-5 shadow-lg dark:bg-primary-dark-1 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6"
-              >
-                <ul
-                  class="block lg:flex"
-                  role="menu"
-                  aria-label="Navigation menu"
-                >
-                  <li class="group relative">
-                    <a
-                      href="#home"
-                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 active"
-                      role="menuitem"
-                      >Home</a
-                    >
-                  </li>
-
-                  <li class="group relative">
-                    <a
-                      href="#services"
-                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                      role="menuitem"
-                      >Services</a
-                    >
-                  </li>
-
-                  <li class="group relative">
-                    <a
-                      href="#portfolio"
-                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                      role="menuitem"
-                      >Portfolio</a
-                    >
-                  </li>
-                  <li class="group relative">
-                    <a
-                      href="#team"
-                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                      role="menuitem"
-                      >Team</a
-                    >
-                  </li>
-
-                  <li class="group relative">
-                    <a
-                      href="#contact"
-                      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70"
-                      role="menuitem"
-                      >Contact</a
-                    >
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div class="flex items-center justify-end pr-[52px] lg:pr-0">
-              <button
-                type="button"
-                class="inline-flex items-center text-primary-color text-[24px]/none"
-                aria-label="Switch theme"
-                data-web-trigger="web-theme"
-              ></button>
-            </div>
+          <!-- Logo/Brand -->
+          <div class="flex items-center px-3 md:px-5">
+            <a href="#home" class="ic-navbar-logo flex items-center text-primary-color font-bold text-xl">
+              <span>IDEA AFG</span>
+            </a>
           </div>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            type="button"
+            class="ic-navbar-toggler md:hidden absolute right-4 top-1/2 -translate-y-1/2 rounded-md px-3 py-2 text-[22px] text-primary-color ring-primary focus:ring-2"
+            data-web-toggle="navbar-collapse"
+            data-web-target="navbarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+          >
+            <i class="lni lni-menu"></i>
+          </button>
+
+          <!-- Navigation Menu -->
+          <nav
+            id="navbarMenu"
+            class="ic-navbar-collapse absolute right-4 top-16 w-full max-w-[280px] rounded-lg hidden bg-primary-light-1 py-5 shadow-lg dark:bg-primary-dark-1 md:static md:block md:w-auto md:max-w-none md:bg-transparent md:py-0 md:shadow-none dark:md:bg-transparent"
+          >
+            <ul
+              class="block md:flex md:items-center"
+              role="menu"
+              aria-label="Navigation menu"
+            >
+              <li class="group relative">
+                <a
+                  href="#home"
+                  class="ic-page-scroll flex py-2 px-4 md:px-3 lg:px-4 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 md:text-primary-color md:dark:text-primary-color md:group-hover:text-primary-color md:group-hover:opacity-70 active"
+                  role="menuitem"
+                  >Home</a
+                >
+              </li>
+
+              <li class="group relative">
+                <a
+                  href="#services"
+                  class="ic-page-scroll flex py-2 px-4 md:px-3 lg:px-4 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 md:text-primary-color md:dark:text-primary-color md:group-hover:text-primary-color md:group-hover:opacity-70"
+                  role="menuitem"
+                  >Services</a
+                >
+              </li>
+
+              <li class="group relative">
+                <a
+                  href="#portfolio"
+                  class="ic-page-scroll flex py-2 px-4 md:px-3 lg:px-4 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 md:text-primary-color md:dark:text-primary-color md:group-hover:text-primary-color md:group-hover:opacity-70"
+                  role="menuitem"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="group relative">
+                <a
+                  href="#team"
+                  class="ic-page-scroll flex py-2 px-4 md:px-3 lg:px-4 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 md:text-primary-color md:dark:text-primary-color md:group-hover:text-primary-color md:group-hover:opacity-70"
+                  role="menuitem"
+                  >Team</a
+                >
+              </li>
+
+              <li class="group relative">
+                <a
+                  href="#contact"
+                  class="ic-page-scroll flex py-2 px-4 md:px-3 lg:px-4 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 md:text-primary-color md:dark:text-primary-color md:group-hover:text-primary-color md:group-hover:opacity-70"
+                  role="menuitem"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Right Side Controls -->
+          <div class="hidden md:flex items-center justify-end pr-3 md:pr-5">
+            <!-- Language Selector -->
+            <div class="language-selector mr-4" id="languageSelector">
+              <div class="language-button flex items-center cursor-pointer text-primary-color">
+                <i class="las la-globe-americas mr-1"></i>
+                <span class="current-language">English</span>
+                <i class="las la-angle-down ml-1 text-xs"></i>
+              </div>
+              
+              <div class="language-dropdown hidden absolute mt-2 bg-white dark:bg-primary-dark-1 rounded-md shadow-lg z-50">
+                <div class="language-option active flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-primary-dark-2 cursor-pointer" data-lang="en">
+                  <div class="language-flag flag-en w-4 h-4 bg-blue-500 rounded-full mr-2"></div>
+                  <span class="language-name">English</span>
+                </div>
+                <div class="language-option flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-primary-dark-2 cursor-pointer" data-lang="fa">
+                  <div class="language-flag flag-af w-4 h-4 bg-green-500 rounded-full mr-2"></div>
+                  <span class="language-name">فارسی</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Theme Toggle -->
+            <button
+              type="button"
+              class="inline-flex items-center text-primary-color text-[20px]"
+              aria-label="Switch theme"
+              data-web-trigger="web-theme"
+            >
+              <i class="lni lni-sun"></i>
+          </button>
+          </div>
+          
         </div>
       </div>
     </header>
 
+    <!-- Rest of your content -->
+    
+    <script src="./assets/js/main.js"></script>
+    <script>
+      // Language Selector Functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const languageSelector = document.getElementById('languageSelector');
+        const languageButton = languageSelector.querySelector('.language-button');
+        const languageDropdown = languageSelector.querySelector('.language-dropdown');
+        const languageOptions = languageSelector.querySelectorAll('.language-option');
+        
+        languageButton.addEventListener('click', function(e) {
+          e.stopPropagation();
+          languageDropdown.classList.toggle('hidden');
+        });
+        
+        languageOptions.forEach(option => {
+          option.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            const languageName = this.querySelector('.language-name').textContent;
+            
+            // Update current language display
+            languageSelector.querySelector('.current-language').textContent = languageName;
+            
+            // Remove active class from all options
+            languageOptions.forEach(opt => opt.classList.remove('active'));
+            // Add active class to selected option
+            this.classList.add('active');
+            
+            // Close dropdown
+            languageDropdown.classList.add('hidden');
+            
+            // Here you would typically handle language change logic
+            console.log('Language changed to:', lang);
+          });
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function() {
+          languageDropdown.classList.add('hidden');
+        });
+      });
+    </script>
     <main class="main relative">
       <!-- Hero section -->
       <section
@@ -263,14 +345,14 @@
                     >
                   </li>
                 </ul>
-                <div>
+                <!-- <div>
                   <p class="mb-0.5 text-center text-primary-color">
                     Here is a sample of what we do!
                   </p>
-                </div>
+                </div> -->
               </div>
             </div>
-            <div class="w-full px-5">
+            <!-- <div class="w-full px-5">
               <div class="scroll-revealed relative z-10 mx-auto max-w-[845px]">
                 <figure class="mt-16">
                   <img
@@ -296,7 +378,7 @@
                   />
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -961,31 +1043,6 @@
                 </div>
               </article>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- Call action section -->
-      <section
-        id="call-action"
-        class="section-area !bg-primary !text-primary-color"
-      >
-        <div class="container">
-          <div class="scroll-revealed text-center max-w-[550px] mx-auto">
-            <h2 class="mb-8 text-inherit">
-              Ready to Transform Your Business with Technology?
-            </h2>
-            <p>
-              Join hundreds of satisfied clients who have transformed their
-              operations with our innovative ICT solutions. From small startups
-              to large enterprises, we deliver technology that drives growth and
-              efficiency.
-            </p>
-            <a
-              href="#contact"
-              class="inline-block px-5 py-3 rounded-md mt-11 bg-green-400 text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white"
-              role="button"
-              >Get Started Now</a
-            >
           </div>
         </div>
       </section>
@@ -2325,123 +2382,6 @@
         </div>
       </section>
 
-      <!-- Blog section -->
-      <section id="blog" class="section-area">
-        <div class="container">
-          <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 block text-lg font-semibold text-primary">Blog</h6>
-            <h2 class="mb-6">Latest Insights & Updates</h2>
-            <p>
-              Stay updated with the latest trends in technology, digital
-              transformation insights, and expert tips to help your business
-              thrive in the digital age.
-            </p>
-          </div>
-
-          <div class="row">
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <article class="group">
-                <div class="relative">
-                  <a
-                    href="javascript:void(0)"
-                    class="w-full aspect-[3/2] rounded-xl overflow-hidden block"
-                  >
-                    <img
-                      src="./assets/img/thumbnail/thumbnail-1.jpg"
-                      alt="Thumbnail"
-                      class="w-full h-full object-cover group-hover:scale-[1.05] group-hover:rotate-[2deg]"
-                    />
-                  </a>
-                </div>
-                <span
-                  class="block mt-6 w-full text-sm text-body-light-10 dark:text-body-dark-10"
-                  >IDEA AFG Team - 15 Dec 2024</span
-                >
-                <h4 class="mb-6 mt-3 font-semibold text-[1.5rem]">
-                  <a
-                    href="javascript:void(0)"
-                    class="text-body-light-12 dark:text-body-dark-12"
-                    >Digital Transformation: A Complete Guide for Afghan
-                    Businesses</a
-                  >
-                </h4>
-                <p>
-                  Discover how digital transformation can revolutionize your
-                  business operations, improve efficiency, and drive growth in
-                  today's competitive market.
-                </p>
-              </article>
-            </div>
-
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <article class="group">
-                <div class="relative">
-                  <a
-                    href="javascript:void(0)"
-                    class="w-full aspect-[3/2] rounded-xl overflow-hidden block"
-                  >
-                    <img
-                      src="./assets/img/thumbnail/thumbnail-2.jpg"
-                      alt="Thumbnail"
-                      class="w-full h-full object-cover group-hover:scale-[1.05] group-hover:rotate-[2deg]"
-                    />
-                  </a>
-                </div>
-                <span
-                  class="block mt-6 w-full text-sm text-body-light-10 dark:text-body-dark-10"
-                  >IDEA AFG Team - 10 Dec 2024</span
-                >
-                <h4 class="mb-6 mt-3 font-semibold text-[1.5rem]">
-                  <a
-                    href="javascript:void(0)"
-                    class="text-body-light-12 dark:text-body-dark-12"
-                    >Cloud Computing Solutions: Benefits and Implementation</a
-                  >
-                </h4>
-                <p>
-                  Learn how cloud computing can reduce costs, improve
-                  scalability, and enhance security for your business
-                  operations.
-                </p>
-              </article>
-            </div>
-
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <article class="group">
-                <div class="relative">
-                  <a
-                    href="javascript:void(0)"
-                    class="w-full aspect-[3/2] rounded-xl overflow-hidden block"
-                  >
-                    <img
-                      src="./assets/img/thumbnail/thumbnail-3.jpg"
-                      alt="Thumbnail"
-                      class="w-full h-full object-cover group-hover:scale-[1.05] group-hover:rotate-[2deg]"
-                    />
-                  </a>
-                </div>
-                <span
-                  class="block mt-6 w-full text-sm text-body-light-10 dark:text-body-dark-10"
-                  >IDEA AFG Team - 5 Dec 2024</span
-                >
-                <h4 class="mb-6 mt-3 font-semibold text-[1.5rem]">
-                  <a
-                    href="javascript:void(0)"
-                    class="text-body-light-12 dark:text-body-dark-12"
-                    >Cybersecurity Best Practices for Small and Medium
-                    Businesses</a
-                  >
-                </h4>
-                <p>
-                  Essential cybersecurity measures every business should
-                  implement to protect sensitive data and maintain customer
-                  trust.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- Clients section -->
       <section id="clients" class="section-area">
