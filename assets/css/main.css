@@ -39,6 +39,41 @@
 7. Disable tap highlights on iOS
 */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 html,
 :host {
   line-height: 1.5;
@@ -917,7 +952,6 @@ p+p {
     opacity: 0.5;
   }
 } */
-/* for responsive header */
 
 .ic-navbar {
   border-width: 0px;
