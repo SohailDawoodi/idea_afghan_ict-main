@@ -953,7 +953,7 @@ p+p {
   }
 } */
 
-.ic-navbar {
+/* .ic-navbar {
   border-width: 0px;
   border-bottom-width: 1px;
   border-color: transparent;
@@ -1006,8 +1006,8 @@ p+p {
 .ic-navbar.menu-show .ic-navbar-collapse {
   z-index: -1;
   display: block;
-}
-
+} */
+/* 
 @media (min-width: 1024px) {
   .ic-navbar.sticky .ic-page-scroll {
     --tw-text-opacity: 1;
@@ -1085,7 +1085,7 @@ p+p {
       rgba(255, 255, 255, 0.05) 63%,
       rgba(255, 255, 255, 0.025) 63%,
       rgba(255, 255, 255, 0.025) 100%);
-}
+} */
 
 .section-area {
   position: relative;
