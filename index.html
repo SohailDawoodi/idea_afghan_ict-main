@@ -109,6 +109,8 @@
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/about.css">
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
@@ -143,461 +145,613 @@
         <div class="progress-bar" id="progressBar"></div>
       </div>
     </div>
- <header class="main-header" id="mainHeader">
-      <div class="nav-container">
-        <div class="nav-content">
-          <!-- Logo Section -->
-          <div class="logo-section">
-            <a href="#" class="logo-link">
-              <div class="logo-image">
-              <img src="./assets/img/ompany.jpg" alt="logo">
-              </div>
-              <div class="logo-text">
-                <span class="logo-primary">IDEA AFG</span>
-                <span class="logo-secondary">ICT Solutions</span>
-              </div>
-              <div class="logo-compact">IDEA AFG</div>
-            </a>
-          </div>
-
-          <!-- Navigation Menu -->
-          <nav class="nav-menu" id="navMenu">
-            <ul class="nav-links">
-              <li>
-                <a href="#home" class="nav-link active"
-                  ><i class="lni lni-home"></i> Home</a
-                >
-              </li>
-              <li>
-                <a href="#services" class="nav-link"
-                  ><i class="lni lni-cogs"></i> Services</a
-                >
-              </li>
-              <li>
-                <a href="#portfolio" class="nav-link"
-                  ><i class="lni lni-briefcase"></i> Portfolio</a
-                >
-              </li>
-              <li>
-                <a href="#about" class="nav-link"
-                  ><i class="lni lni-users"></i> About</a
-                >
-              </li>
-              <li>
-                <a href="#contact" class="nav-link"
-                  ><i class="lni lni-envelope"></i> Contact</a
-                >
-              </li>
-            </ul>
-          </nav>
-
-          <!-- Navigation Controls -->
-          <div class="nav-controls">
-            <!-- Language Selector -->
-            <div class="language-selector" id="languageSelector">
-              <button class="language-btn">
-                <i class="lni lni-world"></i>
-                <span>EN</span>
-                <i class="lni lni-chevron-down"></i>
-              </button>
-              <div class="language-dropdown">
-                <div class="lang-option active" data-lang="en">
-                  <span class="flag">🇺🇸</span>
-                  <span class="lang-name">English</span>
+    <div id="mainContent" style="display: none">
+      <header class="main-header" id="mainHeader">
+        <div class="nav-container">
+          <div class="nav-content">
+            <!-- Logo Section -->
+            <div class="logo-section">
+              <a href="#" class="logo-link">
+                <div class="logo-image">
+                  <img
+                    src="./assets/img/ompany.jpg"
+                    alt="IDEA AFG Logo"
+                    loading="eager"
+                  />
                 </div>
-                <div class="lang-option" data-lang="fa">
-                  <span class="flag">🇦🇫</span>
-                  <span class="lang-name">فارسی</span>
+                <div class="logo-text">
+                  <span class="logo-primary">IDEA AFGHAN</span>
+                  <span class="logo-secondary"> ICT Solutions</span>
                 </div>
-              </div>
-            </div>
-
-            <!-- Theme Toggle -->
-            <button class="theme-toggle" id="themeToggle">
-              <i class="lni lni-sun"></i>
-              <i class="lni lni-moon"></i>
-            </button>
-
-            <!-- Mobile Toggle -->
-            <button class="mobile-toggle" id="mobileToggle">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-section" id="home">
-      <div class="hero-background">
-        <div class="hero-particles" id="particlesContainer"></div>
-        <div class="animated-bg-shapes">
-          <div class="shape shape-1"></div>
-          <div class="shape shape-2"></div>
-          <div class="shape shape-3"></div>
-        </div>
-      </div>
-      <div class="hero-content">
-        <div class="hero-grid">
-          <div class="hero-text slide-in-left">
-            <h1 class="hero-title text-glow">
-              Transform Your Business with Digital Solutions
-            </h1>
-            <p class="hero-subtitle delay-1">
-              IDEA AFG provides cutting-edge ICT solutions including custom
-              software development, mobile applications, and business
-              intelligence systems tailored to your specific needs.
-            </p>
-            <div class="hero-actions delay-2">
-              <a href="#contact" class="btn btn-primary">
-                <i class="lni lni-rocket"></i>
-                Get Started
+                <div class="logo-compact">IDEA AFGHAN</div>
               </a>
-              <button class="btn btn-secondary" id="watchIntroBtn">
-                <i class="lni lni-play"></i>
-                Watch Demo
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu" id="navMenu">
+              <ul class="nav-links">
+                <li>
+                  <a href="#home" class="nav-link active"
+                    ><i class="lni lni-home"></i> Home</a
+                  >
+                </li>
+                <li>
+                  <a href="#services" class="nav-link"
+                    ><i class="lni lni-cogs"></i> Services</a
+                  >
+                </li>
+                <li>
+                  <a href="#portfolio" class="nav-link"
+                    ><i class="lni lni-briefcase"></i> Portfolio</a
+                  >
+                </li>
+                <li>
+                  <a href="#about" class="nav-link"
+                    ><i class="lni lni-users"></i> About</a
+                  >
+                </li>
+                <li>
+                  <a href="#contact" class="nav-link"
+                    ><i class="lni lni-envelope"></i> Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <!-- Navigation Controls -->
+            <div class="nav-controls">
+              <!-- Language Selector -->
+              <div class="language-selector" id="languageSelector">
+                <button class="language-btn">
+                  <i class="lni lni-world"></i>
+                  <span>EN</span>
+                  <i class="lni lni-chevron-down"></i>
+                </button>
+                <div class="language-dropdown">
+                  <div class="lang-option active" data-lang="en">
+                    <span class="flag">🇺🇸</span>
+                    <span class="lang-name">English</span>
+                  </div>
+                  <div class="lang-option" data-lang="fa">
+                    <span class="flag">🇦🇫</span>
+                    <span class="lang-name">فارسی</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Theme Toggle -->
+              <button class="theme-toggle" id="themeToggle">
+                <i class="lni lni-sun"></i>
+                <i class="lni lni-moon"></i>
+              </button>
+
+              <!-- Mobile Toggle -->
+              <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
               </button>
             </div>
           </div>
-          <div class="hero-visual slide-in-right delay-3">
-            <div class="hero-image-container">
-              <img
-                src="./assets/img/ompany.jpg"
-                alt="IDEA AFG Solutions"
-                class="hero-image"
-              />
-              <div class="floating-elements">
-                <div class="floating-element">
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero-section" id="home">
+        <div class="hero-background">
+          <div class="hero-particles" id="particlesContainer"></div>
+          <div class="animated-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-grid">
+            <div class="hero-text slide-in-left">
+              <h1 class="hero-title text-glow">
+                Transform Your Business with Digital Solutions
+              </h1>
+              <p class="hero-subtitle delay-1">
+                IDEA AFG provides cutting-edge ICT solutions including custom
+                software development, mobile applications, and business
+                intelligence systems tailored to your specific needs.
+              </p>
+              <div class="hero-actions delay-2">
+                <a href="#contact" class="btn btn-primary">
+                  <i class="lni lni-rocket"></i>
+                  Get Started
+                </a>
+                <button class="btn btn-secondary" id="watchIntroBtn">
+                  <i class="lni lni-play"></i>
+                  Watch Demo
+                </button>
+              </div>
+            </div>
+            <div class="hero-visual slide-in-right delay-3">
+              <div class="hero-image-container">
+                <img
+                  src="./assets/img/Artboard 1@4x-100.jpg"
+                  alt="IDEA AFG Digital Solutions"
+                  class="hero-image"
+                  loading="eager"
+                />
+                <div class="floating-elements">
+                  <div class="floating-element">
+                    <i class="lni lni-mobile"></i>
+                  </div>
+                  <div class="floating-element">
+                    <i class="lni lni-stats-up"></i>
+                  </div>
+                  <div class="floating-element">
+                    <i class="lni lni-cloud"></i>
+                  </div>
+                  <div class="floating-element">
+                    <i class="lni lni-database"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enhanced Services Section -->
+      <section id="services" class="services-section">
+        <div class="container">
+          <div class="text-center max-w-800 mx-auto mb-16">
+            <h6
+              class="mb-4 block text-lg font-semibold text-primary animated-badge"
+            >
+              <span>Our Expertise</span>
+            </h6>
+            <h2 class="section-title">Innovative ICT Solutions</h2>
+            <p class="section-subtitle">
+              We deliver cutting-edge technology services designed to transform
+              your digital landscape and accelerate business growth through
+              innovative, scalable solutions.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <!-- Front-end and Back-end Web Development -->
+            <div class="service-item">
+              <div class="service-icon-container">
+                <div class="service-icon">
+                  <i class="lni lni-code"></i>
+                </div>
+                <div class="service-icon-bg"></div>
+              </div>
+              <div class="service-content">
+                <h4>Web Development</h4>
+                <p>
+                  Custom front-end and back-end web solutions with modern
+                  frameworks, responsive design, and optimal performance for
+                  seamless user experiences.
+                </p>
+                <div class="service-features">
+                  <span>Front-end</span>
+                  <span>Back-end</span>
+                  <span>Responsive</span>
+                </div>
+              </div>
+              <div class="service-hover-effect"></div>
+            </div>
+
+            <!-- Management and Accounting Systems -->
+            <div class="service-item">
+              <div class="service-icon-container">
+                <div class="service-icon">
+                  <i class="lni lni-cogs"></i>
+                </div>
+                <div class="service-icon-bg"></div>
+              </div>
+              <div class="service-content">
+                <h4>Management Systems</h4>
+                <p>
+                  Comprehensive management and accounting systems with automated
+                  workflows, financial reporting, and real-time analytics for
+                  business optimization.
+                </p>
+                <div class="service-features">
+                  <span>ERP Systems</span>
+                  <span>Accounting</span>
+                  <span>Automation</span>
+                </div>
+              </div>
+              <div class="service-hover-effect"></div>
+            </div>
+
+            <!-- Mobile Applications -->
+            <div class="service-item">
+              <div class="service-icon-container">
+                <div class="service-icon">
                   <i class="lni lni-mobile"></i>
                 </div>
-                <div class="floating-element">
-                  <i class="lni lni-stats-up"></i>
-                </div>
-                <div class="floating-element">
-                  <i class="lni lni-cloud"></i>
-                </div>
-                <div class="floating-element">
-                  <i class="lni lni-database"></i>
+                <div class="service-icon-bg"></div>
+              </div>
+              <div class="service-content">
+                <h4>Mobile Applications</h4>
+                <p>
+                  Native and cross-platform mobile applications for iOS and
+                  Android with intuitive UI/UX, high performance, and seamless
+                  integration capabilities.
+                </p>
+                <div class="service-features">
+                  <span>iOS & Android</span>
+                  <span>Cross-Platform</span>
+                  <span>UI/UX Design</span>
                 </div>
               </div>
+              <div class="service-hover-effect"></div>
+            </div>
+
+            <!-- Advertising and Marketing -->
+            <div class="service-item">
+              <div class="service-icon-container">
+                <div class="service-icon">
+                  <i class="lni lni-megaphone"></i>
+                </div>
+                <div class="service-icon-bg"></div>
+              </div>
+              <div class="service-content">
+                <h4>Digital Marketing</h4>
+                <p>
+                  Strategic digital advertising and marketing campaigns with
+                  data-driven approaches to maximize reach, engagement, and
+                  conversion rates.
+                </p>
+                <div class="service-features">
+                  <span>SEO/SEM</span>
+                  <span>Social Media</span>
+                  <span>Campaigns</span>
+                </div>
+              </div>
+              <div class="service-hover-effect"></div>
+            </div>
+
+            <!-- Business Analysis and Consulting -->
+            <div class="service-item">
+              <div class="service-icon-container">
+                <div class="service-icon">
+                  <i class="lni lni-stats-up"></i>
+                </div>
+                <div class="service-icon-bg"></div>
+              </div>
+              <div class="service-content">
+                <h4>Business Consulting</h4>
+                <p>
+                  Comprehensive business analysis and strategic consulting to
+                  optimize operations, identify growth opportunities, and drive
+                  sustainable success.
+                </p>
+                <div class="service-features">
+                  <span>Analysis</span>
+                  <span>Strategy</span>
+                  <span>Optimization</span>
+                </div>
+              </div>
+              <div class="service-hover-effect"></div>
+            </div>
+
+            <!-- Graphic Design -->
+            <div class="service-item">
+              <div class="service-icon-container">
+                <div class="service-icon">
+                  <i class="lni lni-pallet"></i>
+                </div>
+                <div class="service-icon-bg"></div>
+              </div>
+              <div class="service-content">
+                <h4>Graphic Design</h4>
+                <p>
+                  Creative visual design solutions including branding, UI/UX
+                  design, and marketing materials that capture attention and
+                  communicate effectively.
+                </p>
+                <div class="service-features">
+                  <span>Branding</span>
+                  <span>UI/UX</span>
+                  <span>Marketing</span>
+                </div>
+              </div>
+              <div class="service-hover-effect"></div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-      <!-- About section -->
-      <section id="about" class="section-area">
+        <!-- Background Elements -->
+        <div class="services-bg-elements">
+          <div class="bg-shape shape-1"></div>
+          <div class="bg-shape shape-2"></div>
+          <div class="bg-shape shape-3"></div>
+          <div class="bg-shape shape-4"></div>
+        </div>
+      </section>
+
+      <!-- Enhanced About Section -->
+      <section id="about" class="about-section">
         <div class="container">
-          <div class="grid grid-cols-1 gap-14 lg:grid-cols-2">
-            <div class="w-full">
-              <figure class="scroll-revealed max-w-[480px] mx-auto">
-                <img
-                  src="./assets/img/about-img.jpg"
-                  alt="About image"
-                  class="rounded-xl"
-                />
-              </figure>
+          <div class="about-grid">
+            <div class="about-visual">
+              <div class="about-image-container">
+                <div class="about-image-wrapper">
+                  <img
+                    src="./assets/img/about-img.jpg"
+                    alt="IDEA AFG Team"
+                    class="about-image"
+                  />
+                  <div class="about-image-overlay">
+                    <div class="experience-badge">
+                      <span class="years">7+</span>
+                      <span class="text">Years of Excellence</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="floating-shapes">
+                  <div class="shape shape-1"></div>
+                  <div class="shape shape-2"></div>
+                  <div class="shape shape-3"></div>
+                </div>
+              </div>
             </div>
 
-            <div class="w-full">
-              <div class="scroll-revealed">
-                <h6
-                  class="mb-2 block text-lg font-semibold text-primary"
-                  data-i18n="about.title"
-                >
-                  About Us
+            <div class="about-content">
+              <div class="about-header">
+                <h6 class="section-badge">
+                  <span>About IDEA AFG</span>
                 </h6>
-                <h2 class="mb-6" data-i18n="about.description">
-                  Empowering Afghan Businesses Through Digital Innovation
+                <h2 class="about-title">
+                  Empowering Digital Transformation in Afghanistan
                 </h2>
-                <p class="mb-6 text-body-light-11 dark:text-body-dark-11">
-                  IDEA AFG is a leading ICT solutions provider dedicated to
-                  transforming businesses through cutting-edge technology. We
-                  specialize in custom software development, system integration,
-                  and digital transformation services.
+                <p class="about-description">
+                  IDEA AFG is a premier technology company driving digital
+                  innovation across Afghanistan. With a team of dedicated
+                  professionals and years of industry experience, we deliver
+                  comprehensive ICT solutions that transform businesses and
+                  empower communities through cutting-edge technology.
                 </p>
               </div>
 
-              <div class="tabs scroll-revealed">
-                <nav
-                  class="tabs-nav flex flex-wrap gap-4 my-8"
-                  role="tablist"
-                  aria-label="About us tabs"
-                >
-                  <button
-                    type="button"
-                    class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-                    data-web-toggle="tabs"
-                    data-web-target="tabs-panel-profile"
-                    id="tabs-list-profile"
-                    role="tab"
-                    aria-controls="tabs-panel-profile"
-                  >
-                    Our Profile
+              <div class="enhanced-tabs">
+                <nav class="tabs-nav" role="tablist">
+                  <button class="tab-btn active" data-tab="profile">
+                    <i class="las la-user"></i>
+                    <span>Our Profile</span>
                   </button>
-
-                  <button
-                    type="button"
-                    class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-                    data-web-toggle="tabs"
-                    data-web-target="tabs-panel-vision"
-                    id="tabs-list-vision"
-                    role="tab"
-                    aria-controls="tabs-panel-vision"
-                  >
-                    Our Vision
+                  <button class="tab-btn" data-tab="vision">
+                    <i class="las la-bullseye"></i>
+                    <span>Our Vision</span>
                   </button>
-
-                  <button
-                    type="button"
-                    class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-                    data-web-toggle="tabs"
-                    data-web-target="tabs-panel-history"
-                    id="tabs-list-history"
-                    role="tab"
-                    aria-controls="tabs-panel-history"
-                  >
-                    Our History
+                  <button class="tab-btn" data-tab="history">
+                    <i class="las la-history"></i>
+                    <span>Our Journey</span>
                   </button>
                 </nav>
 
-                <div
-                  class="tabs-content mt-4"
-                  id="tabs-panel-profile"
-                  tabindex="-1"
-                  role="tabpanel"
-                  aria-labelledby="tabs-list-profile"
-                >
-                  <p>
-                    IDEA AFG is a premier ICT solutions company based in Herat,
-                    Afghanistan. We provide comprehensive technology services
-                    including software development, accounting systems, mobile
-                    applications, and cloud solutions.
-                  </p>
-                  <p>
-                    Our experienced team combines local market knowledge with
-                    international best practices to deliver reliable, scalable,
-                    and secure digital solutions that drive business growth and
-                    operational efficiency.
-                  </p>
-                </div>
+                <div class="tabs-content">
+                  <div class="tab-panel active" id="profile">
+                    <div class="tab-content">
+                      <h4>Leading ICT Innovation in Afghanistan</h4>
+                      <p>
+                        IDEA AFG stands at the forefront of technological
+                        advancement in Afghanistan, offering comprehensive
+                        digital solutions tailored to the unique needs of
+                        businesses and organizations across various sectors.
+                      </p>
+                      <p>
+                        Our expertise spans custom software development, system
+                        integration, mobile applications, and digital
+                        transformation services that drive measurable business
+                        growth and operational excellence.
+                      </p>
+                      <div class="tab-features">
+                        <div class="feature">
+                          <i class="las la-check-circle"></i>
+                          <span>Custom Software Development</span>
+                        </div>
+                        <div class="feature">
+                          <i class="las la-check-circle"></i>
+                          <span>System Integration & Implementation</span>
+                        </div>
+                        <div class="feature">
+                          <i class="las la-check-circle"></i>
+                          <span>Digital Transformation Consulting</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                <div
-                  class="tabs-content mt-4"
-                  id="tabs-panel-vision"
-                  tabindex="-1"
-                  role="tabpanel"
-                  aria-labelledby="tabs-list-vision"
-                >
-                  <p>
-                    To become Afghanistan's leading ICT solutions provider,
-                    empowering businesses with innovative technology that drives
-                    digital transformation and economic growth.
-                  </p>
-                  <p>
-                    We envision a future where every Afghan business has access
-                    to world-class technology solutions that enhance
-                    productivity, improve customer experiences, and create
-                    sustainable competitive advantages.
-                  </p>
-                </div>
+                  <div class="tab-panel" id="vision">
+                    <div class="tab-content">
+                      <h4>Shaping Afghanistan's Digital Future</h4>
+                      <p>
+                        Our vision is to establish IDEA AFG as Afghanistan's
+                        most trusted technology partner, empowering businesses
+                        with innovative solutions that drive sustainable growth
+                        and digital excellence.
+                      </p>
+                      <p>
+                        We envision a future where Afghan enterprises leverage
+                        world-class technology to enhance productivity, improve
+                        customer experiences, and create lasting competitive
+                        advantages in the global marketplace.
+                      </p>
+                      <div class="vision-goals">
+                        <div class="goal-item">
+                          <i class="las la-rocket"></i>
+                          <span>Technological Leadership</span>
+                        </div>
+                        <div class="goal-item">
+                          <i class="las la-users"></i>
+                          <span>Business Empowerment</span>
+                        </div>
+                        <div class="goal-item">
+                          <i class="las la-chart-line"></i>
+                          <span>Sustainable Growth</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                <div
-                  class="tabs-content mt-4"
-                  id="tabs-panel-history"
-                  tabindex="-1"
-                  role="tabpanel"
-                  aria-labelledby="tabs-list-history"
-                >
-                  <p>
-                    Founded with a mission to bridge the technology gap in
-                    Afghanistan, IDEA AFG has been serving businesses across
-                    various industries with innovative ICT solutions and
-                    exceptional customer service.
-                  </p>
-                  <p>
-                    From our headquarters in Herat, we have successfully
-                    delivered numerous projects ranging from small business
-                    applications to enterprise-level systems, establishing
-                    ourselves as a trusted technology partner.
-                  </p>
+                  <div class="tab-panel" id="history">
+                    <div class="tab-content">
+                      <h4>Our Digital Journey</h4>
+                      <p>
+                        Since our establishment, IDEA AFG has been on an
+                        inspiring journey of growth and innovation. We began
+                        with a vision to bridge the technology gap in
+                        Afghanistan and have evolved into a leading provider of
+                        comprehensive digital solutions.
+                      </p>
+                      <p>
+                        Our journey is marked by continuous learning, adaptation
+                        to emerging technologies, and a steadfast commitment to
+                        delivering excellence. From our headquarters in Herat,
+                        we've expanded our reach across Afghanistan, serving
+                        diverse industries with customized technology solutions
+                        that address specific challenges and opportunities.
+                      </p>
+                      <p>
+                        Each project has contributed to our growing expertise,
+                        allowing us to refine our methodologies and expand our
+                        service offerings. Today, we stand proud of our
+                        accomplishments while remaining focused on the future,
+                        constantly exploring new ways to leverage technology for
+                        positive impact.
+                      </p>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="about-actions">
+                <a
+                  target="_blank"
+                  href="./assets/download/brochure.pdf"
+                  download="IDEA Afghan-Brochure.pdf"
+                  class="btn btn-primary"
+                >
+                  <i class="lni lni-download"></i>
+                  Download Brochure
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                  <i class="lni lni-phone"></i>
+                  Contact Us
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Services section -->
-      <section id="services" class="section-area">
+      <!-- Enhanced Intro Video Section -->
+      <section id="intro" class="intro-section">
         <div class="container">
-          <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 block text-lg font-semibold text-primary">
-              Services
+          <div class="text-center max-w-800 mx-auto mb-16">
+            <h6
+              class="mb-4 block text-lg font-semibold text-primary animated-badge"
+            >
+              <span>Company Overview</span>
             </h6>
-            <h2 class="mb-6">Our ICT Solutions</h2>
-            <p>
-              We provide comprehensive technology services designed to transform
-              your business operations and drive digital growth through
-              innovative solutions.
-            </p>
-          </div>
-
-          <div class="row">
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <div class="group hover:-translate-y-1">
-                <div
-                  class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
-                >
-                  <i class="lni lni-code"></i>
-                </div>
-                <div class="w-full">
-                  <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-                    Software Development
-                  </h4>
-                  <p>
-                    Custom software solutions tailored to your business needs,
-                    from web applications to enterprise systems.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <div class="group hover:-translate-y-1">
-                <div
-                  class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
-                >
-                  <i class="lni lni-mobile"></i>
-                </div>
-                <div class="w-full">
-                  <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-                    Mobile App Development
-                  </h4>
-                  <p>
-                    Cross-platform mobile applications for iOS and Android that
-                    enhance customer engagement and business efficiency.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <div class="group hover:-translate-y-1">
-                <div
-                  class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
-                >
-                  <i class="lni lni-calculator"></i>
-                </div>
-                <div class="w-full">
-                  <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-                    Accounting Systems
-                  </h4>
-                  <p>
-                    Comprehensive accounting and financial management systems
-                    with automated reporting and compliance features.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <div class="group hover:-translate-y-1">
-                <div
-                  class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
-                >
-                  <i class="lni lni-cloud"></i>
-                </div>
-                <div class="w-full">
-                  <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-                    Cloud Solutions
-                  </h4>
-                  <p>
-                    Secure cloud infrastructure and migration services to
-                    improve scalability and reduce operational costs.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <div class="group hover:-translate-y-1">
-                <div
-                  class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
-                >
-                  <i class="lni lni-stats-up"></i>
-                </div>
-                <div class="w-full">
-                  <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-                    Business Analytics
-                  </h4>
-                  <p>
-                    Data-driven insights and custom dashboards to help you make
-                    informed business decisions and track performance.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-              <div class="group hover:-translate-y-1">
-                <div
-                  class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center text-[37px]/none bg-primary text-primary-color"
-                >
-                  <i class="lni lni-shield"></i>
-                </div>
-                <div class="w-full">
-                  <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-                    Cybersecurity Services
-                  </h4>
-                  <p>
-                    Comprehensive security solutions to protect your business
-                    from cyber threats and ensure data integrity.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Intro video section -->
-      <section id="intro" class="section-area">
-        <div class="container">
-          <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 block text-lg font-semibold text-primary">
-              Company Overview
-            </h6>
-            <h2 class="mb-6">See How We Transform Ideas Into Reality</h2>
-            <p>
-              Discover our innovative approach to digital transformation. Watch
-              how we help businesses streamline operations, enhance
+            <h2 class="section-title">
+              Transforming Ideas Into Digital Reality
+            </h2>
+            <p class="section-subtitle">
+              Experience our innovative approach to digital transformation.
+              Discover how we help businesses streamline operations, enhance
               productivity, and achieve sustainable growth through cutting-edge
               technology solutions.
             </p>
           </div>
 
-          <div class="scroll-revealed relative max-w-[900px] mx-auto">
-            <video
-              src="./assets/img/LogoMotion.mp4"
-              autoplay
-              repeat
-              alt="Intro video"
-              class="w-full h-full aspect-video rounded-xl object-cover"
-            ></video>
-            <a
-              href="javascript:void(0)"
-              class="video-popup w-[80px] h-[80px] rounded-full inline-flex items-center justify-center bg-primary text-primary-color text-[1.875rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-md hover:bg-primary-color hover:text-primary hover:shadow-xl focus:bg-primary-color focus:text-primary focus:shadow-xl"
-            >
-              <i class="lni lni-play"></i>
-            </a>
+          <div class="video-container">
+            <div class="video-wrapper">
+              <div class="video-poster">
+                <img
+                  src="./assets/img/intro-video.jpg"
+                  alt="IDEA AFG Video"
+                  class="poster-image"
+                />
+                <div class="video-overlay">
+                  <div class="play-button" id="videoTrigger">
+                    <div class="play-icon">
+                      <i class="lni lni-play"></i>
+                    </div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring ring-2"></div>
+                  </div>
+                  <div class="video-info">
+                    <h4>Digital Transformation in Action</h4>
+                    <p>
+                      See how we deliver innovative solutions that drive
+                      business success
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="video-modal" id="videoModal">
+                <div class="modal-content">
+                  <button class="close-modal" id="closeModal">
+                    <i class="lni lni-close"></i>
+                  </button>
+                  <div class="video-player">
+                    <video controls id="introVideo">
+                      <source
+                        src="./assets/video/تبلیغات شرکت آیدیا افغان2.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-features">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="lni lni-bulb"></i>
+                </div>
+                <h5>Innovation</h5>
+                <p>
+                  Cutting-edge solutions tailored to your specific business
+                  needs and challenges
+                </p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="lni lni-cog"></i>
+                </div>
+                <h5>Expertise</h5>
+                <p>
+                  Years of technical excellence and deep industry knowledge
+                  across multiple sectors
+                </p>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="lni lni-support"></i>
+                </div>
+                <h5>Support</h5>
+                <p>
+                  Comprehensive support and maintenance services to ensure
+                  optimal performance
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
 
+        <!-- Background Animation -->
+        <div class="intro-bg-animation">
+          <div class="floating-element el-1"></div>
+          <div class="floating-element el-2"></div>
+          <div class="floating-element el-3"></div>
+          <div class="floating-element el-4"></div>
+        </div>
+      </section>
+    </div>
       <!-- Portfolio section -->
       <section id="portfolio" class="section-area">
         <div class="container">
