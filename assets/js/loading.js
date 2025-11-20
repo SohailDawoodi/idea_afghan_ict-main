@@ -1,123 +1,66 @@
+// Optimized Loading Animation
 document.addEventListener("DOMContentLoaded", function () {
-  const loadingPage = document.getElementById("loadingPage");
-  const mainContent = document.getElementById("mainContent");
-  const loadingPercentage = document.getElementById("loadingPercentage");
-  const progressBar = document.getElementById("progressBar");
-  const reloadButton = document.getElementById("reloadButton");
+    const loadingPage = document.getElementById("loadingPage");
+    const mainContent = document.getElementById("mainContent");
+    const loadingPercentage = document.getElementById("loadingPercentage");
+    const progressBar = document.getElementById("progressBar");
 
-  let progress = 0;
-  const interval = setInterval(() => {
-    progress += Math.random() * 10;
-    if (progress > 100) progress = 100;
+    let progress = 0;
+    const targetProgress = 100;
+    const duration = 2000; // 2 seconds total
+    const steps = 20;
+    const increment = targetProgress / steps;
+    const stepDuration = duration / steps;
 
-    loadingPercentage.textContent = Math.floor(progress) + "%";
-    progressBar.style.width = progress + "%";
+    const updateProgress = () => {
+        progress += increment;
+        if (progress > targetProgress) progress = targetProgress;
 
-    if (progress === 100) {
-      clearInterval(interval);
-      setTimeout(() => {
-        loadingPage.classList.add("fade-out");
-        setTimeout(() => {
-          loadingPage.style.display = "none";
-          mainContent.style.display = "block";
-        }, 800);
-      }, 500);
-    }
-  }, 200);
+        loadingPercentage.textContent = Math.floor(progress) + "%";
+        progressBar.style.width = progress + "%";
+
+        if (progress < targetProgress) {
+            setTimeout(updateProgress, stepDuration);
+        } else {
+            setTimeout(() => {
+                loadingPage.classList.add("fade-out");
+                setTimeout(() => {
+                    loadingPage.style.display = "none";
+                    mainContent.style.display = "block";
+                    // Initialize animations after loading
+                    initPageAnimations();
+                }, 800);
+            }, 300);
+        }
+    };
+
+    // Start progress animation
+    setTimeout(updateProgress, 100);
 });
 
-// // Enhanced JavaScript for interactive elements
-// document.addEventListener('DOMContentLoaded', function() {
-  
-//   // Services Section Animation
-//   const serviceItems = document.querySelectorAll('.service-item');
-//   serviceItems.forEach(item => {
-//     item.addEventListener('mouseenter', function() {
-//       this.style.transform = 'translateY(-10px)';
-//     });
-    
-//     item.addEventListener('mouseleave', function() {
-//       this.style.transform = 'translateY(0)';
-//     });
-//   });
-  
-//   // About Section Tabs
-//   const tabButtons = document.querySelectorAll('.tab-btn');
-//   const tabPanels = document.querySelectorAll('.tab-panel');
-  
-//   tabButtons.forEach(button => {
-//     button.addEventListener('click', function() {
-//       const targetTab = this.getAttribute('data-tab');
-      
-//       // Remove active class from all buttons and panels
-//       tabButtons.forEach(btn => btn.classList.remove('active'));
-//       tabPanels.forEach(panel => panel.classList.remove('active'));
-      
-//       // Add active class to current button and panel
-//       this.classList.add('active');
-//       document.getElementById(targetTab).classList.add('active');
-//     });
-//   });
-  
-//   // Video Modal Functionality
-//   const videoTrigger = document.getElementById('videoTrigger');
-//   const videoModal = document.getElementById('videoModal');
-//   const closeModal = document.getElementById('closeModal');
-//   const introVideo = document.getElementById('introVideo');
-  
-//   if (videoTrigger && videoModal) {
-//     videoTrigger.addEventListener('click', function() {
-//       videoModal.classList.add('active');
-//       document.body.style.overflow = 'hidden';
-      
-//       // Play video when modal opens
-//       setTimeout(() => {
-//         if (introVideo) {
-//           const playPromise = introVideo.play();
-//           if (playPromise !== undefined) {
-//             playPromise.catch(error => {
-//               console.log('Autoplay prevented:', error);
-//             });
-//           }
-//         }
-//       }, 500);
-//     });
-    
-//     closeModal.addEventListener('click', function() {
-//       videoModal.classList.remove('active');
-//       document.body.style.overflow = 'auto';
-      
-//       // Pause video when modal closes
-//       if (introVideo) introVideo.pause();
-//     });
-    
-//     // Close modal when clicking outside
-//     videoModal.addEventListener('click', function(e) {
-//       if (e.target === videoModal) {
-//         videoModal.classList.remove('active');
-//         document.body.style.overflow = 'auto';
-        
-//         // Pause video when modal closes
-//         if (introVideo) introVideo.pause();
-//       }
-//     });
-//   }
-  
-//   // Scroll Reveal Animation
-//   // const scrollRevealElements = document.querySelectorAll('.scroll-revealed');
-  
-//   // const scrollObserver = new IntersectionObserver(function(entries) {
-//   //   entries.forEach(entry => {
-//   //     if (entry.isIntersecting) {
-//   //       entry.target.style.animation = 'fadeIn 0.8s ease forwards';
-//   //       scrollObserver.unobserve(entry.target);
-//   //     }
-//   //   });
-//   // }, {
-//   //   threshold: 0.1,
-//   //   rootMargin: '0px 0px -50px 0px'
-//   // });
-  
-//   // 
-  
-// });
+// Initialize page animations after load
+function initPageAnimations() {
+    // Use Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.service-item, .team-member, .feature-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+}

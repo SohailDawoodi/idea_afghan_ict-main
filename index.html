@@ -110,16 +110,27 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/about.css">
-    
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
-    />
+    <link rel="stylesheet" href="./assets/css/team.css">
+ 
+   <!-- Replace icon links with these -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+
+<!-- Fallback for local icons -->
+<link rel="stylesheet" href="./assets/css/line-awesome.min.css">
 
     <!-- js links  -->
     <script src="./assets/js/loading.js" defer></script>
     <script src="./assets/js/header.js" defer></script>
+    <script src="./assets/js/team.js" defer></script>
     
+    <!-- Replace existing animation libraries with these -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+
+
+
   </head>
 
   <body>
@@ -145,96 +156,96 @@
         <div class="progress-bar" id="progressBar"></div>
       </div>
     </div>
-    <div id="mainContent" style="display: none">
-      <header class="main-header" id="mainHeader">
-        <div class="nav-container">
-          <div class="nav-content">
-            <!-- Logo Section -->
-            <div class="logo-section">
-              <a href="#" class="logo-link">
-                <div class="logo-image">
-                  <img
-                    src="./assets/img/ompany.jpg"
-                    alt="IDEA AFG Logo"
-                    loading="eager"
-                  />
-                </div>
-                <div class="logo-text">
-                  <span class="logo-primary">IDEA AFGHAN</span>
-                  <span class="logo-secondary"> ICT Solutions</span>
-                </div>
-                <div class="logo-compact">IDEA AFGHAN</div>
-              </a>
+    
+    <header class="main-header" id="mainHeader">
+  <div class="nav-container">
+    <div class="nav-content">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <a href="#" class="logo-link">
+          <div class="logo-image">
+            <img
+              src="./assets/img/ompany.jpg"
+              alt="IDEA AFG Logo"
+              loading="eager"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-primary">IDEA AFGHAN</span>
+            <span class="logo-secondary"> ICT Solutions</span>
+          </div>
+          <div class="logo-compact">IDEA AFGHAN</div>
+        </a>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li>
+            <a href="#home" class="nav-link active"
+              ><i class="lni lni-home"></i> Home</a
+            >
+          </li>
+          <li>
+            <a href="#services" class="nav-link"
+              ><i class="lni lni-cogs"></i> Services</a
+            >
+          </li>
+          <li>
+            <a href="#portfolio" class="nav-link"
+              ><i class="lni lni-briefcase"></i> Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="nav-link"
+              ><i class="lni lni-users"></i> About</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link"
+              ><i class="lni lni-envelope"></i> Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Navigation Controls -->
+      <div class="nav-controls">
+        <!-- Language Selector -->
+        <div class="language-selector" id="languageSelector">
+          <button class="language-btn">
+            <i class="lni lni-world"></i>
+            <span>EN</span>
+            <i class="lni lni-chevron-down"></i>
+          </button>
+          <div class="language-dropdown">
+            <div class="lang-option active" data-lang="en">
+              <span class="flag">🇺🇸</span>
+              <span class="lang-name">English</span>
             </div>
-
-            <!-- Navigation Menu -->
-            <nav class="nav-menu" id="navMenu">
-              <ul class="nav-links">
-                <li>
-                  <a href="#home" class="nav-link active"
-                    ><i class="lni lni-home"></i> Home</a
-                  >
-                </li>
-                <li>
-                  <a href="#services" class="nav-link"
-                    ><i class="lni lni-cogs"></i> Services</a
-                  >
-                </li>
-                <li>
-                  <a href="#portfolio" class="nav-link"
-                    ><i class="lni lni-briefcase"></i> Portfolio</a
-                  >
-                </li>
-                <li>
-                  <a href="#about" class="nav-link"
-                    ><i class="lni lni-users"></i> About</a
-                  >
-                </li>
-                <li>
-                  <a href="#contact" class="nav-link"
-                    ><i class="lni lni-envelope"></i> Contact</a
-                  >
-                </li>
-              </ul>
-            </nav>
-
-            <!-- Navigation Controls -->
-            <div class="nav-controls">
-              <!-- Language Selector -->
-              <div class="language-selector" id="languageSelector">
-                <button class="language-btn">
-                  <i class="lni lni-world"></i>
-                  <span>EN</span>
-                  <i class="lni lni-chevron-down"></i>
-                </button>
-                <div class="language-dropdown">
-                  <div class="lang-option active" data-lang="en">
-                    <span class="flag">🇺🇸</span>
-                    <span class="lang-name">English</span>
-                  </div>
-                  <div class="lang-option" data-lang="fa">
-                    <span class="flag">🇦🇫</span>
-                    <span class="lang-name">فارسی</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Theme Toggle -->
-              <button class="theme-toggle" id="themeToggle">
-                <i class="lni lni-sun"></i>
-                <i class="lni lni-moon"></i>
-              </button>
-
-              <!-- Mobile Toggle -->
-              <button class="mobile-toggle" id="mobileToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
+            <div class="lang-option" data-lang="fa">
+              <span class="flag">🇦🇫</span>
+              <span class="lang-name">فارسی</span>
             </div>
           </div>
         </div>
-      </header>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle">
+          <i class="lni lni-sun"></i>
+          <i class="lni lni-moon"></i>
+        </button>
+
+        <!-- Mobile Toggle -->
+        <button class="mobile-toggle" id="mobileToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+    </header>
 
       <!-- Hero Section -->
       <section class="hero-section" id="home">
@@ -295,463 +306,10 @@
           </div>
         </div>
       </section>
+  
 
-      <!-- Enhanced Services Section -->
-      <section id="services" class="services-section">
-        <div class="container">
-          <div class="text-center max-w-800 mx-auto mb-16">
-            <h6
-              class="mb-4 block text-lg font-semibold text-primary animated-badge"
-            >
-              <span>Our Expertise</span>
-            </h6>
-            <h2 class="section-title">Innovative ICT Solutions</h2>
-            <p class="section-subtitle">
-              We deliver cutting-edge technology services designed to transform
-              your digital landscape and accelerate business growth through
-              innovative, scalable solutions.
-            </p>
-          </div>
-
-          <div class="services-grid">
-            <!-- Front-end and Back-end Web Development -->
-            <div class="service-item">
-              <div class="service-icon-container">
-                <div class="service-icon">
-                  <i class="lni lni-code"></i>
-                </div>
-                <div class="service-icon-bg"></div>
-              </div>
-              <div class="service-content">
-                <h4>Web Development</h4>
-                <p>
-                  Custom front-end and back-end web solutions with modern
-                  frameworks, responsive design, and optimal performance for
-                  seamless user experiences.
-                </p>
-                <div class="service-features">
-                  <span>Front-end</span>
-                  <span>Back-end</span>
-                  <span>Responsive</span>
-                </div>
-              </div>
-              <div class="service-hover-effect"></div>
-            </div>
-
-            <!-- Management and Accounting Systems -->
-            <div class="service-item">
-              <div class="service-icon-container">
-                <div class="service-icon">
-                  <i class="lni lni-cogs"></i>
-                </div>
-                <div class="service-icon-bg"></div>
-              </div>
-              <div class="service-content">
-                <h4>Management Systems</h4>
-                <p>
-                  Comprehensive management and accounting systems with automated
-                  workflows, financial reporting, and real-time analytics for
-                  business optimization.
-                </p>
-                <div class="service-features">
-                  <span>ERP Systems</span>
-                  <span>Accounting</span>
-                  <span>Automation</span>
-                </div>
-              </div>
-              <div class="service-hover-effect"></div>
-            </div>
-
-            <!-- Mobile Applications -->
-            <div class="service-item">
-              <div class="service-icon-container">
-                <div class="service-icon">
-                  <i class="lni lni-mobile"></i>
-                </div>
-                <div class="service-icon-bg"></div>
-              </div>
-              <div class="service-content">
-                <h4>Mobile Applications</h4>
-                <p>
-                  Native and cross-platform mobile applications for iOS and
-                  Android with intuitive UI/UX, high performance, and seamless
-                  integration capabilities.
-                </p>
-                <div class="service-features">
-                  <span>iOS & Android</span>
-                  <span>Cross-Platform</span>
-                  <span>UI/UX Design</span>
-                </div>
-              </div>
-              <div class="service-hover-effect"></div>
-            </div>
-
-            <!-- Advertising and Marketing -->
-            <div class="service-item">
-              <div class="service-icon-container">
-                <div class="service-icon">
-                  <i class="lni lni-megaphone"></i>
-                </div>
-                <div class="service-icon-bg"></div>
-              </div>
-              <div class="service-content">
-                <h4>Digital Marketing</h4>
-                <p>
-                  Strategic digital advertising and marketing campaigns with
-                  data-driven approaches to maximize reach, engagement, and
-                  conversion rates.
-                </p>
-                <div class="service-features">
-                  <span>SEO/SEM</span>
-                  <span>Social Media</span>
-                  <span>Campaigns</span>
-                </div>
-              </div>
-              <div class="service-hover-effect"></div>
-            </div>
-
-            <!-- Business Analysis and Consulting -->
-            <div class="service-item">
-              <div class="service-icon-container">
-                <div class="service-icon">
-                  <i class="lni lni-stats-up"></i>
-                </div>
-                <div class="service-icon-bg"></div>
-              </div>
-              <div class="service-content">
-                <h4>Business Consulting</h4>
-                <p>
-                  Comprehensive business analysis and strategic consulting to
-                  optimize operations, identify growth opportunities, and drive
-                  sustainable success.
-                </p>
-                <div class="service-features">
-                  <span>Analysis</span>
-                  <span>Strategy</span>
-                  <span>Optimization</span>
-                </div>
-              </div>
-              <div class="service-hover-effect"></div>
-            </div>
-
-            <!-- Graphic Design -->
-            <div class="service-item">
-              <div class="service-icon-container">
-                <div class="service-icon">
-                  <i class="lni lni-pallet"></i>
-                </div>
-                <div class="service-icon-bg"></div>
-              </div>
-              <div class="service-content">
-                <h4>Graphic Design</h4>
-                <p>
-                  Creative visual design solutions including branding, UI/UX
-                  design, and marketing materials that capture attention and
-                  communicate effectively.
-                </p>
-                <div class="service-features">
-                  <span>Branding</span>
-                  <span>UI/UX</span>
-                  <span>Marketing</span>
-                </div>
-              </div>
-              <div class="service-hover-effect"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Background Elements -->
-        <div class="services-bg-elements">
-          <div class="bg-shape shape-1"></div>
-          <div class="bg-shape shape-2"></div>
-          <div class="bg-shape shape-3"></div>
-          <div class="bg-shape shape-4"></div>
-        </div>
-      </section>
-
-      <!-- Enhanced About Section -->
-      <section id="about" class="about-section">
-        <div class="container">
-          <div class="about-grid">
-            <div class="about-visual">
-              <div class="about-image-container">
-                <div class="about-image-wrapper">
-                  <img
-                    src="./assets/img/about-img.jpg"
-                    alt="IDEA AFG Team"
-                    class="about-image"
-                  />
-                  <div class="about-image-overlay">
-                    <div class="experience-badge">
-                      <span class="years">7+</span>
-                      <span class="text">Years of Excellence</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="floating-shapes">
-                  <div class="shape shape-1"></div>
-                  <div class="shape shape-2"></div>
-                  <div class="shape shape-3"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="about-content">
-              <div class="about-header">
-                <h6 class="section-badge">
-                  <span>About IDEA AFG</span>
-                </h6>
-                <h2 class="about-title">
-                  Empowering Digital Transformation in Afghanistan
-                </h2>
-                <p class="about-description">
-                  IDEA AFG is a premier technology company driving digital
-                  innovation across Afghanistan. With a team of dedicated
-                  professionals and years of industry experience, we deliver
-                  comprehensive ICT solutions that transform businesses and
-                  empower communities through cutting-edge technology.
-                </p>
-              </div>
-
-              <div class="enhanced-tabs">
-                <nav class="tabs-nav" role="tablist">
-                  <button class="tab-btn active" data-tab="profile">
-                    <i class="las la-user"></i>
-                    <span>Our Profile</span>
-                  </button>
-                  <button class="tab-btn" data-tab="vision">
-                    <i class="las la-bullseye"></i>
-                    <span>Our Vision</span>
-                  </button>
-                  <button class="tab-btn" data-tab="history">
-                    <i class="las la-history"></i>
-                    <span>Our Journey</span>
-                  </button>
-                </nav>
-
-                <div class="tabs-content">
-                  <div class="tab-panel active" id="profile">
-                    <div class="tab-content">
-                      <h4>Leading ICT Innovation in Afghanistan</h4>
-                      <p>
-                        IDEA AFG stands at the forefront of technological
-                        advancement in Afghanistan, offering comprehensive
-                        digital solutions tailored to the unique needs of
-                        businesses and organizations across various sectors.
-                      </p>
-                      <p>
-                        Our expertise spans custom software development, system
-                        integration, mobile applications, and digital
-                        transformation services that drive measurable business
-                        growth and operational excellence.
-                      </p>
-                      <div class="tab-features">
-                        <div class="feature">
-                          <i class="las la-check-circle"></i>
-                          <span>Custom Software Development</span>
-                        </div>
-                        <div class="feature">
-                          <i class="las la-check-circle"></i>
-                          <span>System Integration & Implementation</span>
-                        </div>
-                        <div class="feature">
-                          <i class="las la-check-circle"></i>
-                          <span>Digital Transformation Consulting</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="tab-panel" id="vision">
-                    <div class="tab-content">
-                      <h4>Shaping Afghanistan's Digital Future</h4>
-                      <p>
-                        Our vision is to establish IDEA AFG as Afghanistan's
-                        most trusted technology partner, empowering businesses
-                        with innovative solutions that drive sustainable growth
-                        and digital excellence.
-                      </p>
-                      <p>
-                        We envision a future where Afghan enterprises leverage
-                        world-class technology to enhance productivity, improve
-                        customer experiences, and create lasting competitive
-                        advantages in the global marketplace.
-                      </p>
-                      <div class="vision-goals">
-                        <div class="goal-item">
-                          <i class="las la-rocket"></i>
-                          <span>Technological Leadership</span>
-                        </div>
-                        <div class="goal-item">
-                          <i class="las la-users"></i>
-                          <span>Business Empowerment</span>
-                        </div>
-                        <div class="goal-item">
-                          <i class="las la-chart-line"></i>
-                          <span>Sustainable Growth</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="tab-panel" id="history">
-                    <div class="tab-content">
-                      <h4>Our Digital Journey</h4>
-                      <p>
-                        Since our establishment, IDEA AFG has been on an
-                        inspiring journey of growth and innovation. We began
-                        with a vision to bridge the technology gap in
-                        Afghanistan and have evolved into a leading provider of
-                        comprehensive digital solutions.
-                      </p>
-                      <p>
-                        Our journey is marked by continuous learning, adaptation
-                        to emerging technologies, and a steadfast commitment to
-                        delivering excellence. From our headquarters in Herat,
-                        we've expanded our reach across Afghanistan, serving
-                        diverse industries with customized technology solutions
-                        that address specific challenges and opportunities.
-                      </p>
-                      <p>
-                        Each project has contributed to our growing expertise,
-                        allowing us to refine our methodologies and expand our
-                        service offerings. Today, we stand proud of our
-                        accomplishments while remaining focused on the future,
-                        constantly exploring new ways to leverage technology for
-                        positive impact.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="about-actions">
-                <a
-                  target="_blank"
-                  href="./assets/download/brochure.pdf"
-                  download="IDEA Afghan-Brochure.pdf"
-                  class="btn btn-primary"
-                >
-                  <i class="lni lni-download"></i>
-                  Download Brochure
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                  <i class="lni lni-phone"></i>
-                  Contact Us
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Enhanced Intro Video Section -->
-      <section id="intro" class="intro-section">
-        <div class="container">
-          <div class="text-center max-w-800 mx-auto mb-16">
-            <h6
-              class="mb-4 block text-lg font-semibold text-primary animated-badge"
-            >
-              <span>Company Overview</span>
-            </h6>
-            <h2 class="section-title">
-              Transforming Ideas Into Digital Reality
-            </h2>
-            <p class="section-subtitle">
-              Experience our innovative approach to digital transformation.
-              Discover how we help businesses streamline operations, enhance
-              productivity, and achieve sustainable growth through cutting-edge
-              technology solutions.
-            </p>
-          </div>
-
-          <div class="video-container">
-            <div class="video-wrapper">
-              <div class="video-poster">
-                <img
-                  src="./assets/img/intro-video.jpg"
-                  alt="IDEA AFG Video"
-                  class="poster-image"
-                />
-                <div class="video-overlay">
-                  <div class="play-button" id="videoTrigger">
-                    <div class="play-icon">
-                      <i class="lni lni-play"></i>
-                    </div>
-                    <div class="pulse-ring"></div>
-                    <div class="pulse-ring ring-2"></div>
-                  </div>
-                  <div class="video-info">
-                    <h4>Digital Transformation in Action</h4>
-                    <p>
-                      See how we deliver innovative solutions that drive
-                      business success
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="video-modal" id="videoModal">
-                <div class="modal-content">
-                  <button class="close-modal" id="closeModal">
-                    <i class="lni lni-close"></i>
-                  </button>
-                  <div class="video-player">
-                    <video controls id="introVideo">
-                      <source
-                        src="./assets/video/تبلیغات شرکت آیدیا افغان2.mp4"
-                        type="video/mp4"
-                      />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="video-features">
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="lni lni-bulb"></i>
-                </div>
-                <h5>Innovation</h5>
-                <p>
-                  Cutting-edge solutions tailored to your specific business
-                  needs and challenges
-                </p>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="lni lni-cog"></i>
-                </div>
-                <h5>Expertise</h5>
-                <p>
-                  Years of technical excellence and deep industry knowledge
-                  across multiple sectors
-                </p>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="lni lni-support"></i>
-                </div>
-                <h5>Support</h5>
-                <p>
-                  Comprehensive support and maintenance services to ensure
-                  optimal performance
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Background Animation -->
-        <div class="intro-bg-animation">
-          <div class="floating-element el-1"></div>
-          <div class="floating-element el-2"></div>
-          <div class="floating-element el-3"></div>
-          <div class="floating-element el-4"></div>
-        </div>
-      </section>
-    </div>
+    
+    
       <!-- Portfolio section -->
       <section id="portfolio" class="section-area">
         <div class="container">
@@ -1106,230 +664,7 @@
         </div>
       </section>
 
-      <!-- Team section -->
-      <section id="team" class="section-area">
-        <div class="container">
-          <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 block text-lg font-semibold text-primary">Team</h6>
-            <h2 class="mb-6">Meet Our Expert Team</h2>
-            <p>
-              Our skilled professionals bring years of experience in software
-              development, system design, and digital innovation to deliver
-              exceptional ICT solutions.
-            </p>
-          </div>
-
-          <div class="row">
-            <div class="scroll-revealed col-12 sm:col-6 md:col-4 lg:col-3">
-              <figure
-                class="group rounded-xl bg-body-light-1 dark:bg-body-dark-12/10 px-5 pb-10 pt-12 shadow-card-2 hover:shadow-lg hover:-translate-y-1"
-              >
-                <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
-                  <img
-                    src="./assets/img/rafe.jpg"
-                    alt="Team picture"
-                    class="h-full w-full rounded-full object-cover"
-                  />
-                  <span
-                    class="absolute bottom-0 left-0 -z-10 h-10 w-10 rounded-full bg-red-500 opacity-0 group-hover:opacity-100"
-                  ></span>
-                  <span
-                    class="absolute top-0 right-0 -z-10 h-10 w-10 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100"
-                  ></span>
-                </div>
-                <figcaption class="text-center block">
-                  <h4
-                    class="mb-1 text-lg font-semibold text-body-light-12 dark:text-body-dark-12"
-                  >
-                    Rafe Khatebi
-                  </h4>
-                  <p
-                    class="mb-5 text-sm text-body-light-11 dark:text-body-dark-11"
-                  >
-                    Lead Developer
-                  </p>
-                  <div class="flex items-center justify-center gap-5">
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-light-10 dark:text-body-dark-10 hover:text-primary"
-                    >
-                      <i class="lni lni-facebook-fill"></i>
-                    </a>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-light-10 dark:text-body-dark-10 hover:text-primary"
-                    >
-                      <i class="lni lni-twitter-original"></i>
-                    </a>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-light-10 dark:text-body-dark-10 hover:text-primary"
-                    >
-                      <i class="lni lni-instagram-original"></i>
-                    </a>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="scroll-revealed col-12 sm:col-6 md:col-4 lg:col-3">
-              <figure
-                class="group rounded-xl bg-body-light-1 dark:bg-body-dark-12/10 px-5 pb-10 pt-12 shadow-card-2 hover:shadow-lg hover:-translate-y-1"
-              >
-                <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
-                  <img
-                    src="./assets/img/fuad.jpg"
-                    alt="Team picture"
-                    class="h-full w-full rounded-full object-cover"
-                  />
-                  <span
-                    class="absolute bottom-0 left-0 -z-10 h-10 w-10 rounded-full bg-red-500 opacity-0 group-hover:opacity-100"
-                  ></span>
-                  <span
-                    class="absolute top-0 right-0 -z-10 h-10 w-10 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100"
-                  ></span>
-                </div>
-                <figcaption class="text-center block">
-                  <h4
-                    class="mb-1 text-lg font-semibold text-body-light-12 dark:text-body-dark-12"
-                  >
-                    Fuad Anwari
-                  </h4>
-                  <p
-                    class="mb-5 text-sm text-body-light-11 dark:text-body-dark-11"
-                  >
-                    Full Stack Developer
-                  </p>
-                  <div class="flex items-center justify-center gap-5">
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-light-10 dark:text-body-dark-10 hover:text-primary"
-                    >
-                      <i class="lni lni-facebook-fill"></i>
-                    </a>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-light-10 dark:text-body-dark-10 hover:text-primary"
-                    >
-                      <i class="lni lni-twitter-original"></i>
-                    </a>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-light-10 dark:text-body-dark-10 hover:text-primary"
-                    >
-                      <i class="lni lni-instagram-original"></i>
-                    </a>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="scroll-revealed col-12 sm:col-6 md:col-4 lg:col-3">
-              <figure
-                class="group rounded-xl bg-body-light-1 dark:bg-body-dark-12/10 px-5 pb-10 pt-12 shadow-card-2 hover:shadow-lg hover:-translate-y-1"
-              >
-                <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
-                  <img
-                    src="./assets/img/avatar/avatar-3.jpg"
-                    alt="Team picture"
-                    class="h-full w-full rounded-full object-cover"
-                  />
-                  <span
-                    class="absolute bottom-0 left-0 -z-10 h-10 w-10 rounded-full bg-red-500 opacity-0 group-hover:opacity-100"
-                  ></span>
-                  <span
-                    class="absolute top-0 right-0 -z-10 h-10 w-10 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100"
-                  ></span>
-                </div>
-                <figcaption class="text-center block">
-                  <h4
-                    class="mb-1 text-lg font-semibold text-body-light-12 dark:text-body-dark-12"
-                  >
-                    Mr. Afghan
-                  </h4>
-                  <p
-                    class="mb-5 text-sm text-body-light-11 dark:text-body-dark-11"
-                  >
-                    Manger
-                  </p>
-                  <div class="flex items-center justify-center gap-5">
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-light-10 dark:text-body-dark-10 hover:text-primary"
-                    >
-                      <i class="lni lni-facebook-fill"></i>
-                    </a>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-light-10 dark:text-body-dark-10 hover:text-primary"
-                    >
-                      <i class="lni lni-twitter-original"></i>
-                    </a>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-light-10 dark:text-body-dark-10 hover:text-primary"
-                    >
-                      <i class="lni lni-instagram-original"></i>
-                    </a>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="scroll-revealed col-12 sm:col-6 md:col-4 lg:col-3">
-              <figure
-                class="group rounded-xl bg-body-light-1 dark:bg-body-dark-12/10 px-5 pb-10 pt-12 shadow-card-2 hover:shadow-lg hover:-translate-y-1"
-              >
-                <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
-                  <img
-                    src="./assets/img/avatar/avatar-4.jpg"
-                    alt="Team picture"
-                    class="h-full w-full rounded-full object-cover"
-                  />
-                  <span
-                    class="absolute bottom-0 left-0 -z-10 h-10 w-10 rounded-full bg-red-500 opacity-0 group-hover:opacity-100"
-                  ></span>
-                  <span
-                    class="absolute top-0 right-0 -z-10 h-10 w-10 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100"
-                  ></span>
-                </div>
-                <figcaption class="text-center block">
-                  <h4
-                    class="mb-1 text-lg font-semibold text-body-light-12 dark:text-body-dark-12"
-                  >
-                    Najibullaha Arman
-                  </h4>
-                  <p
-                    class="mb-5 text-sm text-body-light-11 dark:text-body-dark-11"
-                  >
-                    Designer
-                  </p>
-                  <div class="flex items-center justify-center gap-5">
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-light-10 dark:text-body-dark-10 hover:text-primary"
-                    >
-                      <i class="lni lni-facebook-fill"></i>
-                    </a>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-light-10 dark:text-body-dark-10 hover:text-primary"
-                    >
-                      <i class="lni lni-twitter-original"></i>
-                    </a>
-                    <a
-                      href="javascript:void(0)"
-                      class="text-body-light-10 dark:text-body-dark-10 hover:text-primary"
-                    >
-                      <i class="lni lni-instagram-original"></i>
-                    </a>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <!-- Testimonials section -->
       <section id="testimonials" class="section-area">
@@ -2455,7 +1790,7 @@
               transformation and operational excellence.
             </p>
           </div>
-
+          
           <div class="">
             <div class="row">
               <div
@@ -2688,7 +2023,6 @@
         ></object>
       </section>
     </main>
-
     <!-- Footer -->
     <footer class="bg-primary-dark-2 text-white">
       <div class="container py-20 lg:py-[100px]">
