@@ -1,7 +1,7 @@
 /* Enhanced Team Section Styles - Final Version */
 .team-section {
   position: relative;
-  padding: 80px 0;
+  padding: clamp(5rem, 8vw, 8rem) 0;
   background: var(--light-bg);
 }
 
@@ -12,38 +12,32 @@
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .team-card {
   position: relative;
-  height: 400px;
-  border-radius: 16px;
+  height: 380px;
+  border-radius: 20px;
   overflow: hidden;
-  background: var(--card-light);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: var(--card-dark); /* تغییر: در تم روشن هم کارت تیره باشد */
+  box-shadow: var(--shadow);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: pointer;
+  border: 1px solid rgba(61, 99, 221, 0.1);
 }
 
-/* تغییرات برای تم روشن - بک‌گراند کارت تاریک‌تر */
-:root {
-  --card-light: #1a1a2e;
-  --card-dark: #16213e;
-  --text-light: #ffffff;
-  --text-dark: #e6e6e6;
-}
-
+/* تغییر: در تم تاریک فقط سایه و border تغییر کند */
 .dark-theme .team-card {
-  background: var(--card-dark);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-dark);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .team-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(61, 99, 221, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(61, 99, 221, 0.15);
 }
 
 /* انیمیشن اسکن نرم */
@@ -56,7 +50,7 @@
   height: 30%;
   background: linear-gradient(to bottom, 
     transparent, 
-    rgba(255, 255, 255, 0.4), 
+    rgba(255, 255, 255, 0.3), 
     transparent);
   z-index: 5;
   opacity: 0;
@@ -80,11 +74,47 @@
   }
 }
 
+/* انیمیشن درخشان - مشابه فوتر */
+.card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: radial-gradient(
+    circle at center,
+    rgba(61, 99, 221, 0.3) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.team-card:hover .card-glow {
+  opacity: 1;
+  animation: gentlePulse 3s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+}
+
 .card-inner {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: 2;
 }
 
 /* حالت اول: تصویر کامل با مشخصات روی آن */
@@ -100,7 +130,7 @@
 
 .team-card:hover .card-image,
 .team-card.active .card-image {
-  height: 50%; /* تصویر به بالا می‌رود و 50% می‌شود */
+  height: 50%;
 }
 
 .card-image img {
@@ -137,7 +167,7 @@
   left: 0;
   right: 0;
   padding: 30px;
-  color: var(--text-light); /* استفاده از متغیر برای متن روشن */
+  color: white;
   z-index: 10;
   transition: all 0.4s ease;
 }
@@ -159,20 +189,43 @@
   bottom: auto;
   margin-bottom: 20px;
   transform: translateY(-20px);
+  animation: slideUp 0.5s ease forwards;
 }
 
+@keyframes slideUp {
+  from {
+    opacity: 0.8;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تغییر: در تم روشن متن آبی، در تم تاریک متن سفید */
 .member-name {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: var(--text-light); /* متن روشن در تم روشن */
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color); /* رنگ آبی در تم روشن */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .member-name {
+  color: white; /* در تم تاریک سفید */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .member-role {
-  font-size: 0.95rem;
+  font-size: 1rem;
   opacity: 0.9;
-  color: rgba(255, 255, 255, 0.9); /* همیشه روشن */
+  color: var(--primary-light); /* آبی روشن در تم روشن */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .member-role {
+  color: rgba(255, 255, 255, 0.9); /* در تم تاریک سفید */
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -189,84 +242,112 @@
 .team-card.active .hover-content {
   opacity: 1;
   transform: translateY(0);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .member-social {
   display: flex;
   gap: 15px;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
-/* حالت اولیه: آیکون‌ها با رنگ هماهنگ و زیبا */
-.social-link {
-  width: 45px;
-  height: 45px;
-  border-radius: 12px;
+/* استفاده از استایل مشابه فوتر برای آیکون‌های شبکه‌های اجتماعی */
+.member-social .social-icon {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  overflow: visible;
+}
+
+.member-social .social-icon-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+  z-index: 2;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.member-social .social-icon i {
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  color: var(--primary-color); /* تغییر: آبی در تم روشن */
+}
+
+.dark-theme .member-social .social-icon i {
+  color: white; /* در تم تاریک سفید */
+}
+
+/* حالت هاور: رنگ اصلی هر پلتفرم */
+.member-social .social-icon:hover.linkedin i {
+  color: #0077b5;
+}
+
+.member-social .social-icon:hover.whatsapp i {
+  color: #25d366;
+}
+
+.member-social .social-icon:hover.github i {
+  color: #ffffff;
+}
+
+/* افکت‌های هاور مشابه فوتر */
+.member-social .social-icon:hover {
+  transform: translateY(-5px);
+}
+
+.member-social .social-icon:hover .social-icon-inner {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
 }
 
-/* رنگ‌های هماهنگ در حالت عادی (بدون هاور) */
-.social-link.linkedin {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+.member-social .social-icon:hover i {
+  transform: scale(1.2);
 }
 
-.social-link.whatsapp {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+/* رنگ‌های خاص برای هر پلتفرم در حالت هاور (پس‌زمینه) */
+.member-social .social-icon.linkedin:hover .social-icon-inner {
+  background: rgba(10, 102, 194, 0.2);
+  border-color: #0a66c2;
 }
 
-.social-link.github {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+.member-social .social-icon.whatsapp:hover .social-icon-inner {
+  background: rgba(37, 211, 102, 0.2);
+  border-color: #25d366;
 }
 
-/* حالت هاور: رنگ اصلی و استاندارد هر پلتفرم */
-.team-card:hover .social-link.linkedin,
-.team-card.active .social-link.linkedin {
-  background: linear-gradient(135deg, #0a66c2 0%, #0077b5 100%);
-  box-shadow: 0 10px 25px rgba(10, 102, 194, 0.4);
-}
-
-.team-card:hover .social-link.whatsapp,
-.team-card.active .social-link.whatsapp {
-  background: linear-gradient(135deg, #25d366 0%, #1ebe5c 100%);
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-}
-
-.team-card:hover .social-link.github,
-.team-card.active .social-link.github {
-  background: linear-gradient(135deg, #24292e 0%, #0d1117 100%);
-  box-shadow: 0 10px 25px rgba(36, 41, 46, 0.4);
-}
-
-/* هایلایت بیشتر هنگام هاور مستقیم روی آیکون */
-.social-link:hover {
-  transform: translateY(-5px) scale(1.15);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
-.social-link.linkedin:hover {
-  background: linear-gradient(135deg, #0a66c2 0%, #0077b5 100%) !important;
-  box-shadow: 0 15px 30px rgba(10, 102, 194, 0.5) !important;
-}
-
-.social-link.whatsapp:hover {
-  background: linear-gradient(135deg, #25d366 0%, #1ebe5c 100%) !important;
-  box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5) !important;
-}
-
-.social-link.github:hover {
-  background: linear-gradient(135deg, #24292e 0%, #0d1117 100%) !important;
-  box-shadow: 0 15px 30px rgba(36, 41, 46, 0.5) !important;
+.member-social .social-icon.github:hover .social-icon-inner {
+  background: rgba(36, 41, 46, 0.2);
+  border-color: #24292e;
 }
 
 /* Load More */
@@ -274,41 +355,120 @@
   display: none;
 }
 
-/* تنظیمات برای تم تاریک */
-.dark-theme .social-link {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+/* انیمیشن فلوتینگ برای کارت‌ها */
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
-.dark-theme .social-link.linkedin,
-.dark-theme .social-link.whatsapp,
-.dark-theme .social-link.github {
-  background: rgba(255, 255, 255, 0.15);
+.team-card {
+  animation: floatCard 6s ease-in-out infinite;
 }
 
-.dark-theme .team-card:hover .social-link.linkedin,
-.dark-theme .team-card.active .social-link.linkedin {
-  background: linear-gradient(135deg, #0a66c2 0%, #0077b5 100%) !important;
+.team-card:nth-child(odd) {
+  animation-delay: 0.5s;
 }
 
-.dark-theme .team-card:hover .social-link.whatsapp,
-.dark-theme .team-card.active .social-link.whatsapp {
-  background: linear-gradient(135deg, #25d366 0%, #1ebe5c 100%) !important;
+.team-card:nth-child(even) {
+  animation-delay: 1s;
 }
 
-.dark-theme .team-card:hover .social-link.github,
-.dark-theme .team-card.active .social-link.github {
-  background: linear-gradient(135deg, #24292e 0%, #0d1117 100%) !important;
+.team-card:hover {
+  animation-play-state: paused;
 }
 
-:not(.dark-theme) .member-name,
-:not(.dark-theme) .member-role {
-  color: var(--text-light);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+/* پس‌زمینه متحرک */
+.team-bg-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  filter: blur(1px);
+  animation: floatShape 15s infinite linear;
+}
+
+.shape-1 {
+  width: 150px;
+  height: 150px;
+  background: var(--primary-color);
+  top: 10%;
+  left: 5%;
+  animation-duration: 20s;
+}
+
+.shape-2 {
+  width: 100px;
+  height: 100px;
+  background: var(--accent-color);
+  top: 70%;
+  right: 10%;
+  animation-duration: 15s;
+}
+
+.shape-3 {
+  width: 80px;
+  height: 80px;
+  background: var(--success-color);
+  bottom: 20%;
+  left: 15%;
+  animation-duration: 25s;
+}
+
+@keyframes floatShape {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(10px) translateX(15px) rotate(3deg);
+  }
+}
+
+/* دکمه Load More */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(61, 99, 221, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(61, 99, 221, 0.3);
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -317,24 +477,62 @@
 @media (max-width: 768px) {
   .team-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 1.5rem;
   }
   
   .team-card {
     height: 350px;
   }
   
-  .social-link {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
+  .member-social .social-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .member-social .social-icon i {
+    font-size: 1.3rem;
   }
   
   .card-content {
     padding: 20px;
   }
   
+  .member-name {
+    font-size: 1.3rem;
+  }
+  
+  .member-role {
+    font-size: 0.9rem;
+  }
+  
   .team-card::after {
     display: none;
+  }
+  
+  .team-card {
+    animation: none;
+  }
+  
+  .team-card:hover {
+    animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section {
+    padding: 4rem 0;
+  }
+  
+  .team-card {
+    height: 320px;
+  }
+  
+  .member-social .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .member-social .social-icon i {
+    font-size: 1.2rem;
   }
 }
