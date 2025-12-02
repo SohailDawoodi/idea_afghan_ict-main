@@ -662,3 +662,39 @@ if (watchIntroBtn) {
 
     initLottieAnimations();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Set current year in footer
+    const currentYear = new Date().getFullYear();
+    const yearElement = document.getElementById('currentYear');
+    if (yearElement) {
+        yearElement.textContent = currentYear;
+    }
+    
+    // Add hover effect to social icons on mobile
+    const socialIcons = document.querySelectorAll('.social-icon');
+    socialIcons.forEach(icon => {
+        icon.addEventListener('touchstart', function() {
+            this.classList.add('hovered');
+            setTimeout(() => {
+                this.classList.remove('hovered');
+            }, 300);
+        });
+    });
+    
+    // Add click animation to footer links
+    const footerLinks = document.querySelectorAll('.footer-links li a');
+    footerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.getAttribute('href') === '#') {
+                e.preventDefault();
+            }
+            
+            // Add click animation
+            this.style.transform = 'translateX(10px) scale(1.05)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 300);
+        });
+    });
+});

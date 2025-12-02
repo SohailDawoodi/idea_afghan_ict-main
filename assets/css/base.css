@@ -425,3 +425,207 @@ body.dark-theme .carousel-btn {
         padding: 40px 15px;
     }
 }
+
+
+
+/* در فایل base.css یا یک فایل CSS جدید این استایل‌ها را اضافه کنید */
+
+/* تنظیمات یکسان برای تمام بخش‌ها */
+.hero-section,
+.services-section,
+.about-section,
+.intro-section,
+.team-section,
+.section-area,
+#testimonials,
+#contact,
+.professional-footer {
+    margin: 0 auto;
+    padding: 100px 0;
+    width: 100%;
+}
+
+/* تنظیمات خاص برای برخی sections */
+.hero-section {
+    padding: 120px 0 100px;
+    margin-bottom: 0;
+}
+
+.services-section {
+    padding: 100px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.about-section {
+    padding: 100px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.intro-section {
+    padding: 100px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.team-section {
+    padding: 100px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#testimonials {
+    padding: 100px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+.professional-footer {
+    padding: 80px 0 40px;
+    margin-top: 0;
+}
+
+/* تنظیم container داخلی */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* تنظیمات ریسپانسیو */
+@media (max-width: 1200px) {
+    .hero-section,
+    .services-section,
+    .about-section,
+    .intro-section,
+    .team-section,
+    .section-area,
+    #testimonials,
+    #contact {
+        padding: 80px 0;
+    }
+    
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section,
+    .services-section,
+    .about-section,
+    .intro-section,
+    .team-section,
+    .section-area,
+    #testimonials,
+    #contact {
+        padding: 70px 0;
+    }
+    
+    .container {
+        padding: 0 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section,
+    .services-section,
+    .about-section,
+    .intro-section,
+    .team-section,
+    .section-area,
+    #testimonials,
+    #contact {
+        padding: 60px 0;
+    }
+    
+    .hero-section {
+        padding: 100px 0 60px;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section,
+    .services-section,
+    .about-section,
+    .intro-section,
+    .team-section,
+    .section-area,
+    #testimonials,
+    #contact {
+        padding: 50px 0;
+    }
+    
+    .hero-section {
+        padding: 80px 0 50px;
+    }
+    
+    .professional-footer {
+        padding: 60px 0 30px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* تنظیم margin داخلی عناوین */
+.text-center.max-w-800 {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    margin-bottom: 40px;
+}
+
+/* تنظیمات مخصوص map */
+#map {
+    margin-top: -80px;
+    position: relative;
+    z-index: 1;
+}
+
+/* تنظیم فاصله داخلی gridها و کارت‌ها */
+.services-grid,
+.team-grid,
+.video-features {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* تنظیم فاصله دکمه‌ها */
+.hero-actions,
+.about-actions {
+    margin-top: 40px;
+    gap: 20px;
+}
+
+/* تنظیم فاصله testimonials */
+.testimonial-carousel-container {
+    margin-top: 40px;
+}
+
+/* تنظیم فاصله footer sections */
+.footer-top {
+    margin-bottom: 60px;
+}
+
+.footer-social-section {
+    margin: 40px 0;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 30px;
+}

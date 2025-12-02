@@ -33,7 +33,6 @@
     <!-- <link rel="alternate" href="https://www.ideaafg.com/en/" hreflang="en" />
   <link rel="alternate" href="https://www.ideaafg.com/fa/" hreflang="fa" />
   <link rel="alternate" href="https://www.ideaafg.com/" hreflang="x-default" /> -->
-
     <!-- Open Graph -->
     <meta
       property="og:title"
@@ -91,56 +90,109 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
       // Apply saved theme early so CSS picks correct theme on first paint
-      (function(){
-        try{
-          var t = localStorage.getItem('Inazuma_WebTheme') || 'light';
-          document.documentElement.setAttribute('data-web-theme', t === 'dark' ? 'dark' : 'light');
-          if (t === 'dark') document.body.classList.add('dark-theme');
-        }catch(e){}
+      (function () {
+        try {
+          var t = localStorage.getItem("Inazuma_WebTheme") || "light";
+          document.documentElement.setAttribute(
+            "data-web-theme",
+            t === "dark" ? "dark" : "light"
+          );
+          if (t === "dark") document.body.classList.add("dark-theme");
+        } catch (e) {}
       })();
     </script>
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        z-index: 1000;
+      }
 
+      .whatsapp-float a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background-color: #25d366;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .whatsapp-float a:hover {
+        background-color: #128c7e;
+        transform: scale(1.1);
+        box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+      }
+
+      .whatsapp-float i {
+        color: white;
+        font-size: 32px;
+      }
+
+      @media (max-width: 768px) {
+        .whatsapp-float {
+          left: 15px;
+          bottom: 15px;
+        }
+
+        .whatsapp-float a {
+          width: 55px;
+          height: 55px;
+        }
+
+        .whatsapp-float i {
+          font-size: 28px;
+        }
+      }
+    </style>
     <!-- CSS and Libraries -->
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Place header.css after main.css for header-specific overrides -->
     <!-- <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/about.css"> -->
-    <link rel="stylesheet" href="./assets/css/team.css">
-    <link rel="stylesheet" href="./assets/css/intro.css">
-    <link rel="stylesheet" href="./assets/css/sevices.css">
+    <link rel="stylesheet" href="./assets/css/team.css" />
+    <link rel="stylesheet" href="./assets/css/intro.css" />
+    <link rel="stylesheet" href="./assets/css/sevices.css" />
     <link rel="stylesheet" href="./assets/css/hero.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/heder.css" />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/aboutus.css" />
- 
-   <!-- Replace icon links with these -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <!-- اضافه کردن Animate.css برای انیمیشن‌ها -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
-<!-- Fallback for local icons -->
-<link rel="stylesheet" href="./assets/css/line-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/line-awesome.min.css" />
 
     <!-- js links  -->
-    <script src="./assets/js/loading.js" defer></script>
-    <script src="./assets/js/header.js" defer></script>
-    <script src="./assets/js/team.js" defer></script>
+    <script src="./assets/js/loading.js"></script>
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/team.js"></script>
     <script src="./assets/js/testimonial.js"></script>
     <script src="./assets/js/video.js"></script>
-    
-    <!-- Replace existing animation libraries with these -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
-
-
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
   </head>
 
   <body>
@@ -166,467 +218,483 @@
         <div class="progress-bar" id="progressBar"></div>
       </div>
     </div>
-    
+    <div class="whatsapp-float">
+      <a
+        href="https://wa.me/729896899? text=سلام%20وقت%E2%80%8Cتان%20بخیر%20%F0%9F%8C%BF%0A%D9%85%D8%A7%DB%8C%D9%84%D9%85%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%86%D8%B1%D9%85%E2%80%8C%D8%A7%D9%81%D8%B2%D8%A7%D8%B1%DB%8C%D8%8C%20%D8%AA%D8%A8%D9%84%DB%8C%D8%BA%D8%A7%D8%AA%DB%8C%20%D9%88%20%D9%85%D8%A7%D8%B1%DA%A9%D8%AA%DB%8C%D9%86%DA%AF%20%D8%B4%D9%85%D8%A7%20%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1%20%D8%A8%D8%AF%D8%A7%D9%86%D9%85.%0A%D9%84%D8%B7%D9%81%D8%A7%E2%80%8C%D9%85%D9%86%20%D8%B1%D8%A7%20%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C%DB%8C%20%DA%A9%D9%86%DB%8C%D8%AF.%20%F0%9F%8C%9F"
+        target="_blank"
+        aria-label="واتساپ"
+      >
+        <i class="lni lni-whatsapp"></i>
+      </a>
+    </div>
     <header class="main-header" id="mainHeader">
-    <div class="nav-container">
-      <div class="nav-content">
-        <!-- Logo Section -->
-        <div class="logo-section">
-          <a href="#" class="logo-link">
-            <div class="logo-image">
+      <div class="nav-container">
+        <div class="nav-content">
+          <!-- Logo Section -->
+          <div class="logo-section">
+            <a href="#" class="logo-link">
+              <div class="logo-image">
+                <img
+                  src="./assets/img/ompany.jpg"
+                  alt="IDEA AFG Logo"
+                  loading="eager"
+                />
+              </div>
+              <div class="logo-text">
+                <span class="logo-primary">IDEA AFGHAN</span>
+                <span class="logo-secondary"> ICT Solutions</span>
+              </div>
+              <div class="logo-compact">IDEA AFGHAN</div>
+            </a>
+          </div>
+
+          <!-- Navigation Menu -->
+          <nav class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+              <li>
+                <a href="#home" class="nav-link active"
+                  ><i class="lni lni-home"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="nav-link"
+                  ><i class="lni lni-cogs"></i> Services</a
+                >
+              </li>
+              <li>
+                <a href="#portfolio" class="nav-link"
+                  ><i class="lni lni-briefcase"></i> Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="#about" class="nav-link"
+                  ><i class="lni lni-users"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="nav-link"
+                  ><i class="lni lni-envelope"></i> Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Navigation Controls -->
+          <div class="nav-controls">
+            <!-- Language Selector -->
+            <div class="language-selector" id="languageSelector">
+              <button class="language-btn">
+                <i class="lni lni-world"></i>
+                <span>EN</span>
+                <i class="lni lni-chevron-down"></i>
+              </button>
+              <div class="language-dropdown">
+                <div class="lang-option active" data-lang="en">
+                  <span class="flag">🇺🇸</span>
+                  <span class="lang-name">English</span>
+                </div>
+                <div class="lang-option" data-lang="fa">
+                  <span class="flag">🇦🇫</span>
+                  <span class="lang-name">فارسی</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" id="themeToggle">
+              <i class="lni lni-sun"></i>
+              <i class="lni lni-moon"></i>
+            </button>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" id="mobileToggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-background">
+        <!-- Creative Animated SVG Background -->
+        <svg
+          class="animated-svg-bg"
+          viewBox="0 0 1200 800"
+          preserveAspectRatio="xMidYMid slice"
+        >
+          <!-- Background gradients -->
+          <defs>
+            <linearGradient
+              id="bgGradient1"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop offset="0%" stop-color="rgba(61, 99, 221, 0.15)" />
+              <stop offset="100%" stop-color="rgba(61, 99, 221, 0.05)" />
+            </linearGradient>
+            <linearGradient
+              id="bgGradient2"
+              x1="100%"
+              y1="0%"
+              x2="0%"
+              y2="100%"
+            >
+              <stop offset="0%" stop-color="rgba(255, 107, 107, 0.12)" />
+              <stop offset="100%" stop-color="rgba(255, 107, 107, 0.04)" />
+            </linearGradient>
+            <linearGradient
+              id="bgGradient3"
+              x1="0%"
+              y1="100%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop offset="0%" stop-color="rgba(16, 185, 129, 0.1)" />
+              <stop offset="100%" stop-color="rgba(16, 185, 129, 0.03)" />
+            </linearGradient>
+
+            <!-- Glow effect -->
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="3"
+                result="blur"
+              />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- Background rectangles with gradients -->
+          <rect
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            fill="url(#bgGradient1)"
+          />
+          <rect
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            fill="url(#bgGradient2)"
+          />
+          <rect
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            fill="url(#bgGradient3)"
+          />
+
+          <!-- Animated grid lines -->
+          <g class="grid-lines">
+            <path
+              d="M0,0 L1200,0 M0,100 L1200,100 M0,200 L1200,200 M0,300 L1200,300 M0,400 L1200,400 M0,500 L1200,500 M0,600 L1200,600 M0,700 L1200,700 M0,800 L1200,800"
+              stroke="rgba(61, 99, 221, 0.1)"
+              stroke-width="1"
+              stroke-dasharray="5,10"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                values="0;20"
+                dur="3s"
+                repeatCount="indefinite"
+              />
+            </path>
+
+            <path
+              d="M0,0 L0,800 M100,0 L100,800 M200,0 L200,800 M300,0 L300,800 M400,0 L400,800 M500,0 L500,800 M600,0 L600,800 M700,0 L700,800 M800,0 L800,800 M900,0 L900,800 M1000,0 L1000,800 M1100,0 L1100,800 M1200,0 L1200,800"
+              stroke="rgba(16, 185, 129, 0.1)"
+              stroke-width="1"
+              stroke-dasharray="5,10"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                values="0;20"
+                dur="4s"
+                repeatCount="indefinite"
+              />
+            </path>
+          </g>
+
+          <!-- Elegant flowing lines -->
+          <g class="flowing-lines">
+            <path
+              d="M100,100 C300,50 500,150 700,100 S900,200 1100,150"
+              stroke="url(#flowGradient1)"
+              stroke-width="2"
+              fill="none"
+              stroke-dasharray="10,15"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                values="0;50"
+                dur="8s"
+                repeatCount="indefinite"
+              />
+            </path>
+
+            <path
+              d="M50,400 C250,350 450,450 650,400 S850,500 1050,450"
+              stroke="url(#flowGradient2)"
+              stroke-width="2"
+              fill="none"
+              stroke-dasharray="10,15"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                values="50;0"
+                dur="10s"
+                repeatCount="indefinite"
+              />
+            </path>
+          </g>
+
+          <!-- Floating particles -->
+          <g class="floating-particles">
+            <!-- Particles will be added via CSS for better performance -->
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              <span class="title-line">
+                <span class="title-text">Leading Digital Innovation</span>
+              </span>
+              <span class="title-line">
+                <span class="title-text">in Afghanistan</span>
+              </span>
+            </h1>
+            <!-- خط underline حذف شد -->
+            <p class="hero-subtitle">
+              IDEA AFG is Afghanistan's premier ICT solutions provider,
+              delivering cutting-edge technology services that drive business
+              transformation and digital evolution. With expertise in web
+              development, mobile applications, digital marketing, and
+              enterprise solutions, we empower businesses to thrive in the
+              digital era.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">
+                <i class="lni lni-rocket"></i>
+                Start Your Project
+              </a>
+              <button class="btn btn-secondary" id="watchIntroBtn">
+                <i class="lni lni-play"></i>
+                View Our Work
+              </button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-image-container">
               <img
-                src="./assets/img/ompany.jpg"
-                alt="IDEA AFG Logo"
+                src="./assets/img/ideaafghan.jpg"
+                alt="Digital Solutions and Technology Services"
+                class="hero-image"
                 loading="eager"
               />
             </div>
-            <div class="logo-text">
-              <span class="logo-primary">IDEA AFGHAN</span>
-              <span class="logo-secondary"> ICT Solutions</span>
-            </div>
-            <div class="logo-compact">IDEA AFGHAN</div>
-          </a>
-        </div>
-
-        <!-- Navigation Menu -->
-        <nav class="nav-menu" id="navMenu">
-          <ul class="nav-links">
-            <li>
-              <a href="#home" class="nav-link active"
-                ><i class="lni lni-home"></i> Home</a
-              >
-            </li>
-            <li>
-              <a href="#services" class="nav-link"
-                ><i class="lni lni-cogs"></i> Services</a
-              >
-            </li>
-            <li>
-              <a href="#portfolio" class="nav-link"
-                ><i class="lni lni-briefcase"></i> Portfolio</a
-              >
-            </li>
-            <li>
-              <a href="#about" class="nav-link"
-                ><i class="lni lni-users"></i> About</a
-              >
-            </li>
-            <li>
-              <a href="#contact" class="nav-link"
-                ><i class="lni lni-envelope"></i> Contact</a
-              >
-            </li>
-          </ul>
-        </nav>
-
-        <!-- Navigation Controls -->
-        <div class="nav-controls">
-          <!-- Language Selector -->
-          <div class="language-selector" id="languageSelector">
-            <button class="language-btn">
-              <i class="lni lni-world"></i>
-              <span>EN</span>
-              <i class="lni lni-chevron-down"></i>
-            </button>
-            <div class="language-dropdown">
-              <div class="lang-option active" data-lang="en">
-                <span class="flag">🇺🇸</span>
-                <span class="lang-name">English</span>
+            <div class="floating-elements">
+              <div class="floating-element">
+                <i class="lni lni-code"></i>
               </div>
-              <div class="lang-option" data-lang="fa">
-                <span class="flag">🇦🇫</span>
-                <span class="lang-name">فارسی</span>
+              <div class="floating-element">
+                <i class="lni lni-mobile"></i>
+              </div>
+              <div class="floating-element">
+                <i class="lni lni-cloud"></i>
+              </div>
+              <div class="floating-element">
+                <i class="lni lni-shield"></i>
               </div>
             </div>
           </div>
-
-          <!-- Theme Toggle -->
-          <button class="theme-toggle" id="themeToggle">
-            <i class="lni lni-sun"></i>
-            <i class="lni lni-moon"></i>
-          </button>
-
-          <!-- Mobile Toggle -->
-          <button class="mobile-toggle" id="mobileToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
         </div>
       </div>
-    </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-section" id="home">
-        <div class="hero-background">
-          <!-- Creative Animated SVG Background -->
-          <svg class="animated-svg-bg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-            <!-- Background gradients -->
-            <defs>
-              <linearGradient id="bgGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="rgba(61, 99, 221, 0.08)" />
-                <stop offset="100%" stop-color="rgba(61, 99, 221, 0.02)" />
-              </linearGradient>
-              <linearGradient id="bgGradient2" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="rgba(255, 107, 107, 0.06)" />
-                <stop offset="100%" stop-color="rgba(255, 107, 107, 0.01)" />
-              </linearGradient>
-              <linearGradient id="bgGradient3" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="rgba(16, 185, 129, 0.05)" />
-                <stop offset="100%" stop-color="rgba(16, 185, 129, 0.01)" />
-              </linearGradient>
-              
-              <!-- Creative pattern -->
-              <pattern id="creativePattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
-                <path d="M0,60 L120,60 M60,0 L60,120" stroke="rgba(61, 99, 221, 0.1)" stroke-width="1" fill="none" />
-                <circle cx="60" cy="60" r="15" fill="rgba(61, 99, 221, 0.05)" />
-                <path d="M30,30 L90,90 M90,30 L30,90" stroke="rgba(255, 107, 107, 0.05)" stroke-width="1" fill="none" />
-              </pattern>
-              
-              <!-- Advertising icon -->
-              <symbol id="ad-icon" viewBox="0 0 24 24">
-                <path fill="rgba(61, 99, 221, 0.3)" d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v-2h3v2zm5 0h-3v-2h3v2zm5 0h-3v-2h3v2z"/>
-              </symbol>
-              
-              <!-- Branding icon -->
-              <symbol id="brand-icon" viewBox="0 0 24 24">
-                <path fill="rgba(255, 107, 107, 0.3)" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/>
-              </symbol>
-              
-              <!-- System icon -->
-              <symbol id="system-icon" viewBox="0 0 24 24">
-                <path fill="rgba(16, 185, 129, 0.3)" d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"/>
-              </symbol>
-            </defs>
-            
-            <!-- Background rectangles with gradients -->
-            <rect x="0" y="0" width="100%" height="100%" fill="url(#bgGradient1)" />
-            <rect x="0" y="0" width="100%" height="100%" fill="url(#bgGradient2)" />
-            <rect x="0" y="0" width="100%" height="100%" fill="url(#bgGradient3)" />
-            
-            <!-- Creative pattern overlay -->
-            <rect x="0" y="0" width="100%" height="100%" fill="url(#creativePattern)" />
-            
-            <!-- Animated marketing elements -->
-            <g class="marketing-elements">
-              <!-- Advertising megaphone -->
-              <g transform="translate(200, 150)">
-                <path d="M0,0 Q30,-20 60,0 L40,40 Q30,30 20,40 Z" fill="rgba(61, 99, 221, 0.2)" />
-                <circle cx="30" cy="20" r="5" fill="rgba(61, 99, 221, 0.4)" />
-                <animateTransform attributeName="transform" type="translate" values="200,150;200,140;200,150" dur="4s" repeatCount="indefinite" />
-              </g>
-              
-              <!-- Branding elements -->
-              <g transform="translate(900, 250)">
-                <circle cx="0" cy="0" r="20" fill="rgba(255, 107, 107, 0.2)" />
-                <circle cx="0" cy="0" r="12" fill="rgba(255, 255, 255, 0.3)" />
-                <animateTransform attributeName="transform" type="rotate" values="0 900 250;15 900 250;0 900 250" dur="6s" repeatCount="indefinite" />
-              </g>
-              
-              <!-- System gears -->
-              <g transform="translate(600, 500)">
-                <circle cx="0" cy="0" r="25" fill="rgba(16, 185, 129, 0.2)" />
-                <circle cx="0" cy="0" r="15" fill="rgba(255, 255, 255, 0.3)" />
-                <rect x="-3" y="-20" width="6" height="12" fill="rgba(16, 185, 129, 0.4)" />
-                <rect x="-20" y="-3" width="12" height="6" fill="rgba(16, 185, 129, 0.4)" />
-                <animateTransform attributeName="transform" type="rotate" values="0 600 500;360 600 500" dur="8s" repeatCount="indefinite" />
-              </g>
-            </g>
-            
-            <!-- Animated connection lines -->
-            <g class="connection-lines">
-              <path d="M200,150 Q400,100 600,200 T1000,300" stroke="rgba(61, 99, 221, 0.3)" stroke-width="2" fill="none" stroke-dasharray="10,5">
-                <animate attributeName="stroke-dashoffset" values="0;30;0" dur="3s" repeatCount="indefinite" />
-              </path>
-              
-              <path d="M300,500 Q500,400 700,450 T1100,400" stroke="rgba(255, 107, 107, 0.3)" stroke-width="2" fill="none" stroke-dasharray="10,5">
-                <animate attributeName="stroke-dashoffset" values="0;30;0" dur="4s" repeatCount="indefinite" />
-              </path>
-              
-              <path d="M100,600 Q300,550 500,600 T900,500" stroke="rgba(16, 185, 129, 0.3)" stroke-width="2" fill="none" stroke-dasharray="10,5">
-                <animate attributeName="stroke-dashoffset" values="0;30;0" dur="3.5s" repeatCount="indefinite" />
-              </path>
-            </g>
-            
-            <!-- Floating service icons -->
-            <g class="service-icons">
-              <use xlink:href="#ad-icon" x="150" y="100" width="40" height="40">
-                <animate attributeName="opacity" values="0.3;0.6;0.3" dur="5s" repeatCount="indefinite" />
-                <animateTransform attributeName="transform" type="translate" values="0,0;0,-10;0,0" dur="5s" repeatCount="indefinite" />
-              </use>
-              
-              <use xlink:href="#brand-icon" x="1000" y="700" width="35" height="35">
-                <animate attributeName="opacity" values="0.3;0.6;0.3" dur="6s" repeatCount="indefinite" />
-                <animateTransform attributeName="transform" type="translate" values="0,0;0,10;0,0" dur="6s" repeatCount="indefinite" />
-              </use>
-              
-              <use xlink:href="#system-icon" x="800" y="150" width="30" height="30">
-                <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite" />
-                <animateTransform attributeName="transform" type="translate" values="0,0;5,0;0,0" dur="4s" repeatCount="indefinite" />
-              </use>
-            </g>
-            
-            <!-- Abstract geometric shapes -->
-            <g class="abstract-shapes">
-              <path d="M100,300 Q130,280 160,300 T220,300" stroke="rgba(61, 99, 221, 0.2)" stroke-width="3" fill="none">
-                <animate attributeName="d" values="M100,300 Q130,280 160,300 T220,300;M100,300 Q130,320 160,300 T220,300;M100,300 Q130,280 160,300 T220,300" dur="8s" repeatCount="indefinite" />
-              </path>
-              
-              <circle cx="1000" cy="200" r="25" fill="rgba(255, 107, 107, 0.2)">
-                <animate attributeName="r" values="25;30;25" dur="4s" repeatCount="indefinite" />
-              </circle>
-              
-              <rect x="500" y="100" width="40" height="40" rx="8" fill="rgba(16, 185, 129, 0.2)">
-                <animate attributeName="width" values="40;50;40" dur="5s" repeatCount="indefinite" />
-                <animate attributeName="height" values="40;50;40" dur="5s" repeatCount="indefinite" />
-              </rect>
-            </g>
-          </svg>
-        </div>
-        
-        <div class="hero-content">
-          <div class="hero-grid">
-            <div class="hero-text">
-              <h1 class="hero-title">
-                <span class="title-line">
-                  <span class="title-text">Transform Your Business</span>
-                </span>
-                <span class="title-line">
-                  <span class="title-text">With Digital Excellence</span>
-                </span>
-              </h1>
-              <p class="hero-subtitle">
-                IDEA AFG provides cutting-edge digital solutions including advertising campaigns, 
-                brand development, and system automation to drive growth and maximize efficiency 
-                for businesses of all sizes.
-              </p>
-              
-              <div class="services-highlight">
-                <div class="service-tag">
-                  <i class="fas fa-bullhorn"></i> Digital Advertising
-                </div>
-                <div class="service-tag">
-                  <i class="fas fa-palette"></i> Brand Identity
-                </div>
-                <div class="service-tag">
-                  <i class="fas fa-cogs"></i> System Automation
-                </div>
-                <div class="service-tag">
-                  <i class="fas fa-chart-line"></i> Business Intelligence
-                </div>
-              </div>
-              
-              <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">
-                  <i class="fas fa-rocket"></i>
-                  Start Your Project
-                </a>
-                <button class="btn btn-secondary " id="watchIntroBtn">
-                  <i class="fas fa-play-circle"></i>
-                  View Our Work
-                </button>
-              </div>
-            </div>
-            <div class="hero-visual">
-              <div class="hero-image-container">
-                <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80"
-                  alt="Digital Marketing Analytics Dashboard"
-                  class="hero-image"
-                  loading="eager"
-                />
-                <div class="floating-elements">
-                  <div class="floating-element">
-                    <i class="fas fa-bullseye"></i>
-                  </div>
-                  <div class="floating-element">
-                    <i class="fas fa-chart-pie"></i>
-                  </div>
-                  <div class="floating-element">
-                    <i class="fas fa-network-wired"></i>
-                  </div>
-                  <div class="floating-element">
-                    <i class="fas fa-users"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
     </section>
-  
     <!-- Enhanced Services Section -->
     <section id="services" class="services-section">
-        <div class="container">
-          <div class="text-center max-w-800 mx-auto mb-16">
-            <h1
-              class="mb-4 block text-lg font-semibold text-primary animated-badge"
-            >
-              <span>Our Expertise</span>
-            </h1>
-            <h2 class="section-title">Innovative ICT Solutions</h2>
-            <p class="section-subtitle">
-              We deliver cutting-edge technology services designed to transform
-              your digital landscape and accelerate business growth through
-              innovative, scalable solutions.
-            </p>
-          </div>
-
-          <div class="services-grid">
-            <!-- Front-end and Back-end Web Development -->
-            <div class="service-item">
-              <div class="service-icon-container">
-                <div class="service-icon">
-                  <i class="lni lni-code"></i>
-                </div>
-                <div class="service-icon-bg"></div>
-              </div>
-              <div class="service-content">
-                <h4>Web Development</h4>
-                <p>
-                  Custom front-end and back-end web solutions with modern
-                  frameworks, responsive design, and optimal performance for
-                  seamless user experiences.
-                </p>
-                <div class="service-features">
-                  <span>Front-end</span>
-                  <span>Back-end</span>
-                  <span>Responsive</span>
-                </div>
-              </div>
-              <div class="service-hover-effect"></div>
-            </div>
-
-            <!-- Management and Accounting Systems -->
-            <div class="service-item">
-              <div class="service-icon-container">
-                <div class="service-icon">
-                  <i class="lni lni-cogs"></i>
-                </div>
-                <div class="service-icon-bg"></div>
-              </div>
-              <div class="service-content">
-                <h4>Management Systems</h4>
-                <p>
-                  Comprehensive management and accounting systems with automated
-                  workflows, financial reporting, and real-time analytics for
-                  business optimization.
-                </p>
-                <div class="service-features">
-                  <span>ERP Systems</span>
-                  <span>Accounting</span>
-                  <span>Automation</span>
-                </div>
-              </div>
-              <div class="service-hover-effect"></div>
-            </div>
-
-            <!-- Mobile Applications -->
-            <div class="service-item">
-              <div class="service-icon-container">
-                <div class="service-icon">
-                  <i class="lni lni-mobile"></i>
-                </div>
-                <div class="service-icon-bg"></div>
-              </div>
-              <div class="service-content">
-                <h4>Mobile Applications</h4>
-                <p>
-                  Native and cross-platform mobile applications for iOS and
-                  Android with intuitive UI/UX, high performance, and seamless
-                  integration capabilities.
-                </p>
-                <div class="service-features">
-                  <span>iOS & Android</span>
-                  <span>Cross-Platform</span>
-                  <span>UI/UX Design</span>
-                </div>
-              </div>
-              <div class="service-hover-effect"></div>
-            </div>
-
-            <!-- Advertising and Marketing -->
-            <div class="service-item">
-              <div class="service-icon-container">
-                <div class="service-icon">
-                  <i class="lni lni-bullhorn"></i>
-                </div>
-                <div class="service-icon-bg"></div>
-              </div>
-              <div class="service-content">
-                <h4>Digital Marketing</h4>
-                <p>
-                  Strategic digital advertising and marketing campaigns with
-                  data-driven approaches to maximize reach, engagement, and
-                  conversion rates.
-                </p>
-                <div class="service-features">
-                  <span>SEO/SEM</span>
-                  <span>Social Media</span>
-                  <span>Campaigns</span>
-                </div>
-              </div>
-              <div class="service-hover-effect"></div>
-            </div>
-
-            <!-- Business Analysis and Consulting -->
-            <div class="service-item">
-              <div class="service-icon-container">
-                <div class="service-icon">
-                  <i class="lni lni-stats-up"></i>
-                </div>
-                <div class="service-icon-bg"></div>
-              </div>
-              <div class="service-content">
-                <h4>Business Consulting</h4>
-                <p>
-                  Comprehensive business analysis and strategic consulting to
-                  optimize operations, identify growth opportunities, and drive
-                  sustainable success.
-                </p>
-                <div class="service-features">
-                  <span>Analysis</span>
-                  <span>Strategy</span>
-                  <span>Optimization</span>
-                </div>
-              </div>
-              <div class="service-hover-effect"></div>
-            </div>
-
-            <!-- Graphic Design -->
-            <div class="service-item">
-              <div class="service-icon-container">
-                <div class="service-icon">
-                  <i class="lni lni-pallet"></i>
-                </div>
-                <div class="service-icon-bg"></div>
-              </div>
-              <div class="service-content">
-                <h4>Graphic Design</h4>
-                <p>
-                  Creative visual design solutions including branding, UI/UX
-                  design, and marketing materials that capture attention and
-                  communicate effectively.
-                </p>
-                <div class="service-features">
-                  <span>Branding</span>
-                  <span>UI/UX</span>
-                  <span>Marketing</span>
-                </div>
-              </div>
-              <div class="service-hover-effect"></div>
-            </div>
-          </div>
+      <div class="container">
+        <div class="text-center max-w-800 mx-auto mb-16">
+          <h1
+            class="mb-4 block text-lg font-semibold text-primary animated-badge"
+          >
+            <span>Our Expertise</span>
+          </h1>
+          <h2 class="section-title">Innovative ICT Solutions</h2>
+          <p class="section-subtitle">
+            We deliver cutting-edge technology services designed to transform
+            your digital landscape and accelerate business growth through
+            innovative, scalable solutions.
+          </p>
         </div>
 
-        <!-- Background Elements -->
-        <div class="services-bg-elements">
-          <div class="bg-shape shape-1"></div>
-          <div class="bg-shape shape-2"></div>
-          <div class="bg-shape shape-3"></div>
-          <div class="bg-shape shape-4"></div>
+        <div class="services-grid">
+          <!-- Front-end and Back-end Web Development -->
+          <div class="service-item">
+            <div class="service-icon-container">
+              <div class="service-icon">
+                <i class="lni lni-code"></i>
+              </div>
+              <div class="service-icon-bg"></div>
+            </div>
+            <div class="service-content">
+              <h4>Web Development</h4>
+              <p>
+                Custom front-end and back-end web solutions with modern
+                frameworks, responsive design, and optimal performance for
+                seamless user experiences.
+              </p>
+              <div class="service-features">
+                <span>Front-end</span>
+                <span>Back-end</span>
+                <span>Responsive</span>
+              </div>
+            </div>
+            <div class="service-hover-effect"></div>
+          </div>
+
+          <!-- Management and Accounting Systems -->
+          <div class="service-item">
+            <div class="service-icon-container">
+              <div class="service-icon">
+                <i class="lni lni-cogs"></i>
+              </div>
+              <div class="service-icon-bg"></div>
+            </div>
+            <div class="service-content">
+              <h4>Management Systems</h4>
+              <p>
+                Comprehensive management and accounting systems with automated
+                workflows, financial reporting, and real-time analytics for
+                business optimization.
+              </p>
+              <div class="service-features">
+                <span>ERP Systems</span>
+                <span>Accounting</span>
+                <span>Automation</span>
+              </div>
+            </div>
+            <div class="service-hover-effect"></div>
+          </div>
+
+          <!-- Mobile Applications -->
+          <div class="service-item">
+            <div class="service-icon-container">
+              <div class="service-icon">
+                <i class="lni lni-mobile"></i>
+              </div>
+              <div class="service-icon-bg"></div>
+            </div>
+            <div class="service-content">
+              <h4>Mobile Applications</h4>
+              <p>
+                Native and cross-platform mobile applications for iOS and
+                Android with intuitive UI/UX, high performance, and seamless
+                integration capabilities.
+              </p>
+              <div class="service-features">
+                <span>iOS & Android</span>
+                <span>Cross-Platform</span>
+                <span>UI/UX Design</span>
+              </div>
+            </div>
+            <div class="service-hover-effect"></div>
+          </div>
+
+          <!-- Advertising and Marketing -->
+          <div class="service-item">
+            <div class="service-icon-container">
+              <div class="service-icon">
+                <i class="lni lni-bullhorn"></i>
+              </div>
+              <div class="service-icon-bg"></div>
+            </div>
+            <div class="service-content">
+              <h4>Digital Marketing</h4>
+              <p>
+                Strategic digital advertising and marketing campaigns with
+                data-driven approaches to maximize reach, engagement, and
+                conversion rates.
+              </p>
+              <div class="service-features">
+                <span>SEO/SEM</span>
+                <span>Social Media</span>
+                <span>Campaigns</span>
+              </div>
+            </div>
+            <div class="service-hover-effect"></div>
+          </div>
+
+          <!-- Business Analysis and Consulting -->
+          <div class="service-item">
+            <div class="service-icon-container">
+              <div class="service-icon">
+                <i class="lni lni-stats-up"></i>
+              </div>
+              <div class="service-icon-bg"></div>
+            </div>
+            <div class="service-content">
+              <h4>Business Consulting</h4>
+              <p>
+                Comprehensive business analysis and strategic consulting to
+                optimize operations, identify growth opportunities, and drive
+                sustainable success.
+              </p>
+              <div class="service-features">
+                <span>Analysis</span>
+                <span>Strategy</span>
+                <span>Optimization</span>
+              </div>
+            </div>
+            <div class="service-hover-effect"></div>
+          </div>
+
+          <!-- Graphic Design -->
+          <div class="service-item">
+            <div class="service-icon-container">
+              <div class="service-icon">
+                <i class="lni lni-pallet"></i>
+              </div>
+              <div class="service-icon-bg"></div>
+            </div>
+            <div class="service-content">
+              <h4>Graphic Design</h4>
+              <p>
+                Creative visual design solutions including branding, UI/UX
+                design, and marketing materials that capture attention and
+                communicate effectively.
+              </p>
+              <div class="service-features">
+                <span>Branding</span>
+                <span>UI/UX</span>
+                <span>Marketing</span>
+              </div>
+            </div>
+            <div class="service-hover-effect"></div>
+          </div>
         </div>
+      </div>
+
+      <!-- Background Elements -->
+      <div class="services-bg-elements">
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+        <div class="bg-shape shape-3"></div>
+        <div class="bg-shape shape-4"></div>
+      </div>
     </section>
     <!-- Enhanced About Section -->
     <section id="about" class="about-section">
@@ -640,11 +708,11 @@
             Empowering Digital Transformation in Afghanistan
           </h2>
           <p class="about-description">
-            IDEA AFG is a premier technology company driving digital
-            innovation across Afghanistan. With a team of dedicated
-            professionals and years of industry experience, we deliver
-            comprehensive ICT solutions that transform businesses and
-            empower communities through cutting-edge technology.
+            IDEA AFG is a premier technology company driving digital innovation
+            across Afghanistan. With a team of dedicated professionals and years
+            of industry experience, we deliver comprehensive ICT solutions that
+            transform businesses and empower communities through cutting-edge
+            technology.
           </p>
         </div>
 
@@ -811,1508 +879,1497 @@
     </section>
     <!-- Enhanced Intro Video Section -->
     <section id="intro" class="intro-section">
-        <div class="container">
-            <div class="text-center max-w-800 mx-auto mb-16">
-                <h6 class="mb-4 block text-lg font-semibold text-primary animated-badge">
-                    <span>Company Overview</span>
-                </h6>
-                <h2 class="section-title">
-                    Transforming Ideas Into Digital Reality
-                </h2>
-                <p class="section-subtitle">
-                    Experience our innovative approach to digital transformation.
-                    Discover how we help businesses streamline operations, enhance
-                    productivity, and achieve sustainable growth through cutting-edge
-                    technology solutions.
-                </p>
-            </div>
-
-            <div class="video-container">
-                <div class="video-wrapper" id="videoTrigger">
-                    <div class="video-poster">
-                        <img
-                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                            alt="IDEA AFG Video"
-                            class="poster-image"
-                        />
-                        <div class="video-overlay">
-                            <div class="play-button">
-                                <div class="play-icon">
-                                    <i class="las la-play"></i>
-                                </div>
-                                <div class="pulse-ring"></div>
-                                <div class="pulse-ring ring-2"></div>
-                            </div>
-                            <div class="video-info">
-                                <h4>Digital Transformation in Action</h4>
-                                <p>
-                                    See how we deliver innovative solutions that drive
-                                    business success
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video-features">
-                    <div class="feature-card">
-                        <div class="feature-icon-container">
-                            <div class="feature-icon-bg"></div>
-                            <div class="feature-icon">
-                                <i class="las la-lightbulb"></i>
-                            </div>
-                        </div>
-                        <h5>Innovation</h5>
-                        <p>
-                            Cutting-edge solutions tailored to your specific business
-                            needs and challenges
-                        </p>
-                        <div class="feature-hover-effect"></div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon-container">
-                            <div class="feature-icon-bg"></div>
-                            <div class="feature-icon">
-                                <i class="las la-cog"></i>
-                            </div>
-                        </div>
-                        <h5>Expertise</h5>
-                        <p>
-                            Years of technical excellence and deep industry knowledge
-                            across multiple sectors
-                        </p>
-                        <div class="feature-hover-effect"></div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon-container">
-                            <div class="feature-icon-bg"></div>
-                            <div class="feature-icon">
-                                <i class="las la-headset"></i>
-                            </div>
-                        </div>
-                        <h5>Support</h5>
-                        <p>
-                            Comprehensive support and maintenance services to ensure
-                            optimal performance
-                        </p>
-                        <div class="feature-hover-effect"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Background Animation -->
-        <div class="intro-bg-animation">
-            <div class="floating-element el-1"></div>
-            <div class="floating-element el-2"></div>
-            <div class="floating-element el-3"></div>
-            <div class="floating-element el-4"></div>
-        </div>
-    </section>
-
-   <!-- Team section -->
-<section id="team" class="team-section">
-    <div class="container">
+      <div class="container">
         <div class="text-center max-w-800 mx-auto mb-16">
-            <h6 class="mb-4 block text-lg font-semibold text-primary animated-badge">
-                <span>Our Experts</span>
-            </h6>
-            <h2 class="section-title">Meet Our Professional Team</h2>
-            <p class="section-subtitle">
-                Our skilled professionals bring years of experience in software
-                development, system design, and digital innovation to deliver
-                exceptional ICT solutions.
-            </p>
+          <h6
+            class="mb-4 block text-lg font-semibold text-primary animated-badge"
+          >
+            <span>Company Overview</span>
+          </h6>
+          <h2 class="section-title">Transforming Ideas Into Digital Reality</h2>
+          <p class="section-subtitle">
+            Experience our innovative approach to digital transformation.
+            Discover how we help businesses streamline operations, enhance
+            productivity, and achieve sustainable growth through cutting-edge
+            technology solutions.
+          </p>
+        </div>
+
+        <div class="video-container">
+          <div class="video-wrapper" id="videoTrigger">
+            <div class="video-poster">
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="IDEA AFG Video"
+                class="poster-image"
+              />
+              <div class="video-overlay">
+                <div class="play-button">
+                  <div class="play-icon">
+                    <i class="las la-play"></i>
+                  </div>
+                  <div class="pulse-ring"></div>
+                  <div class="pulse-ring ring-2"></div>
+                </div>
+                <div class="video-info">
+                  <h4>Digital Transformation in Action</h4>
+                  <p>
+                    See how we deliver innovative solutions that drive business
+                    success
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-features">
+            <div class="feature-card">
+              <div class="feature-icon-container">
+                <div class="feature-icon-bg"></div>
+                <div class="feature-icon">
+                  <i class="las la-lightbulb"></i>
+                </div>
+              </div>
+              <h5>Innovation</h5>
+              <p>
+                Cutting-edge solutions tailored to your specific business needs
+                and challenges
+              </p>
+              <div class="feature-hover-effect"></div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-container">
+                <div class="feature-icon-bg"></div>
+                <div class="feature-icon">
+                  <i class="las la-cog"></i>
+                </div>
+              </div>
+              <h5>Expertise</h5>
+              <p>
+                Years of technical excellence and deep industry knowledge across
+                multiple sectors
+              </p>
+              <div class="feature-hover-effect"></div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-container">
+                <div class="feature-icon-bg"></div>
+                <div class="feature-icon">
+                  <i class="las la-headset"></i>
+                </div>
+              </div>
+              <h5>Support</h5>
+              <p>
+                Comprehensive support and maintenance services to ensure optimal
+                performance
+              </p>
+              <div class="feature-hover-effect"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Background Animation -->
+      <div class="intro-bg-animation">
+        <div class="floating-element el-1"></div>
+        <div class="floating-element el-2"></div>
+        <div class="floating-element el-3"></div>
+        <div class="floating-element el-4"></div>
+      </div>
+    </section>
+    <!-- Team section -->
+    <section id="team" class="team-section">
+      <div class="container">
+        <div class="text-center max-w-800 mx-auto mb-16">
+          <h6
+            class="mb-4 block text-lg font-semibold text-primary animated-badge"
+          >
+            <span>Our Experts</span>
+          </h6>
+          <h2 class="section-title">Meet Our Professional Team</h2>
+          <p class="section-subtitle">
+            Our skilled professionals bring years of experience in software
+            development, system design, and digital innovation to deliver
+            exceptional ICT solutions.
+          </p>
         </div>
 
         <div class="team-grid" id="teamGrid">
-            <!-- Team Member 1 -->
-            <div class="team-card" data-member="1">
-                <div class="card-inner">
-                    <div class="card-image">
-                        <img src="./assets/img/rafiahmad.JPG" alt="Rafe Khatebi" />
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-content">
-                        <div class="main-info">
-                            <h3 class="member-name">Rafe Khatebi</h3>
-                            <p class="member-role">Lead Developer</p>
-                        </div>
-                        <div class="hover-content">
-                            <div class="member-description">
-                                <p>Expert in full-stack development with 8+ years of experience building scalable applications and leading development teams. Specialized in microservices architecture and cloud technologies.</p>
-                            </div>
-                            <div class="member-social">
-                                <a href="https://linkedin.com" class="social-link linkedin" title="LinkedIn">
-                                    <i class="lab la-linkedin"></i>
-                                </a>
-                                <a href="https://wa.me" class="social-link whatsapp" title="WhatsApp">
-                                    <i class="lab la-whatsapp"></i>
-                                </a>
-                                <a href="https://instagram.com" class="social-link instagram" title="Instagram">
-                                    <i class="lab la-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Team Member 1 -->
+          <div class="team-card" data-member="1">
+            <div class="card-inner">
+              <div class="card-image">
+                <img src="./assets/img/rafiahmad.JPG" alt="Rafe Khatebi" />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Rafe Khatebi</h3>
+                  <p class="member-role">Lead Developer</p>
                 </div>
-                <div class="card-glow"></div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://linkedin.com"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://wa.me"
+                      class="social-link whatsapp"
+                      title="WhatsApp"
+                    >
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://github.com"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card-glow"></div>
+          </div>
 
-            <!-- Team Member 2 -->
-            <div class="team-card" data-member="2">
-                <div class="card-inner">
-                    <div class="card-image">
-                        <img src="./assets/img/fuad.jpg" alt="Fawad Anwari" />
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-content">
-                        <div class="main-info">
-                            <h3 class="member-name">Fawad Anwari</h3>
-                            <p class="member-role">Full Stack Developer</p>
-                        </div>
-                        <div class="hover-content">
-                            <div class="member-description">
-                                <p>Specialized in modern JavaScript frameworks with 6+ years of experience in building robust web applications. Expert in React, Node.js, and database design.</p>
-                            </div>
-                            <div class="member-social">
-                                <a href="https://linkedin.com" class="social-link linkedin" title="LinkedIn">
-                                    <i class="lab la-linkedin"></i>
-                                </a>
-                                <a href="https://wa.me" class="social-link whatsapp" title="WhatsApp">
-                                    <i class="lab la-whatsapp"></i>
-                                </a>
-                                <a href="https://instagram.com" class="social-link instagram" title="Instagram">
-                                    <i class="lab la-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Team Member 2 -->
+          <div class="team-card" data-member="2">
+            <div class="card-inner">
+              <div class="card-image">
+                <img src="./assets/img/fuad.jpg" alt="Fawad Anwari" />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Fawad Anwari</h3>
+                  <p class="member-role">Full Stack Developer</p>
                 </div>
-                <div class="card-glow"></div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://linkedin.com"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://wa.me"
+                      class="social-link whatsapp"
+                      title="WhatsApp"
+                    >
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://github.com"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card-glow"></div>
+          </div>
 
-            <!-- Team Member 3 -->
-            <div class="team-card" data-member="3">
-                <div class="card-inner">
-                    <div class="card-image">
-                        <img src="./assets/img/Mr.edris akrami.jpg" alt="Mr. Edris Akrami" />
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-content">
-                        <div class="main-info">
-                            <h3 class="member-name">Mr. Edris Akrami</h3>
-                            <p class="member-role">Manager</p>
-                        </div>
-                        <div class="hover-content">
-                            <div class="member-description">
-                                <p>Experienced manager with a strong background in project management and team leadership within the tech industry. Focused on strategic planning and business development.</p>
-                            </div>
-                            <div class="member-social">
-                                <a href="https://linkedin.com" class="social-link linkedin" title="LinkedIn">
-                                    <i class="lab la-linkedin"></i>
-                                </a>
-                                <a href="https://wa.me" class="social-link whatsapp" title="WhatsApp">
-                                    <i class="lab la-whatsapp"></i>
-                                </a>
-                                <a href="https://instagram.com" class="social-link instagram" title="Instagram">
-                                    <i class="lab la-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Team Member 3 -->
+          <div class="team-card" data-member="3">
+            <div class="card-inner">
+              <div class="card-image">
+                <img
+                  src="./assets/img/Mr.edris akrami.jpg"
+                  alt="Mr. Edris Akrami"
+                />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Mr. Edris Akrami</h3>
+                  <p class="member-role">Manager</p>
                 </div>
-                <div class="card-glow"></div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://linkedin.com"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://wa.me"
+                      class="social-link whatsapp"
+                      title="WhatsApp"
+                    >
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://github.com"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card-glow"></div>
+          </div>
 
-            <!-- Team Member 4 -->
-            <div class="team-card" data-member="4">
-                <div class="card-inner">
-                    <div class="card-image">
-                        <img src="./assets/img/najibullah armn.jpg" alt="Najibullah Arman" />
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-content">
-                        <div class="main-info">
-                            <h3 class="member-name">Najibullah Arman</h3>
-                            <p class="member-role">Graphic Designer</p>
-                        </div>
-                        <div class="hover-content">
-                            <div class="member-description">
-                                <p>Creative designer with expertise in UI/UX design and brand identity development focused on user-centered design. Proficient in Adobe Creative Suite and prototyping tools.</p>
-                            </div>
-                            <div class="member-social">
-                                <a href="https://linkedin.com" class="social-link linkedin" title="LinkedIn">
-                                    <i class="lab la-linkedin"></i>
-                                </a>
-                                <a href="https://wa.me" class="social-link whatsapp" title="WhatsApp">
-                                    <i class="lab la-whatsapp"></i>
-                                </a>
-                                <a href="https://instagram.com" class="social-link instagram" title="Instagram">
-                                    <i class="lab la-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Team Member 4 -->
+          <div class="team-card" data-member="4">
+            <div class="card-inner">
+              <div class="card-image">
+                <img
+                  src="./assets/img/najibullah armn.jpg"
+                  alt="Najibullah Arman"
+                />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Najibullah Arman</h3>
+                  <p class="member-role">Graphic Designer</p>
                 </div>
-                <div class="card-glow"></div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://linkedin.com"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://wa.me"
+                      class="social-link whatsapp"
+                      title="WhatsApp"
+                    >
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://github.com"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card-glow"></div>
+          </div>
 
-            <!-- Team Member 5 -->
-            <div class="team-card" data-member="5">
-                <div class="card-inner">
-                    <div class="card-image">
-                        <img src="./assets/img/masoud.jpg" alt="Masoud Yarzadah" />
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-content">
-                        <div class="main-info">
-                            <h3 class="member-name">Masoud Yarzadah</h3>
-                            <p class="member-role">Accountant</p>
-                        </div>
-                        <div class="hover-content">
-                            <div class="member-description">
-                                <p>Specialized in financial management and accounting principles with 7+ years of experience in corporate finance. Expert in financial reporting and budget planning.</p>
-                            </div>
-                            <div class="member-social">
-                                <a href="https://linkedin.com" class="social-link linkedin" title="LinkedIn">
-                                    <i class="lab la-linkedin"></i>
-                                </a>
-                                <a href="https://wa.me" class="social-link whatsapp" title="WhatsApp">
-                                    <i class="lab la-whatsapp"></i>
-                                </a>
-                                <a href="https://instagram.com" class="social-link instagram" title="Instagram">
-                                    <i class="lab la-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Team Member 5 -->
+          <div class="team-card" data-member="5">
+            <div class="card-inner">
+              <div class="card-image">
+                <img src="./assets/img/masoud.jpg" alt="Masoud Yarzadah" />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Masoud Yarzadah</h3>
+                  <p class="member-role">Accountant</p>
                 </div>
-                <div class="card-glow"></div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://linkedin.com"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://wa.me"
+                      class="social-link whatsapp"
+                      title="WhatsApp"
+                    >
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://github.com"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card-glow"></div>
+          </div>
 
-            <!-- Team Member 6 -->
-            <div class="team-card" data-member="6">
-                <div class="card-inner">
-                    <div class="card-image">
-                        <img src="./assets/img/sohail.jpg" alt="Sohail Dawoodi"/>
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-content">
-                        <div class="main-info">
-                            <h3 class="member-name">Sohail Dawoodi</h3>
-                            <p class="member-role">Software Engineer</p>
-                        </div>
-                        <div class="hover-content">
-                            <div class="member-description">
-                                <p>Skilled in backend development and system architecture with expertise in Java, Python, and cloud technologies. Passionate about building scalable and efficient solutions.</p>
-                            </div>
-                            <div class="member-social">
-                                <a href="https://linkedin.com" class="social-link linkedin" title="LinkedIn">
-                                    <i class="lab la-linkedin"></i>
-                                </a>
-                                <a href="https://wa.me" class="social-link whatsapp" title="WhatsApp">
-                                    <i class="lab la-whatsapp"></i>
-                                </a>
-                                <a href="https://instagram.com" class="social-link instagram" title="Instagram">
-                                    <i class="lab la-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Team Member 6 -->
+          <div class="team-card" data-member="6">
+            <div class="card-inner">
+              <div class="card-image">
+                <img src="./assets/img/sohail.jpg" alt="Sohail Dawoodi" />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Sohail Dawoodi</h3>
+                  <p class="member-role">Software Engineer</p>
                 </div>
-                <div class="card-glow"></div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://linkedin.com"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://wa.me"
+                      class="social-link whatsapp"
+                      title="WhatsApp"
+                    >
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://github.com"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card-glow"></div>
+          </div>
 
-            <!-- Team Member 7 -->
-            <div class="team-card" data-member="7">
-                <div class="card-inner">
-                    <div class="card-image">
-                        <img src="./assets/img/walid akrami.jpg"  alt="Walid Mohammadi" />
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-content">
-                        <div class="main-info">
-                            <h3 class="member-name">Walid Mohammadi</h3>
-                            <p class="member-role">UI/UX Designer</p>
-                        </div>
-                        <div class="hover-content">
-                            <div class="member-description">
-                                <p>Creative designer with expertise in Figma, Adobe CC and user research methodologies focused on creating intuitive experiences. Strong background in design systems.</p>
-                            </div>
-                            <div class="member-social">
-                                <a href="https://linkedin.com" class="social-link linkedin" title="LinkedIn">
-                                    <i class="lab la-linkedin"></i>
-                                </a>
-                                <a href="https://wa.me" class="social-link whatsapp" title="WhatsApp">
-                                    <i class="lab la-whatsapp"></i>
-                                </a>
-                                <a href="https://instagram.com" class="social-link instagram" title="Instagram">
-                                    <i class="lab la-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Team Member 7 -->
+          <div class="team-card" data-member="7">
+            <div class="card-inner">
+              <div class="card-image">
+                <img src="./assets/img/hadi.jpg" alt="Hadi Ebrahimi" />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Hadi Ebrahimi</h3>
+                  <p class="member-role">Front-end Developer</p>
                 </div>
-                <div class="card-glow"></div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://linkedin.com/in/hadi-ebrahimi-002a37241"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a href="" class="social-link whatsapp" title="WhatsApp">
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href=" https://github.com/HadiEbrahimi313"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card-glow"></div>
+          </div>
 
-            <!-- Team Member 8 -->
-            <div class="team-card" data-member="8">
-                <div class="card-inner">
-                    <div class="card-image">
-                        <img src="./assets/img/rabe milad.jpg" alt="Rabe Milad" />
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-content">
-                        <div class="main-info">
-                            <h3 class="member-name">Rabe Milad</h3>
-                            <p class="member-role">Front-end Developer</p>
-                        </div>
-                        <div class="hover-content">
-                            <div class="member-description">
-                                <p>Specialized in React, Vue.js and modern CSS frameworks with focus on creating responsive and interactive user interfaces. Experienced in working with modern APIs.</p>
-                            </div>
-                            <div class="member-social">
-                                <a href="https://linkedin.com" class="social-link linkedin" title="LinkedIn">
-                                    <i class="lab la-linkedin"></i>
-                                </a>
-                                <a href="https://wa.me" class="social-link whatsapp" title="WhatsApp">
-                                    <i class="lab la-whatsapp"></i>
-                                </a>
-                                <a href="https://instagram.com" class="social-link instagram" title="Instagram">
-                                    <i class="lab la-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Team Member 8 -->
+          <div class="team-card" data-member="8">
+            <div class="card-inner">
+              <div class="card-image">
+                <img
+                  src="./assets/img/rohullah noori.jpg"
+                  alt="Rohullah Noori"
+                />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Rohullah Noori</h3>
+                  <p class="member-role">Wordpress Developer</p>
                 </div>
-                <div class="card-glow"></div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://linkedin.com"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://wa.me"
+                      class="social-link whatsapp"
+                      title="WhatsApp"
+                    >
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://github.com"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card-glow"></div>
+          </div>
 
-            <!-- Team Member 9 (Hidden initially) -->
-            <div class="team-card hidden" data-member="9">
-                <div class="card-inner">
-                    <div class="card-image">
-                        <img src="./assets/img/rashad akrami.jpg" alt="Rashad Afghan" />
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-content">
-                        <div class="main-info">
-                            <h3 class="member-name">Rashad Afghan</h3>
-                            <p class="member-role">Developer</p>
-                        </div>
-                        <div class="hover-content">
-                            <div class="member-description">
-                                <p>Full-stack developer experienced in JavaScript, Node.js and database management. Passionate about building efficient web applications and learning new technologies.</p>
-                            </div>
-                            <div class="member-social">
-                                <a href="https://linkedin.com" class="social-link linkedin" title="LinkedIn">
-                                    <i class="lab la-linkedin"></i>
-                                </a>
-                                <a href="https://wa.me" class="social-link whatsapp" title="WhatsApp">
-                                    <i class="lab la-whatsapp"></i>
-                                </a>
-                                <a href="https://instagram.com" class="social-link instagram" title="Instagram">
-                                    <i class="lab la-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Team Member 9 -->
+          <div class="team-card" data-member="9">
+            <div class="card-inner">
+              <div class="card-image">
+                <img src="./assets/img/Nasrullah.jpg" alt="Nasrullah Qanoni" />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Nasrullah Qanoni</h3>
+                  <p class="member-role">Database Designer</p>
                 </div>
-                <div class="card-glow"></div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://linkedin.com"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://wa.me"
+                      class="social-link whatsapp"
+                      title="WhatsApp"
+                    >
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://github.com"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card-glow"></div>
+          </div>
 
-            <!-- Team Member 10 (Hidden initially) -->
-            <div class="team-card hidden" data-member="10">
-                <div class="card-inner">
-                    <div class="card-image">
-                        <img src="./assets/img/wahid sahel.jpg" alt="Wahid Salih" />
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-content">
-                        <div class="main-info">
-                            <h3 class="member-name">Wahid Salih</h3>
-                            <p class="member-role">Mobile Developer</p>
-                        </div>
-                        <div class="hover-content">
-                            <div class="member-description">
-                                <p>Specialized in React Native and Flutter for cross-platform mobile development with focus on performance and user experience. Strong background in native mobile development.</p>
-                            </div>
-                            <div class="member-social">
-                                <a href="https://linkedin.com" class="social-link linkedin" title="LinkedIn">
-                                    <i class="lab la-linkedin"></i>
-                                </a>
-                                <a href="https://wa.me" class="social-link whatsapp" title="WhatsApp">
-                                    <i class="lab la-whatsapp"></i>
-                                </a>
-                                <a href="https://instagram.com" class="social-link instagram" title="Instagram">
-                                    <i class="lab la-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Team Member 10 -->
+          <div class="team-card" data-member="10">
+            <div class="card-inner">
+              <div class="card-image">
+                <img src="./assets/img/Musavi.jpg" alt="Sayed Musavi" />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Sayed M Hossain Musavi</h3>
+                  <p class="member-role">Backend Developer</p>
                 </div>
-                <div class="card-glow"></div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://www.linkedin.com/in/sayed-m-hossain-musavi-81b114339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://wa.me"
+                      class="social-link whatsapp"
+                      title="WhatsApp"
+                    >
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://github.com"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="card-glow"></div>
+          </div>
+
+          <!-- Team Member 11 -->
+          <div class="team-card" data-member="11">
+            <div class="card-inner">
+              <div class="card-image">
+                <img
+                  src="./assets/img/walid akrami.jpg"
+                  alt="Walid Mohammadi"
+                />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Walid Mohammadi</h3>
+                  <p class="member-role">UI/UX Designer</p>
+                </div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://linkedin.com"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://wa.me"
+                      class="social-link whatsapp"
+                      title="WhatsApp"
+                    >
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://github.com"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-glow"></div>
+          </div>
+
+          <!-- Team Member 12 -->
+          <div class="team-card" data-member="12">
+            <div class="card-inner">
+              <div class="card-image">
+                <img src="./assets/img/rabe milad.jpg" alt="Rabe Milad" />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Rabe Milad</h3>
+                  <p class="member-role">Front-end Developer</p>
+                </div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://linkedin.com"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://wa.me"
+                      class="social-link whatsapp"
+                      title="WhatsApp"
+                    >
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://github.com"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-glow"></div>
+          </div>
+
+          <!-- Team Member 13 -->
+          <div class="team-card hidden" data-member="13">
+            <div class="card-inner">
+              <div class="card-image">
+                <img src="./assets/img/rashad akrami.jpg" alt="Rashad Afghan" />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Rashad Afghan</h3>
+                  <p class="member-role">Developer</p>
+                </div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://linkedin.com"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://wa.me"
+                      class="social-link whatsapp"
+                      title="WhatsApp"
+                    >
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://github.com"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-glow"></div>
+          </div>
+
+          <!-- Team Member 14 -->
+          <div class="team-card hidden" data-member="14">
+            <div class="card-inner">
+              <div class="card-image">
+                <img src="./assets/img/wahid sahel.jpg" alt="Wahid Salih" />
+                <div class="image-overlay"></div>
+              </div>
+              <div class="card-content">
+                <div class="main-info">
+                  <h3 class="member-name">Wahid Salih</h3>
+                  <p class="member-role">Mobile Developer</p>
+                </div>
+                <div class="hover-content">
+                  <div class="member-social">
+                    <a
+                      href="https://linkedin.com"
+                      class="social-link linkedin"
+                      title="LinkedIn"
+                    >
+                      <i class="lab la-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://wa.me"
+                      class="social-link whatsapp"
+                      title="WhatsApp"
+                    >
+                      <i class="lab la-whatsapp"></i>
+                    </a>
+                    <a
+                      href="https://github.com"
+                      class="social-link github"
+                      title="GitHub"
+                    >
+                      <i class="lab la-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-glow"></div>
+          </div>
         </div>
 
         <!-- Load More button -->
         <div class="text-center mt-16">
-            <button id="loadMoreTeam" class="btn btn-primary">
-                View More Members
-                <i class="las la-arrow-down ml-2"></i>
-            </button>
+          <button id="loadMoreTeam" class="btn btn-primary">
+            View More Members
+            <i class="las la-arrow-down ml-2"></i>
+          </button>
         </div>
-    </div>
+      </div>
 
-    <!-- Background Elements -->
-    <div class="team-bg-elements">
+      <!-- Background Elements -->
+      <div class="team-bg-elements">
         <div class="bg-shape shape-1"></div>
         <div class="bg-shape shape-2"></div>
         <div class="bg-shape shape-3"></div>
-    </div>
-</section>
-
-    <!-- Portfolio section -->
-    <section id="portfolio" class="section-area">
-        <div class="container">
-          <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 block text-lg font-semibold text-primary">
-              Portfolio
-            </h6>
-            <h2 class="mb-6">Our Successful Projects</h2>
-            <p>
-              Explore our diverse portfolio of digital solutions including
-              accounting systems, business websites, mobile applications, and
-              custom dashboards that have transformed our clients' operations.
-            </p>
-          </div>
-
-          <nav
-            class="scroll-revealed portfolio-menu mb-[3.750rem] text-center"
-            aria-label="Portfolio filter"
-          >
-            <button
-              type="button"
-              class="font-semibold px-5 py-2 rounded-md text-body-light-11 dark:text-body-dark-11 hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color active"
-              data-filter="all"
-            >
-              All Work
-            </button>
-            <button
-              type="button"
-              class="font-semibold px-5 py-2 rounded-md text-body-light-11 dark:text-body-dark-11 hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-              data-filter="web-development"
-            >
-              Web Development
-            </button>
-            <button
-              type="button"
-              class="font-semibold px-5 py-2 rounded-md text-body-light-11 dark:text-body-dark-11 hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-              data-filter="mobile-apps"
-            >
-              Mobile Apps
-            </button>
-            <button
-              type="button"
-              class="font-semibold px-5 py-2 rounded-md text-body-light-11 dark:text-body-dark-11 hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-              data-filter="accounting"
-            >
-              Accounting Systems
-            </button>
-            <button
-              type="button"
-              class="font-semibold px-5 py-2 rounded-md text-body-light-11 dark:text-body-dark-11 hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-              data-filter="dashboards"
-            >
-              Dashboards
-            </button>
-          </nav>
-
-          <div class="scroll-revealed portfolio-grid row">
-            <div class="portfolio col-12 sm:col-6 lg:col-4">
-              <article class="group" data-filter="web-development">
-                <div
-                  class="relative overflow-hidden w-full aspect-[4/3] rounded-xl"
-                >
-                  <img
-                    src="./assets/img/portfolio/portfolio-1.jpg"
-                    alt="E-Commerce Website"
-                    class="w-full h-full object-cover"
-                  />
-                  <div
-                    class="absolute top-0 left-0 w-full aspect-[4/3] flex items-center justify-center bg-body-light-1/75 scale-[0.15] rounded-xl opacity-0 invisible group-hover:scale-95 group-hover:opacity-100 group-hover:visible"
-                  >
-                    <div class="flex flex-wrap gap-2 p-4">
-                      <div class="inline-block relative">
-                        <a
-                          href="./assets/img/portfolio/portfolio-1.jpg"
-                          class="portfolio-box text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                        >
-                          <i class="lni lni-zoom-in"></i>
-                        </a>
-                      </div>
-                      <div class="portfolio-icon">
-                        <a
-                          href="javascript:void(0)"
-                          class="text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                        >
-                          <i class="lni lni-link"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="pt-4">
-                  <h4 class="mb-2">
-                    <a
-                      href="javascript:void(0)"
-                      class="text-[1.5rem] leading-tight text-inherit"
-                      >E-Commerce Website</a
-                    >
-                  </h4>
-                  <p>
-                    Modern responsive e-commerce platform with secure payment
-                    integration and inventory management.
-                  </p>
-                </div>
-              </article>
-            </div>
-
-            <div class="portfolio col-12 sm:col-6 lg:col-4">
-              <article class="group" data-filter="mobile-apps">
-                <div
-                  class="relative overflow-hidden w-full aspect-[4/3] rounded-xl"
-                >
-                  <img
-                    src="./assets/img/portfolio/portfolio-2.jpg"
-                    alt="Business Mobile App"
-                    class="w-full h-full object-cover"
-                  />
-                  <div
-                    class="absolute top-0 left-0 w-full aspect-[4/3] flex items-center justify-center bg-body-light-1/75 scale-[0.15] rounded-xl opacity-0 invisible group-hover:scale-95 group-hover:opacity-100 group-hover:visible"
-                  >
-                    <div class="flex flex-wrap gap-2 p-4">
-                      <div class="inline-block relative">
-                        <a
-                          href="./assets/img/portfolio/portfolio-2.jpg"
-                          class="portfolio-box text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                        >
-                          <i class="lni lni-zoom-in"></i>
-                        </a>
-                      </div>
-                      <div class="portfolio-icon">
-                        <a
-                          href="javascript:void(0)"
-                          class="text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                        >
-                          <i class="lni lni-link"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="pt-4">
-                  <h4 class="mb-2">
-                    <a
-                      href="javascript:void(0)"
-                      class="text-[1.5rem] leading-tight text-inherit"
-                      >Business Mobile App</a
-                    >
-                  </h4>
-                  <p>
-                    Cross-platform mobile application for business management
-                    with real-time notifications and offline capabilities.
-                  </p>
-                </div>
-              </article>
-            </div>
-
-            <div class="portfolio col-12 sm:col-6 lg:col-4">
-              <article class="group" data-filter="accounting">
-                <div
-                  class="relative overflow-hidden w-full aspect-[4/3] rounded-xl"
-                >
-                  <img
-                    src="./assets/img/portfolio/portfolio-3.jpg"
-                    alt="Accounting Management System"
-                    class="w-full h-full object-cover"
-                  />
-                  <div
-                    class="absolute top-0 left-0 w-full aspect-[4/3] flex items-center justify-center bg-body-light-1/75 scale-[0.15] rounded-xl opacity-0 invisible group-hover:scale-95 group-hover:opacity-100 group-hover:visible"
-                  >
-                    <div class="flex flex-wrap gap-2 p-4">
-                      <div class="inline-block relative">
-                        <a
-                          href="./assets/img/portfolio/portfolio-3.jpg"
-                          class="portfolio-box text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                        >
-                          <i class="lni lni-zoom-in"></i>
-                        </a>
-                      </div>
-                      <div class="portfolio-icon">
-                        <a
-                          href="javascript:void(0)"
-                          class="text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                        >
-                          <i class="lni lni-link"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="pt-4">
-                  <h4 class="mb-2">
-                    <a
-                      href="javascript:void(0)"
-                      class="text-[1.5rem] leading-tight text-inherit"
-                      >Accounting Management System</a
-                    >
-                  </h4>
-                  <p>
-                    Comprehensive accounting software with automated invoicing,
-                    financial reporting, and tax management features.
-                  </p>
-                </div>
-              </article>
-            </div>
-
-            <div class="portfolio col-12 sm:col-6 lg:col-4">
-              <article class="group" data-filter="dashboards">
-                <div
-                  class="relative overflow-hidden w-full aspect-[4/3] rounded-xl"
-                >
-                  <img
-                    src="./assets/img/portfolio/portfolio-4.jpg"
-                    alt="Business Analytics Dashboard"
-                    class="w-full h-full object-cover"
-                  />
-                  <div
-                    class="absolute top-0 left-0 w-full aspect-[4/3] flex items-center justify-center bg-body-light-1/75 scale-[0.15] rounded-xl opacity-0 invisible group-hover:scale-95 group-hover:opacity-100 group-hover:visible"
-                  >
-                    <div class="flex flex-wrap gap-2 p-4">
-                      <div class="inline-block relative">
-                        <a
-                          href="./assets/img/portfolio/portfolio-4.jpg"
-                          class="portfolio-box text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                        >
-                          <i class="lni lni-zoom-in"></i>
-                        </a>
-                      </div>
-                      <div class="portfolio-icon">
-                        <a
-                          href="javascript:void(0)"
-                          class="text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                        >
-                          <i class="lni lni-link"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="pt-4">
-                  <h4 class="mb-2">
-                    <a
-                      href="javascript:void(0)"
-                      class="text-[1.5rem] leading-tight text-inherit"
-                      >Business Analytics Dashboard</a
-                    >
-                  </h4>
-                  <p>
-                    Interactive data visualization dashboard with real-time
-                    analytics, KPI tracking, and customizable reports.
-                  </p>
-                </div>
-              </article>
-            </div>
-
-            <div class="portfolio col-12 sm:col-6 lg:col-4">
-              <article class="group" data-filter="branding">
-                <div
-                  class="relative overflow-hidden w-full aspect-[4/3] rounded-xl"
-                >
-                  <img
-                    src="./assets/img/portfolio/portfolio-5.jpg"
-                    alt="SEO Services"
-                    class="w-full h-full object-cover"
-                  />
-                  <div
-                    class="absolute top-0 left-0 w-full aspect-[4/3] flex items-center justify-center bg-body-light-1/75 scale-[0.15] rounded-xl opacity-0 invisible group-hover:scale-95 group-hover:opacity-100 group-hover:visible"
-                  >
-                    <div class="flex flex-wrap gap-2 p-4">
-                      <div class="inline-block relative">
-                        <a
-                          href="./assets/img/portfolio/portfolio-5.jpg"
-                          class="portfolio-box text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                        >
-                          <i class="lni lni-zoom-in"></i>
-                        </a>
-                      </div>
-                      <div class="portfolio-icon">
-                        <a
-                          href="javascript:void(0)"
-                          class="text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                        >
-                          <i class="lni lni-link"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="pt-4">
-                  <h4 class="mb-2">
-                    <a
-                      href="javascript:void(0)"
-                      class="text-[1.5rem] leading-tight text-inherit"
-                      >SEO Services</a
-                    >
-                  </h4>
-                  <p>
-                    Short description for the ones who look for something new.
-                    Awesome!
-                  </p>
-                </div>
-              </article>
-            </div>
-
-            <div class="portfolio col-12 sm:col-6 lg:col-4">
-              <article class="group" data-filter="marketing">
-                <div
-                  class="relative overflow-hidden w-full aspect-[4/3] rounded-xl"
-                >
-                  <img
-                    src="./assets/img/portfolio/portfolio-6.jpg"
-                    alt="Product Design"
-                    class="w-full h-full object-cover"
-                  />
-                  <div
-                    class="absolute top-0 left-0 w-full aspect-[4/3] flex items-center justify-center bg-body-light-1/75 scale-[0.15] rounded-xl opacity-0 invisible group-hover:scale-95 group-hover:opacity-100 group-hover:visible"
-                  >
-                    <div class="flex flex-wrap gap-2 p-4">
-                      <div class="inline-block relative">
-                        <a
-                          href="./assets/img/portfolio/portfolio-6.jpg"
-                          class="portfolio-box text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                        >
-                          <i class="lni lni-zoom-in"></i>
-                        </a>
-                      </div>
-                      <div class="portfolio-icon">
-                        <a
-                          href="javascript:void(0)"
-                          class="text-[1.75rem] text-primary-color bg-primary z-10 w-[60px] aspect-square rounded-lg text-center inline-flex items-center justify-center hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10 dark:hover:text-primary-color focus:bg-primary-light-10 focus:text-primary-color dark:focus:bg-primary-dark-10 dark:focus:text-primary-color"
-                        >
-                          <i class="lni lni-link"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="pt-4">
-                  <h4 class="mb-2">
-                    <a
-                      href="javascript:void(0)"
-                      class="text-[1.5rem] leading-tight text-inherit"
-                      >Product Design</a
-                    >
-                  </h4>
-                  <p>
-                    Short description for the ones who look for something new.
-                    Awesome!
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
+      </div>
     </section>
 
     <!-- Testimonials section -->
-<section id="testimonials" class="section-area">
-    <div class="container">
+    <section id="testimonials" class="section-area">
+      <div class="container">
         <div class="scroll-revealed text-center max-w-800 mx-auto mb-16">
-            <div class="animated-badge">
-                <span>Client Reviews</span>
-            </div>
-            <h2 class="section-title">What Our Clients Say</h2>
-            <p class="section-subtitle">
-                Discover how IDEA AFG has helped businesses across Afghanistan
-                transform their operations and achieve remarkable growth through
-                innovative technology solutions.
-            </p>
+          <div class="animated-badge">
+            <span>Client Reviews</span>
+          </div>
+          <h2 class="section-title">What Our Clients Say</h2>
+          <p class="section-subtitle">
+            Discover how IDEA AFG has helped businesses across Afghanistan
+            transform their operations and achieve remarkable growth through
+            innovative technology solutions.
+          </p>
         </div>
 
         <div class="testimonial-carousel-container">
-            <div class="testimonial-track">
-                <!-- Testimonial Card 1 -->
-                <div class="testimonial-card active">
-                    <div class="testimonial-content">
-                        <div class="testimonial-quote-icon">"</div>
-                        <div class="testimonial-rating">
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                        </div>
-                        <p class="testimonial-text">
-                            IDEA AFG transformed our business operations completely. Their accounting system streamlined our financial processes and the mobile app increased our customer engagement by 300%.
-                        </p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar-container">
-                            <div class="testimonial-avatar-bg"></div>
-                            <div class="testimonial-avatar">
-                                <img src="./assets/img/rafiahmad.JPG" alt="Jf Soler">
-                            </div>
-                        </div>
-                        <div class="author-info">
-                            <h4>jawad fardin</h4>
-                            <p>Jf Soler Company</p>
-                        </div>
-                    </div>
-                    <div class="service-hover-effect"></div>
+          <div class="testimonial-track">
+            <!-- Testimonial Card 1 -->
+            <div class="testimonial-card active">
+              <div class="testimonial-content">
+                <div class="testimonial-quote-icon">"</div>
+                <div class="testimonial-rating">
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
                 </div>
-
-                <!-- Testimonial Card 2 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="testimonial-quote-icon">"</div>
-                        <div class="testimonial-rating">
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                        </div>
-                        <p class="testimonial-text">
-                            The custom software solution provided by IDEA AFG has revolutionized our manufacturing processes. We've seen a 40% increase in efficiency and a significant reduction in operational costs.
-                        </p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar-container">
-                            <div class="testimonial-avatar-bg"></div>
-                            <div class="testimonial-avatar">
-                                <img src="./assets/img/Mr.edris akrami.jpg" alt="Mohammad Reza">
-                            </div>
-                        </div>
-                        <div class="author-info">
-                            <h4>Mohammad </h4>
-                            <p>دریا پلاست</p>
-                        </div>
-                    </div>
-                    <div class="service-hover-effect"></div>
+                <p class="testimonial-text">
+                  IDEA AFG transformed our business operations completely. Their
+                  accounting system streamlined our financial processes and the
+                  mobile app increased our customer engagement by 300%.
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar-container">
+                  <div class="testimonial-avatar-bg"></div>
+                  <div class="testimonial-avatar">
+                    <img src="./assets/img/test.webp" alt="Jf Soler" />
+                  </div>
                 </div>
-
-                <!-- Testimonial Card 3 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="testimonial-quote-icon">"</div>
-                        <div class="testimonial-rating">
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                        </div>
-                        <p class="testimonial-text">
-                            Working with IDEA AFG was a game-changer for our healthcare organization. Their patient management system has improved our service delivery and patient satisfaction dramatically.
-                        </p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar-container">
-                            <div class="testimonial-avatar-bg"></div>
-                            <div class="testimonial-avatar">
-                                <img src="./assets/img/walid akrami.jpg" alt="sajad Azizi">
-                            </div>
-                        </div>
-                        <div class="author-info">
-                            <h4>sajad Azizi</h4>
-                            <p>دل آسا</p>
-                        </div>
-                    </div>
-                    <div class="service-hover-effect"></div>
+                <div class="author-info">
+                  <h4>jawad fardin</h4>
+                  <p>Jf Soler Company</p>
                 </div>
-
-                <!-- Testimonial Card 4 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="testimonial-quote-icon">"</div>
-                        <div class="testimonial-rating">
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                        </div>
-                        <p class="testimonial-text">
-                            The booking and management system developed by IDEA AFG has transformed our hotel operations. Our occupancy rates have increased by 25% since implementation.
-                        </p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar-container">
-                            <div class="testimonial-avatar-bg"></div>
-                            <div class="testimonial-avatar">
-                                <img src="./assets/img/rafe.jpg" alt="Ahmad Zia">
-                            </div>
-                        </div>
-                        <div class="author-info">
-                            <h4>Ahmad Zia</h4>
-                            <p>هتل هلال</p>
-                        </div>
-                    </div>
-                    <div class="service-hover-effect"></div>
-                </div>
-
-                <!-- Testimonial Card 5 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="testimonial-quote-icon">"</div>
-                        <div class="testimonial-rating">
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                        </div>
-                        <p class="testimonial-text">
-                            IDEA AFG's inventory management solution has streamlined our supply chain operations. We now have real-time visibility into our stock levels across all locations.
-                        </p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar-container">
-                            <div class="testimonial-avatar-bg"></div>
-                            <div class="testimonial-avatar">
-                                <img src="./assets/img/rabe milad.jpg" alt="Karim Rahimi">
-                            </div>
-                        </div>
-                        <div class="author-info">
-                            <h4>Karim Rahimi</h4>
-                            <p>ام دی اف ارگ</p>
-                        </div>
-                    </div>
-                    <div class="service-hover-effect"></div>
-                </div>
-
-                <!-- Testimonial Card 6 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="testimonial-quote-icon">"</div>
-                        <div class="testimonial-rating">
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                        </div>
-                        <p class="testimonial-text">
-                            The financial software developed by IDEA AFG has revolutionized our accounting processes. It's intuitive, powerful, and has saved us countless hours of manual work.
-                        </p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar-container">
-                            <div class="testimonial-avatar-bg"></div>
-                            <div class="testimonial-avatar">
-                                <img src="./assets/img/Firooz ahmad nemani.jpg" alt="Firooz Ahmad Nemani">
-                            </div>
-                        </div>
-                        <div class="author-info">
-                            <h4>Firooz Ahmad Nemani</h4>
-                            <p>شرکت امین حسیب</p>
-                        </div>
-                    </div>
-                    <div class="service-hover-effect"></div>
-                </div>
-
-                <!-- Testimonial Card 7 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="testimonial-quote-icon">"</div>
-                        <div class="testimonial-rating">
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                            <span class="rating-star">★</span>
-                        </div>
-                        <p class="testimonial-text">
-                            IDEA AFG delivered an exceptional e-commerce platform that has significantly boosted our online sales. The user experience is seamless and the backend management is incredibly efficient.
-                        </p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar-container">
-                            <div class="testimonial-avatar-bg"></div>
-                            <div class="testimonial-avatar">
-                                <img src="./assets/img/sohail.jpg" alt="Sohail">
-                            </div>
-                        </div>
-                        <div class="author-info">
-                            <h4>Sohail</h4>
-                            <p>مهین ممتاز کمپانی</p>
-                        </div>
-                    </div>
-                    <div class="service-hover-effect"></div>
-                </div>
+              </div>
+              <div class="service-hover-effect"></div>
             </div>
-            
-            <div class="carousel-controls">
-                <button class="carousel-btn prev-btn">
-                    <i class="lni lni-arrow-left"></i>
-                </button>
-                <div class="carousel-indicators">
-                    <div class="indicator active" data-index="0"></div>
-                    <div class="indicator" data-index="1"></div>
-                    <div class="indicator" data-index="2"></div>
-                    <div class="indicator" data-index="3"></div>
-                    <div class="indicator" data-index="4"></div>
+
+            <!-- Testimonial Card 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-quote-icon">"</div>
+                <div class="testimonial-rating">
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
                 </div>
-                <button class="carousel-btn next-btn">
-                    <i class="lni lni-arrow-right"></i>
-                </button>
+                <p class="testimonial-text">
+                  The custom software solution provided by IDEA AFG has
+                  revolutionized our manufacturing processes. We've seen a 40%
+                  increase in efficiency and a significant reduction in
+                  operational costs.
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar-container">
+                  <div class="testimonial-avatar-bg"></div>
+                  <div class="testimonial-avatar">
+                    <img src="./assets/img/test.webp" alt="Mohammad Reza" />
+                  </div>
+                </div>
+                <div class="author-info">
+                  <h4>Mohammad</h4>
+                  <p>دریا پلاست</p>
+                </div>
+              </div>
+              <div class="service-hover-effect"></div>
             </div>
+
+            <!-- Testimonial Card 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-quote-icon">"</div>
+                <div class="testimonial-rating">
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                </div>
+                <p class="testimonial-text">
+                  Working with IDEA AFG was a game-changer for our healthcare
+                  organization. Their patient management system has improved our
+                  service delivery and patient satisfaction dramatically.
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar-container">
+                  <div class="testimonial-avatar-bg"></div>
+                  <div class="testimonial-avatar">
+                    <img src="./assets/img/test.webp" alt="sajad Azizi" />
+                  </div>
+                </div>
+                <div class="author-info">
+                  <h4>sajad Azizi</h4>
+                  <p>دل آسا</p>
+                </div>
+              </div>
+              <div class="service-hover-effect"></div>
+            </div>
+
+            <!-- Testimonial Card 4 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-quote-icon">"</div>
+                <div class="testimonial-rating">
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                </div>
+                <p class="testimonial-text">
+                  The booking and management system developed by IDEA AFG has
+                  transformed our hotel operations. Our occupancy rates have
+                  increased by 25% since implementation.
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar-container">
+                  <div class="testimonial-avatar-bg"></div>
+                  <div class="testimonial-avatar">
+                    <img src="./assets/img/test.webp" alt="Ahmad Zia" />
+                  </div>
+                </div>
+                <div class="author-info">
+                  <h4>Ahmad Zia</h4>
+                  <p>هتل هلال</p>
+                </div>
+              </div>
+              <div class="service-hover-effect"></div>
+            </div>
+
+            <!-- Testimonial Card 5 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-quote-icon">"</div>
+                <div class="testimonial-rating">
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                </div>
+                <p class="testimonial-text">
+                  IDEA AFG's inventory management solution has streamlined our
+                  supply chain operations. We now have real-time visibility into
+                  our stock levels across all locations.
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar-container">
+                  <div class="testimonial-avatar-bg"></div>
+                  <div class="testimonial-avatar">
+                    <img src="./assets/img/test.webp" alt="Karim Rahimi" />
+                  </div>
+                </div>
+                <div class="author-info">
+                  <h4>Karim Rahimi</h4>
+                  <p>ام دی اف ارگ</p>
+                </div>
+              </div>
+              <div class="service-hover-effect"></div>
+            </div>
+
+            <!-- Testimonial Card 6 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-quote-icon">"</div>
+                <div class="testimonial-rating">
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                </div>
+                <p class="testimonial-text">
+                  The financial software developed by IDEA AFG has
+                  revolutionized our accounting processes. It's intuitive,
+                  powerful, and has saved us countless hours of manual work.
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar-container">
+                  <div class="testimonial-avatar-bg"></div>
+                  <div class="testimonial-avatar">
+                    <img
+                      src="./assets/img/test.webp"
+                      alt="Firooz Ahmad Nemani"
+                    />
+                  </div>
+                </div>
+                <div class="author-info">
+                  <h4>Firooz Ahmad Nemani</h4>
+                  <p>شرکت امین حسیب</p>
+                </div>
+              </div>
+              <div class="service-hover-effect"></div>
+            </div>
+
+            <!-- Testimonial Card 7 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-quote-icon">"</div>
+                <div class="testimonial-rating">
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-star">★</span>
+                </div>
+                <p class="testimonial-text">
+                  IDEA AFG delivered an exceptional e-commerce platform that has
+                  significantly boosted our online sales. The user experience is
+                  seamless and the backend management is incredibly efficient.
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar-container">
+                  <div class="testimonial-avatar-bg"></div>
+                  <div class="testimonial-avatar">
+                    <img src="./assets/img/test.webp" alt="Sohail" />
+                  </div>
+                </div>
+                <div class="author-info">
+                  <h4>Sohail</h4>
+                  <p>مهین ممتاز کمپانی</p>
+                </div>
+              </div>
+              <div class="service-hover-effect"></div>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <button class="carousel-btn prev-btn">
+              <i class="lni lni-arrow-left"></i>
+            </button>
+            <div class="carousel-indicators">
+              <div class="indicator active" data-index="0"></div>
+              <div class="indicator" data-index="1"></div>
+              <div class="indicator" data-index="2"></div>
+              <div class="indicator" data-index="3"></div>
+              <div class="indicator" data-index="4"></div>
+            </div>
+            <button class="carousel-btn next-btn">
+              <i class="lni lni-arrow-right"></i>
+            </button>
+          </div>
         </div>
-    </div>
-    
-    <!-- Background elements -->
-    <div class="services-bg-elements">
+      </div>
+
+      <!-- Background elements -->
+      <div class="services-bg-elements">
         <div class="bg-shape shape-1"></div>
         <div class="bg-shape shape-2"></div>
         <div class="bg-shape shape-3"></div>
         <div class="bg-shape shape-4"></div>
-    </div>
-</section>
-
-     
-      <!-- Clients section
-      <section id="clients" class="section-area">
-        <div class="container">
-          <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 block text-lg font-semibold text-primary">
-              Clients
-            </h6>
-            <h2 class="mb-6">Trusted by Leading Organizations</h2>
-            <p>
-              We are proud to serve a diverse range of clients from various
-              industries across Afghanistan, helping them achieve digital
-              transformation and operational excellence.
-            </p>
-          </div>
-          
-          <div class="">
-            <div class="row">
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="./assets/img/brand/airbnb.svg"
-                  alt="Brand Logo Image"
-                  class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="./assets/img/brand/coca-cola.svg"
-                  alt="Brand Logo Image"
-                  class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="./assets/img/brand/facebook.svg"
-                  alt="Brand Logo Image"
-                  class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="./assets/img/brand/mandiri.svg"
-                  alt="Brand Logo Image"
-                  class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="./assets/img/brand/shopware.svg"
-                  alt="Brand Logo Image"
-                  class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="./assets/img/brand/spotify.svg"
-                  alt="Brand Logo Image"
-                  class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="./assets/img/brand/tunnel-id.svg"
-                  alt="Brand Logo Image"
-                  class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-              <div
-                class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
-              >
-                <img
-                  src="./assets/img/brand/walmart.svg"
-                  alt="Brand Logo Image"
-                  class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
-                />
-              </div>
-            </div>
-          </div>
+      </div>
+    </section>
+    <!-- Clients section-->
+    <!-- <section id="clients" class="section-area">
+      <div class="container">
+        <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
+          <h6 class="mb-2 block text-lg font-semibold text-primary">Clients</h6>
+          <h2 class="mb-6">Trusted by Leading Organizations</h2>
+          <p>
+            We are proud to serve a diverse range of clients from various
+            industries across Afghanistan, helping them achieve digital
+            transformation and operational excellence.
+          </p>
         </div>
-      </section> -->
 
-      <!-- Contact section -->
-      <section id="contact" class="section-area">
-        <div class="container">
+        <div class="">
           <div class="row">
-            <div class="col-12 xl:col-4">
-              <div class="row">
-                <div class="col-12 md:col-6 xl:col-12">
-                  <div
-                    class="scroll-revealed py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg"
-                  >
-                    <div>
-                      <i
-                        class="lni lni-phone w-[50px] h-[50px] inline-flex items-center justify-center rounded-lg text-[1.25rem] bg-primary text-primary-color"
-                      ></i>
-                    </div>
-                    <div>
-                      <h4 class="text-[1.25rem] text-primary mb-3">Contact</h4>
-                      <p class="m-0">+93 799 442 183</p>
-                      <p class="m-0">ideaafghanitc@gmail.com</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 md:col-6 xl:col-12">
-                  <div
-                    class="scroll-revealed py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg"
-                  >
-                    <div>
-                      <i
-                        class="lni lni-map-marker w-[50px] h-[50px] inline-flex items-center justify-center rounded-lg text-[1.25rem] bg-primary text-primary-color"
-                      ></i>
-                    </div>
-                    <div>
-                      <h4 class="text-[1.25rem] text-primary mb-3">Address</h4>
-                      <p class="m-0">3rd floor Eltaf Market Bazar Khosh</p>
-                      <p class="m-0">Herat, Afghanistan</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 md:col-6 xl:col-12">
-                  <div
-                    class="scroll-revealed py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg"
-                  >
-                    <div>
-                      <i
-                        class="lni lni-alarm-clock w-[50px] h-[50px] inline-flex items-center justify-center rounded-lg text-[1.25rem] bg-primary text-primary-color"
-                      ></i>
-                    </div>
-                    <div>
-                      <h4 class="text-[1.25rem] text-primary mb-3">Schedule</h4>
-                      <p class="m-0">24 Hours / 7 Days Open</p>
-                      <p class="m-0">Office time: 10:00 AM - 5:30 PM</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div
+              class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
+            >
+              <img
+                src="./assets/img/brand/airbnb.svg"
+                alt="Brand Logo Image"
+                class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
+              />
             </div>
-
-            <div class="col-12 xl:col-8">
-              <div
-                class="scroll-revealed bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 z-10 relative shadow-card-1 hover:shadow-lg"
-              >
-                <div class="text-center max-w-[550px] mx-auto mb-12">
-                  <h6 class="mb-2 block text-lg font-semibold text-primary">
-                    Get in Touch
-                  </h6>
-                  <h2 class="mb-3">Ready to Transform Your Business?</h2>
-                  <p>
-                    Contact us today to discuss your ICT needs and discover how
-                    we can help your business achieve digital transformation and
-                    sustainable growth.
-                  </p>
-                </div>
-
-                <form action="#" method="POST" class="flex flex-col gap-6">
-                  <div class="row">
-                    <div class="col-12 md:col-6">
-                      <input
-                        type="text"
-                        name="name"
-                        class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
-                        placeholder="Name"
-                        required
-                      />
-                    </div>
-
-                    <div class="col-12 md:col-6">
-                      <input
-                        type="email"
-                        name="email"
-                        class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
-                        placeholder="Email"
-                        required
-                      />
-                    </div>
-
-                    <div class="col-12 md:col-6">
-                      <input
-                        type="text"
-                        name="phone"
-                        class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
-                        placeholder="Phone"
-                        required
-                      />
-                    </div>
-
-                    <div class="col-12 md:col-6">
-                      <input
-                        type="text"
-                        name="subject"
-                        class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
-                        placeholder="Subject"
-                        required
-                      />
-                    </div>
-
-                    <div class="col-12">
-                      <textarea
-                        name="message"
-                        rows="5"
-                        class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
-                        placeholder="Type your message"
-                        required
-                      ></textarea>
-                    </div>
-
-                    <div class="col-12">
-                      <div class="w-full text-center">
-                        <button
-                          type="submit"
-                          class="inline-block px-5 py-3 rounded-md text-base bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10"
-                        >
-                          Send Message
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
+            <div
+              class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
+            >
+              <img
+                src="./assets/img/brand/coca-cola.svg"
+                alt="Brand Logo Image"
+                class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
+              />
+            </div>
+            <div
+              class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
+            >
+              <img
+                src="./assets/img/brand/facebook.svg"
+                alt="Brand Logo Image"
+                class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
+              />
+            </div>
+            <div
+              class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
+            >
+              <img
+                src="./assets/img/brand/mandiri.svg"
+                alt="Brand Logo Image"
+                class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
+              />
+            </div>
+            <div
+              class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
+            >
+              <img
+                src="./assets/img/brand/shopware.svg"
+                alt="Brand Logo Image"
+                class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
+              />
+            </div>
+            <div
+              class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
+            >
+              <img
+                src="./assets/img/brand/spotify.svg"
+                alt="Brand Logo Image"
+                class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
+              />
+            </div>
+            <div
+              class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
+            >
+              <img
+                src="./assets/img/brand/tunnel-id.svg"
+                alt="Brand Logo Image"
+                class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
+              />
+            </div>
+            <div
+              class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3"
+            >
+              <img
+                src="./assets/img/brand/walmart.svg"
+                alt="Brand Logo Image"
+                class="h-[40px] inline-block grayscale dark:invert hover:grayscale-0 hover:invert-0"
+              />
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section> -->
 
-      <!-- Map section -->
-      <section id="map" class="w-full h-[500px] overflow-hidden -mt-[12rem]">
-        <object
-          data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206170.0!2d62.2057!3d34.3482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f3cf0c0b8b8b8b8%3A0x1234567890abcdef!2sHerat%2C%20Afghanistan!5e0!3m2!1sen!2s!4v1640000000000!5m2!1sen!2s"
-          class="border-0 w-full h-full"
-        ></object>
-      </section>
-    </main>
-    <!-- Footer -->
-    <footer class="bg-primary-dark-2 text-white">
-      <div class="container py-20 lg:py-[100px]">
+    <!-- Contact section -->
+    <section id="contact" class="section-area">
+      <div class="container">
         <div class="row">
-          <div class="col-12 order-first lg:col-4">
-            <div class="w-full">
-              <p class="mb-8 text-body-dark-11">
-                IDEA AFG is Afghanistan's leading ICT solutions provider,
-                specializing in software development, digital transformation,
-                and innovative technology services.
-              </p>
-
-              <div class="-mx-3 flex items-center">
-                <a
-                  href="javascript:void(0)"
-                  class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
+          <div class="col-12 xl:col-4">
+            <div class="row">
+              <div class="col-12 md:col-6 xl:col-12">
+                <div
+                  class="scroll-revealed py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg"
                 >
-                  <i class="lni lni-facebook-fill"></i>
-                </a>
+                  <div>
+                    <i
+                      class="lni lni-phone w-[50px] h-[50px] inline-flex items-center justify-center rounded-lg text-[1.25rem] bg-primary text-primary-color"
+                    ></i>
+                  </div>
+                  <div>
+                    <h4 class="text-[1.25rem] text-primary mb-3">Contact</h4>
+                    <p class="m-0">+93 799 442 183</p>
+                    <p class="m-0">ideaafghanitc@gmail.com</p>
+                  </div>
+                </div>
+              </div>
 
-                <a
-                  href="javascript:void(0)"
-                  class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
+              <div class="col-12 md:col-6 xl:col-12">
+                <div
+                  class="scroll-revealed py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg"
                 >
-                  <i class="lni lni-twitter-original"></i>
-                </a>
+                  <div>
+                    <i
+                      class="lni lni-map-marker w-[50px] h-[50px] inline-flex items-center justify-center rounded-lg text-[1.25rem] bg-primary text-primary-color"
+                    ></i>
+                  </div>
+                  <div>
+                    <h4 class="text-[1.25rem] text-primary mb-3">Address</h4>
+                    <p class="m-0">3rd floor Eltaf Market Bazar Khosh</p>
+                    <p class="m-0">Herat, Afghanistan</p>
+                  </div>
+                </div>
+              </div>
 
-                <a
-                  href="javascript:void(0)"
-                  class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
+              <div class="col-12 md:col-6 xl:col-12">
+                <div
+                  class="scroll-revealed py-5 px-6 rounded-xl shadow-card-1 bg-body-light-1 dark:bg-primary-dark-2 flex gap-6 hover:shadow-lg"
                 >
-                  <i class="lni lni-instagram-original"></i>
-                </a>
-
-                <a
-                  href="javascript:void(0)"
-                  class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
-                >
-                  <i class="lni lni-linkedin-original"></i>
-                </a>
+                  <div>
+                    <i
+                      class="lni lni-alarm-clock w-[50px] h-[50px] inline-flex items-center justify-center rounded-lg text-[1.25rem] bg-primary text-primary-color"
+                    ></i>
+                  </div>
+                  <div>
+                    <h4 class="text-[1.25rem] text-primary mb-3">Schedule</h4>
+                    <p class="m-0">24 Hours / 7 Days Open</p>
+                    <p class="m-0">Office time: 10:00 AM - 5:30 PM</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-6 lg:col-2">
-            <div class="w-full">
-              <h4 class="mb-9 text-lg font-semibold text-inherit">Solutions</h4>
-              <ul>
-                <li>
-                  <a
-                    href="#services"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Software Development</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Mobile Apps</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Cloud Solutions</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Accounting Systems</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-6 lg:col-2">
-            <div class="w-full">
-              <h4 class="mb-9 text-lg font-semibold text-inherit">Support</h4>
-              <ul>
-                <li>
-                  <a
-                    href="#pricing"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Pricing</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#faq"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >FAQ</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#contact"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Contact Us</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#team"
-                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
-                    >Our Team</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-12 -order-3 lg:col-4 lg:order-1">
-            <div class="w-full">
-              <h4 class="mb-9 text-lg font-semibold text-inherit">
-                Newsletter
-              </h4>
 
-              <p class="text-body-dark-11">
-                Subscribe to receive the latest technology insights, industry
-                updates, and exclusive offers from IDEA AFG.
-              </p>
+          <div class="col-12 xl:col-8">
+            <div
+              class="scroll-revealed bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 z-10 relative shadow-card-1 hover:shadow-lg"
+            >
+              <div class="text-center max-w-[550px] mx-auto mb-12">
+                <h6 class="mb-2 block text-lg font-semibold text-primary">
+                  Get in Touch
+                </h6>
+                <h2 class="mb-3">Ready to Transform Your Business?</h2>
+                <p>
+                  Contact us today to discuss your ICT needs and discover how we
+                  can help your business achieve digital transformation and
+                  sustainable growth.
+                </p>
+              </div>
 
-              <form action="#" method="POST" target="_blank" class="mt-8 flex">
-                <input
-                  type="email"
-                  name="email"
-                  class="inline-block flex-grow px-5 py-3 rounded-md rounded-e-none border border-solid border-alpha-dark text-inherit text-base focus:border-primary"
-                  placeholder="Email address"
-                  required
-                />
+              <form
+                action="http://localhost/contact_form/contact_submit.php"
+                method="POST"
+                class="flex flex-col gap-6"
+              >
+                <div class="row">
+                  <div class="col-12 md:col-6">
+                    <input
+                      type="text"
+                      name="name"
+                      class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
+                      placeholder="Name"
+                      required
+                    />
+                  </div>
 
-                <button
-                  type="submit"
-                  class="inline-block py-3 w-[50px] rounded-md rounded-s-none text-center text-lg/none bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10"
-                >
-                  <i class="lni lni-envelope"></i>
-                </button>
+                  <div class="col-12 md:col-6">
+                    <input
+                      type="email"
+                      name="email"
+                      class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-12 md:col-6">
+                    <input
+                      type="text"
+                      name="phone"
+                      class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
+                      placeholder="Phone"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-12 md:col-6">
+                    <input
+                      type="text"
+                      name="subject"
+                      class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
+                      placeholder="Subject"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-12">
+                    <textarea
+                      name="message"
+                      rows="5"
+                      class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
+                      placeholder="Type your message"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="w-full text-center">
+                      <button
+                        type="submit"
+                        class="inline-block px-5 py-3 rounded-md text-base bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10"
+                      >
+                        Send Message
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
         </div>
       </div>
-      <div class="w-full border-t border-solid border-alpha-dark"></div>
-      <div class="container py-8">
-        <div class="flex flex-wrap">
-          <div class="w-full md:w-1/2">
-            <div class="my-1">
-              <div
-                class="flex flex-wrap justify-center gap-x-3 md:justify-start"
-              >
-                <a
-                  href="javascript:void(0)"
-                  class="text-body-dark-11 hover:text-body-dark-12"
-                  >Privacy Policy</a
+    </section>
+
+    <!-- Map section -->
+    <section id="map" class="w-full h-[500px] overflow-hidden -mt-[12rem]">
+      <object
+        data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206170.0!2d62.2057!3d34.3482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f3cf0c0b8b8b8b8%3A0x1234567890abcdef!2sHerat%2C%20Afghanistan!5e0!3m2!1sen!2s!4v1640000000000!5m2!1sen!2s"
+        class="border-0 w-full h-full"
+      ></object>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="professional-footer">
+      <div class="footer-container">
+        <!-- Top Section -->
+        <div class="footer-top">
+          <div class="footer-logo-section">
+            <a href="#home" class="footer-logo">
+              <div class="logo-img">
+                <img src="./assets/img/ompany.jpg" alt="IDEA AFG Logo" />
+              </div>
+              <div class="logo-text">
+                <span class="logo-primary">IDEA AFGHAN</span>
+                <span class="logo-secondary">ICT Solutions</span>
+              </div>
+            </a>
+            <p class="footer-description">
+              Leading ICT solutions provider in Afghanistan, delivering
+              cutting-edge technology services for digital transformation and
+              business growth.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-links-section">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#home"><i class="las la-arrow-right"></i> Home</a>
+              </li>
+              <li>
+                <a href="#services"
+                  ><i class="las la-arrow-right"></i> Services</a
                 >
-                <a
-                  href="javascript:void(0)"
-                  class="text-body-dark-11 hover:text-body-dark-12"
-                  >Legal Notice</a
+              </li>
+              <li>
+                <a href="#intro"
+                  ><i class="las la-arrow-right"></i>Company Overview</a
                 >
-                <a
-                  href="javascript:void(0)"
-                  class="text-body-dark-11 hover:text-body-dark-12"
-                  >Terms of Service</a
+              </li>
+              <li>
+                <a href="#about"><i class="las la-arrow-right"></i> About Us</a>
+              </li>
+              <li>
+                <a href="#team"><i class="las la-arrow-right"></i> Our Team</a>
+              </li>
+              <li>
+                <a href="#contact"
+                  ><i class="las la-arrow-right"></i> Contact</a
                 >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-links-section">
+            <h3 class="footer-title">Our Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#"><i class="las la-code"></i> Web Development</a>
+              </li>
+              <li>
+                <a href="#"><i class="las la-cogs"></i> Management Systems</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="las la-mobile"></i> Mobile Applications</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="las la-bullhorn"></i> Digital Marketing</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="las la-chart-line"></i> Business Consulting</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="las la-palette"></i> Graphic Design</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-contact-section">
+            <h3 class="footer-title">Contact Info</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="las la-map-marker"></i>
+                <div>
+                  <p>3rd floor Eltaf Market Bazar Khosh</p>
+                  <p>Herat, Afghanistan</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="las la-phone"></i>
+                <div>
+                  <p>+93 799 442 183</p>
+                  <p>ideaafghanitc@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="las la-clock"></i>
+                <div>
+                  <p>24 Hours / 7 Days Open</p>
+                  <p>Office: 10:00 AM - 5:30 PM</p>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="w-full md:w-1/2">
-            <div class="my-1 flex justify-center md:justify-end">
-              <p class="text-body-dark-11">
-                &#169; 2025 IDEA AFGHAN. All rights reserved.
-              </p>
+        <!-- Social Media Section (Email removed) -->
+        <div class="footer-social-section">
+          <h3 class="social-title">Connect With Us</h3>
+          <div class="social-icons-container">
+            <div class="social-icons-grid">
+              <!-- WhatsApp -->
+              <a
+                href="https://wa.me/+93799442183"
+                class="social-icon whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="social-icon-inner">
+                  <i class="lab la-whatsapp"></i>
+                </div>
+                <div class="social-tooltip">WhatsApp</div>
+              </a>
+
+              <!-- Telegram -->
+              <a
+                href="https://t.me/ideaafg"
+                class="social-icon telegram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="social-icon-inner">
+                  <i class="lab la-telegram"></i>
+                </div>
+                <div class="social-tooltip">Telegram</div>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/company/ideaafg"
+                class="social-icon linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="social-icon-inner">
+                  <i class="lab la-linkedin"></i>
+                </div>
+                <div class="social-tooltip">LinkedIn</div>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/ideaafg"
+                class="social-icon instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="social-icon-inner">
+                  <i class="lab la-instagram"></i>
+                </div>
+                <div class="social-tooltip">Instagram</div>
+              </a>
+
+              <!-- Facebook -->
+              <a
+                href="https://www.facebook.com/ideaafg"
+                class="social-icon facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="social-icon-inner">
+                  <i class="lab la-facebook-f"></i>
+                </div>
+                <div class="social-tooltip">Facebook</div>
+              </a>
+
+              <!-- GitHub -->
+              <a
+                href="https://github.com/ideaafg"
+                class="social-icon github"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="social-icon-inner">
+                  <i class="lab la-github"></i>
+                </div>
+                <div class="social-tooltip">GitHub</div>
+              </a>
+
+              <!-- YouTube -->
+              <a
+                href="https://youtube.com/ideaafg"
+                class="social-icon youtube"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="social-icon-inner">
+                  <i class="lab la-youtube"></i>
+                </div>
+                <div class="social-tooltip">YouTube</div>
+              </a>
             </div>
           </div>
         </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>
+              &copy; <span id="currentYear"></span> IDEA AFG. All rights
+              reserved.
+            </p>
+            <p class="copyright-description">
+              Leading Digital Innovation in Afghanistan
+            </p>
+          </div>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <!-- Cookie Policy remains -->
+          </div>
+        </div>
+
+        <!-- Animated Background Elements -->
+        <div class="footer-bg-elements">
+          <div class="bg-shape shape-1"></div>
+          <div class="bg-shape shape-2"></div>
+          <div class="bg-shape shape-3"></div>
+          <div class="bg-shape shape-4"></div>
+        </div>
       </div>
     </footer>
-
     <button
       type="button"
       class="inline-flex w-12 h-12 rounded-md items-center justify-center text-lg/none bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10 fixed bottom-[117px] right-[20px] hover:-translate-y-1 opacity-100 visible z-50 is-hided"
@@ -2321,6 +2378,150 @@
     >
       <i class="lni lni-chevron-up"></i>
     </button>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.querySelector("#contact form");
+
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // اعتبارسنجی اولیه
+            const requiredFields = contactForm.querySelectorAll("[required]");
+            let isValid = true;
+
+            requiredFields.forEach((field) => {
+              if (!field.value.trim()) {
+                isValid = false;
+                field.style.borderColor = "#ef4444";
+              } else {
+                field.style.borderColor = "";
+              }
+            });
+
+            if (!isValid) {
+              Swal.fire({
+                icon: "warning",
+                title: "توجه!",
+                text: "لطفاً تمام فیلدهای ضروری را پر کنید.",
+                confirmButtonText: "متوجه شدم",
+                confirmButtonColor: "#3b82f6",
+                customClass: {
+                  popup: "animate__animated animate__fadeIn",
+                  confirmButton: "animate__animated animate__pulse",
+                },
+              });
+              return;
+            }
+
+            // نمایش لودینگ
+            Swal.fire({
+              title: "در حال ارسال...",
+              text: "لطفاً چند لحظه صبر کنید",
+              allowOutsideClick: false,
+              allowEscapeKey: false,
+              didOpen: () => {
+                Swal.showLoading();
+              },
+              backdrop: "rgba(0,0,0,0.4)",
+              customClass: {
+                popup: "animate__animated animate__fadeIn",
+              },
+            });
+
+            // ارسال فرم با AJAX
+            const formData = new FormData(this);
+
+            fetch(this.action, {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json",
+              },
+            })
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error("Network response was not ok");
+                }
+                return response.json();
+              })
+              .then((data) => {
+                Swal.close();
+
+                if (data.success) {
+                  Swal.fire({
+                    icon: "success",
+                    title: "ارسال موفق!",
+                    html: `
+                            <div style="text-align: center;">
+                                <div style="font-size: 60px; color: #10b981; margin-bottom: 20px;">✓</div>
+                                <p style="font-size: 18px; margin-bottom: 10px;">${data.message}</p>
+                                <p style="font-size: 14px; color: #6b7280;">پاسخ شما طی ۲۴ ساعت کاری ارسال خواهد شد</p>
+                            </div>
+                        `,
+                    confirmButtonText: "متوجه شدم",
+                    confirmButtonColor: "#10b981",
+                    showConfirmButton: true,
+                    timer: 5000,
+                    timerProgressBar: true,
+                    customClass: {
+                      popup:
+                        "animate__animated animate__fadeIn animate__faster",
+                      confirmButton: "animate__animated animate__pulse",
+                    },
+                  });
+
+                  // ریست فرم
+                  setTimeout(() => {
+                    contactForm.reset();
+                  }, 500);
+                } else {
+                  Swal.fire({
+                    icon: "error",
+                    title: "خطا در ارسال!",
+                    text:
+                      data.message ||
+                      "خطایی رخ داده است. لطفاً دوباره تلاش کنید.",
+                    confirmButtonText: "تلاش مجدد",
+                    confirmButtonColor: "#ef4444",
+                    customClass: {
+                      popup: "animate__animated animate__shakeX",
+                      confirmButton: "animate__animated animate__pulse",
+                    },
+                  });
+                }
+              })
+              .catch((error) => {
+                Swal.close();
+                console.error("Error:", error);
+                Swal.fire({
+                  icon: "error",
+                  title: "خطای ارتباطی",
+                  text: "ارتباط با سرور برقرار نشد. لطفاً اتصال اینترنت خود را بررسی کرده و دوباره تلاش کنید.",
+                  confirmButtonText: "تلاش مجدد",
+                  confirmButtonColor: "#f59e0b",
+                  customClass: {
+                    popup: "animate__animated animate__wobble",
+                    confirmButton: "animate__animated animate__pulse",
+                  },
+                });
+              });
+          });
+
+          // حذف خطای border هنگام تایپ
+          contactForm.querySelectorAll("input, textarea").forEach((input) => {
+            input.addEventListener("input", function () {
+              this.style.borderColor = "";
+            });
+          });
+        }
+      });
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <script src="./assets/js/swiper-bundle.min.js"></script>
 
@@ -2333,7 +2534,7 @@
       // Scroll Reveal
       const sr = ScrollReveal({
         origin: "bottom",
-        distance: "16px",
+        distance: "18px",
         duration: 2000,
         reset: false,
       });
@@ -2343,15 +2544,14 @@
       });
 
       // GLightBox
-      GLightbox({
-        selector: ".video-popup",
-        href: "https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM",
-        type: "video",
-        source: "youtube",
-        width: 900,
-        autoplayVideos: true,
-      });
-
+      // GLightbox({
+      //   selector: ".video-popup",
+      //   href: "https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM",
+      //   type: "video",
+      //   source: "youtube",
+      //   width: 900,
+      //   autoplayVideos: true,
+      // });
       const myGallery3 = GLightbox({
         selector: ".portfolio-box",
         type: "image",
