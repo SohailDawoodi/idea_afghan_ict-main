@@ -12,7 +12,31 @@
   transform: translateZ(0);
   will-change: transform;
 }
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
 
+/* اصلاح main-header برای موبایل */
+@media (max-width: 1024px) {
+  .main-header {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  
+  .nav-container {
+    max-width: 100vw;
+    padding: 0 0.5rem !important;
+    overflow-x: hidden;
+  }
+  
+  .nav-content {
+    flex-wrap: nowrap;
+    min-width: 0;
+    width: 100%;
+  }
+}
 .dark-theme .main-header {
   background: rgba(15, 23, 42, 0.95);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
