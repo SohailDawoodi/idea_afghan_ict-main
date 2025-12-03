@@ -72,7 +72,7 @@
 }
 
 .footer-logo:hover .logo-img {
-  border-color: #10b981;
+  border-color: #3d63dd;
   transform: rotate(5deg);
 }
 
@@ -94,7 +94,7 @@
 }
 
 .footer-logo:hover .logo-primary {
-  color: #10b981;
+  color: #5a7de6;
 }
 
 .logo-secondary {
@@ -210,8 +210,8 @@
 }
 
 .footer-links li a:hover i {
-  transform: rotate(90deg) scale(1.2);
-  color: #10b981;
+  transform: rotate(270deg) scale(1.2);
+  color: #5a7de6;
 }
 
 .footer-contact-section {
@@ -269,7 +269,7 @@
 
 .contact-item:hover i {
   transform: scale(1.2);
-  color: #10b981;
+  color: #5a7de6;
 }
 
 .contact-item div {
@@ -285,18 +285,28 @@
   opacity: 0.9;
 }
 
-/* Social Media Section - SIMPLE & TRANSPARENT STYLES */
+/* Social Media Section - ENHANCED & THEME-AWARE STYLES */
 .footer-social-section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 3rem;
-  padding: 2rem;
-  background: rgba(61, 99, 221, 0.05);
+  padding: 2.5rem;
+  background: linear-gradient(135deg, 
+    rgba(61, 99, 221, 0.08) 0%, 
+    rgba(61, 99, 221, 0.04) 100%);
   border-radius: 20px;
-  border: 1px solid rgba(61, 99, 221, 0.1);
+  border: 1px solid rgba(61, 99, 221, 0.15);
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+[data-web-theme="dark"] .footer-social-section {
+  background: linear-gradient(135deg, 
+    rgba(61, 99, 221, 0.12) 0%, 
+    rgba(61, 99, 221, 0.05) 100%);
+  border-color: rgba(61, 99, 221, 0.25);
 }
 
 .footer-social-section::before {
@@ -313,7 +323,7 @@
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(16, 185, 129, 0.1) 0%,
+      rgba(61, 99, 221, 0.1) 0%,
       transparent 50%
     );
   animation: gradientShift 15s ease infinite;
@@ -334,8 +344,7 @@
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 1rem;
-  background: #3d63dd;
-  /* background: linear-gradient(90deg, var(--primary-color, #3d63dd), #10b981, #f59e0b); */
+  background: linear-gradient(90deg, #3d63dd, #5a7de6, #798eea);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -355,24 +364,21 @@
 
 .social-icons-grid {
   display: grid;
-  grid-template-columns: repeat(
-    7,
-    1fr
-  ); /* Changed from 8 to 7 (email removed) */
-  gap: 1.2rem;
-  max-width: 800px;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-/* Simple & Transparent Social Icon Styles */
+/* Enhanced & Theme-aware Social Icon Styles */
 .social-icon {
   position: relative;
   display: block;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: visible;
 }
 
@@ -385,19 +391,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 18px;
   z-index: 2;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(61, 99, 221, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-web-theme="dark"] .social-icon-inner {
+  background: rgba(30, 30, 46, 0.95);
+  border-color: rgba(61, 99, 221, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .social-icon i {
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
+  font-size: 1.6rem;
+  transition: all 0.4s ease;
   position: relative;
   z-index: 2;
 }
@@ -412,57 +423,96 @@
   white-space: nowrap;
   opacity: 0;
   transition: all 0.3s ease;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   color: white;
   z-index: 10;
   pointer-events: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
 }
 
-/* Simple color styles for social icons */
-.whatsapp i {
+[data-web-theme="dark"] .social-tooltip {
+  background: rgba(20, 20, 30, 0.9);
+  border: 1px solid rgba(61, 99, 221, 0.3);
+}
+
+/* Theme-aware icon colors */
+.whatsapp .social-icon-inner i {
   color: #25d366;
 }
-.telegram i {
+.telegram .social-icon-inner i {
   color: #0088cc;
 }
-.linkedin i {
+.linkedin .social-icon-inner i {
   color: #0077b5;
 }
-.instagram i {
-  color: #e1306c;
+.instagram .social-icon-inner i {
+  background: linear-gradient(45deg, #405DE6, #E1306C, #FD1D1D, #F77737, #FFDC80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.facebook i {
+.facebook .social-icon-inner i {
   color: #1877f2;
 }
-.github i {
+.github .social-icon-inner i {
   color: #333;
 }
-.youtube i {
+.youtube .social-icon-inner i {
   color: #ff0000;
 }
 
-/* Simple hover effects */
+[data-web-theme="dark"] .github .social-icon-inner i {
+  color: #f0f6fc;
+}
+
+/* Enhanced hover effects */
 .social-icon:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.05);
 }
 
 .social-icon:hover .social-icon-inner {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: var(--primary-color, #3d63dd);
+  background: rgba(61, 99, 221, 0.1);
+  border-color: rgba(61, 99, 221, 0.6);
   transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(61, 99, 221, 0.25);
+}
+
+[data-web-theme="dark"] .social-icon:hover .social-icon-inner {
+  background: rgba(61, 99, 221, 0.2);
+  box-shadow: 0 15px 30px rgba(61, 99, 221, 0.4);
 }
 
 .social-icon:hover i {
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 
 .social-icon:hover .social-tooltip {
   bottom: -45px;
   opacity: 1;
   transform: translateX(-50%) scale(1);
+}
+
+/* Glow effect on hover */
+.social-icon::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 22px;
+  background: var(--primary-color, #3d63dd);
+  opacity: 0;
+  z-index: 1;
+  filter: blur(15px);
+  transition: opacity 0.4s ease;
+}
+
+.social-icon:hover::after {
+  opacity: 0.4;
 }
 
 /* Footer Bottom */
@@ -582,7 +632,7 @@
 .shape-2 {
   width: 300px;
   height: 300px;
-  background: #10b981;
+  background: #5a7de6;
   bottom: -150px;
   left: -100px;
   animation-delay: 5s;
@@ -592,7 +642,7 @@
 .shape-3 {
   width: 200px;
   height: 200px;
-  background: #ff6b6b;
+  background: #798eea;
   top: 30%;
   right: 15%;
   animation-delay: 10s;
@@ -601,7 +651,7 @@
 .shape-4 {
   width: 150px;
   height: 150px;
-  background: #f59e0b;
+  background: #9aaef0;
   bottom: 20%;
   left: 15%;
   animation-delay: 15s;
@@ -621,8 +671,24 @@
   }
 }
 
-/* Responsive Design */
+/* Responsive Design - Enhanced */
 @media (max-width: 1200px) {
+  .social-icons-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+  }
+  
+  .social-icon {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
   .social-icons-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
@@ -641,16 +707,25 @@
 
   .social-icons-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 1.2rem;
   }
-
+  
   .social-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
   }
-
+  
   .social-icon i {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+  }
+  
+  .footer-social-section {
+    padding: 2rem;
+  }
+  
+  .social-title {
+    font-size: 1.5rem;
   }
 
   .footer-legal {
@@ -659,12 +734,42 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .social-icons-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
+  
+  .social-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+  }
+  
+  .social-icon i {
+    font-size: 1.3rem;
+  }
+  
+  .footer-social-section {
+    padding: 1.5rem;
+  }
+  
+  .social-title {
+    font-size: 1.3rem;
+  }
+}
 
+@media (max-width: 400px) {
+  .social-icons-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .social-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
   .footer-logo {
     flex-direction: column;
     text-align: center;
@@ -672,9 +777,5 @@
 
   .logo-text {
     align-items: center;
-  }
-
-  .footer-social-section {
-    padding: 1.5rem;
   }
 }

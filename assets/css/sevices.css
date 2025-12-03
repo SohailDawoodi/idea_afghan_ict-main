@@ -1,4 +1,4 @@
-/* Services Component Styles - به‌روزرسانی شده */
+
 .services-section {
     position: relative;
     padding: clamp(5rem, 8vw, 8rem) 0;
@@ -6,7 +6,6 @@
     margin: 0;
 }
 
-/* گرید سرویس‌ها - 3 آیتم در هر ردیف */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -27,13 +26,13 @@
     text-align: center;
 }
 
-/* آیکون مربع کج */
+
 .service-icon-container {
     position: relative;
     width: 80px;
     height: 80px;
     margin: 0 auto 1.5rem;
-    transform: rotate(15deg);
+    /* transform: rotate(30deg); */
     transition: transform 0.4s ease;
 }
 
@@ -54,7 +53,7 @@
     position: relative;
     z-index: 2;
     transition: all 0.4s ease;
-    transform: rotate(-15deg);
+    transform: rotate(-45deg);
 }
 
 .service-icon-container:hover .service-icon {
@@ -140,7 +139,6 @@
     color: white;
 }
 
-/* عناصر پس‌زمینه */
 .services-bg-elements {
     position: absolute;
     top: 0;
@@ -195,7 +193,7 @@
     animation-duration: 18s;
 }
 
-/* انیمیشن‌ها */
+
 @keyframes float {
     0%, 100% {
         transform: translateY(0) translateX(0) rotate(0deg);
@@ -211,7 +209,6 @@
     }
 }
 
-/* پشتیبانی RTL */
 .rtl .service-item {
     text-align: center;
 }
@@ -220,7 +217,6 @@
     justify-content: center;
 }
 
-/* رسپانسیو */
 @media (max-width: 1200px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
