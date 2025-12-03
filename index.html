@@ -45,8 +45,7 @@
     />
     <meta property="og:type" content="website" />
     <!-- <meta property="og:url" content="https://www.ideaafg.com/en/" />
-  <meta property="og:image" content="https://www.ideaafg.com/assets/img/idea-afg-cover.png" /> -->
-
+    <meta property="og:image" content="https://www.ideaafg.com/assets/img/idea-afg-cover.png" /> -->
     <!-- Browser color -->
     <meta name="theme-color" content="#3d63dd" />
     <meta name="msapplication-TileColor" content="#3d63dd" />
@@ -87,69 +86,6 @@
         ] -->
       }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      // Apply saved theme early so CSS picks correct theme on first paint
-      (function () {
-        try {
-          var t = localStorage.getItem("Inazuma_WebTheme") || "light";
-          document.documentElement.setAttribute(
-            "data-web-theme",
-            t === "dark" ? "dark" : "light"
-          );
-          if (t === "dark") document.body.classList.add("dark-theme");
-        } catch (e) {}
-      })();
-    </script>
-    <style>
-      .whatsapp-float {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        z-index: 1000;
-      }
-
-      .whatsapp-float a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 60px;
-        height: 60px;
-        background-color: #25d366;
-        border-radius: 50%;
-        text-decoration: none;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-        animation: gentle-pulse 3s ease-in-out infinite;
-      }
-
-      .whatsapp-float a:hover {
-        transform: scale(1.1);
-        animation-play-state: paused;
-      }
-
-      .whatsapp-float a:active {
-        transform: scale(0.95);
-      }
-
-      .whatsapp-float i {
-        font-size: 32px;
-        color: white;
-      }
-
-      @keyframes gentle-pulse {
-        0%,
-        100% {
-          transform: scale(1);
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-        50% {
-          transform: scale(1.05);
-          box-shadow: 0 0 0 5px rgba(37, 211, 102, 0.2),
-            0 0 0 10px rgba(37, 211, 102, 0.1), 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-      }
-    </style>
     <!-- CSS and Libraries -->
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/glightbox.min.css" />
@@ -226,7 +162,7 @@
     </div>
     <div class="whatsapp-float">
       <a
-        href="https://wa.me/93799442183?text=سلام%20وقت%E2%80%8Cتان%20بخیر%20%F0%9F%8C%BF%0A%D9%85%D8%A7%DB%8C%D9%84%D9%85%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%86%D8%B1%D9%85%E2%80%8C%D8%A7%D9%81%D8%B2%D8%A7%D8%B1%DB%8C%D8%8C%20%D8%AA%D8%A8%D9%84%DB%8C%D8%BA%D8%A7%D8%AA%DB%8C%20%D9%88%20%D9%85%D8%A7%D8%B1%DA%A9%D8%AA%DB%8C%D9%86%DA%AF%20%D8%B4%D9%85%D8%A7%20%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1%20%D8%A8%D8%AF%D8%A7%D9%86%D9%85.%0A%D9%84%D8%B7%D9%81%D8%A7%E2%80%8C%D9%85%D9%86%20%D8%B1%D8%A7%20%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C%DB%8C%20%DA%A9%D9%86%DB%8C%D8%AF.%20%F0%9F%8C%9F"
+        href="https://wa.me/93799442183?text=%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85%0A%D9%88%D9%82%D8%AA%20%D8%A8%D8%AE%DB%8C%D8%B1%0A%D8%A7%D9%86%D8%B4%D8%A7%D8%A1%D8%A7%D9%84%D9%84%D9%87%20%DA%A9%D9%87%20%D8%AE%D9%88%D8%A8%20%D8%B5%D8%AD%D8%AA%D9%85%D9%86%D8%AF%20%D8%A8%D8%A7%D8%B4%DB%8C%D8%AF%0A%D9%85%DB%8C%E2%80%8C%D8%AE%D9%88%D8%A7%D8%B3%D8%AA%D9%85%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%86%D8%B1%D9%85%E2%80%8C%D8%A7%D9%81%D8%B2%D8%A7%D8%B1%DB%8C%D8%8C%20%D8%AA%D8%B9%D8%B1%D9%81%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AA%D8%A8%D9%84%DB%8C%D8%BA%D8%A7%D8%AA%DB%8C%20%D9%88%20%D9%85%D8%A7%D8%B1%DA%A9%D8%AA%DB%8C%D9%86%DA%AF%20%D8%B4%D9%85%D8%A7%20%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%A8%DA%AF%DB%8C%D8%B1%D9%85%20.%0A%D9%84%D8%B7%D9%81%D8%A7%E2%80%8C%D9%85%D9%86%20%D8%B1%D8%A7%20%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C%DB%8C%20%DA%A9%D9%86%DB%8C%D8%AF."
         target="_blank"
         aria-label="واتساپ"
         rel="noopener noreferrer"
@@ -1781,333 +1717,237 @@
         <div class="bg-shape shape-3"></div>
       </div>
     </section>
-    <!-- FAQ Section -->
-    <section id="faq" class="faq-section section-spacing">
-      <div class="section-container">
+   <!-- FAQ Section -->
+<section id="faq" class="faq-section section-spacing">
+    <div class="section-container">
         <div class="section-header">
-          <h6 class="section-badge">
-            <span>Frequently Asked Questions</span>
-          </h6>
-          <h2 class="section-title">Questions & Answers</h2>
-          <p class="section-description">
-            Find answers to common questions about our services, processes, and
-            partnerships. If you don't find what you're looking for, feel free
-            to contact our team directly.
-          </p>
+            <h6 class="section-badge">
+                <span>Frequently Asked Questions</span>
+            </h6>
+            <h2 class="section-title">Questions & Answers</h2>
+            <p class="section-description">
+                Find answers to common questions about our services, processes, and
+                partnerships. If you don't find what you're looking for, feel free
+                to contact our team directly.
+            </p>
         </div>
 
         <div class="faq-container">
-          <!-- FAQ Item 1 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="question-text"
-                >What services does IDEA AFG offer?</span
-              >
-              <span class="faq-icon">
-                <i class="lni lni-plus"></i>
-                <i class="lni lni-minus"></i>
-              </span>
-            </button>
-            <div class="faq-answer">
-              <p>IDEA AFG provides comprehensive ICT solutions including:</p>
-              <ul>
-                <li>Custom web development (front-end & back-end)</li>
-                <li>Management and accounting systems</li>
-                <li>Mobile applications for iOS and Android</li>
-                <li>Digital marketing and advertising campaigns</li>
-                <li>Business analysis and consulting</li>
-                <li>Graphic design and branding services</li>
-              </ul>
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="true">
+                    <span class="question-text">What services does IDEA AFG offer?</span>
+                    <span class="faq-icon">
+                        <i class="lni lni-plus"></i>
+                        <i class="lni lni-minus"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>IDEA AFG provides comprehensive ICT solutions including:</p>
+                        <ul>
+                            <li>Custom web development (front-end & back-end)</li>
+                            <li>Management and accounting systems</li>
+                            <li>Mobile applications for iOS and Android</li>
+                            <li>Digital marketing and advertising campaigns</li>
+                            <li>Business analysis and consulting</li>
+                            <li>Graphic design and branding services</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- FAQ Item 2 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="question-text"
-                >How long does it take to complete a web development
-                project?</span
-              >
-              <span class="faq-icon">
-                <i class="lni lni-plus"></i>
-                <i class="lni lni-minus"></i>
-              </span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Project timelines vary based on complexity and requirements:
-              </p>
-              <ul>
-                <li><strong>Simple websites:</strong> 2-4 weeks</li>
-                <li><strong>Business websites:</strong> 4-8 weeks</li>
-                <li><strong>E-commerce platforms:</strong> 8-12 weeks</li>
-                <li><strong>Custom web applications:</strong> 12+ weeks</li>
-              </ul>
-              <p>
-                We provide detailed project timelines during the initial
-                consultation phase.
-              </p>
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="question-text">How long does it take to complete a web development project?</span>
+                    <span class="faq-icon">
+                        <i class="lni lni-plus"></i>
+                        <i class="lni lni-minus"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Project timelines vary based on complexity and requirements:</p>
+                        <ul>
+                            <li><strong>Simple websites:</strong> 2-4 weeks</li>
+                            <li><strong>Business websites:</strong> 4-8 weeks</li>
+                            <li><strong>E-commerce platforms:</strong> 8-12 weeks</li>
+                            <li><strong>Custom web applications:</strong> 12+ weeks</li>
+                        </ul>
+                        <p>We provide detailed project timelines during the initial consultation phase.</p>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- FAQ Item 3 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="question-text"
-                >Do you provide ongoing support and maintenance?</span
-              >
-              <span class="faq-icon">
-                <i class="lni lni-plus"></i>
-                <i class="lni lni-minus"></i>
-              </span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes, we offer comprehensive support packages:</p>
-              <ul>
-                <li>
-                  <strong>Basic Support:</strong> Bug fixes and security updates
-                </li>
-                <li>
-                  <strong>Standard Support:</strong> Regular updates, security
-                  monitoring, and technical assistance
-                </li>
-                <li>
-                  <strong>Premium Support:</strong> 24/7 monitoring, priority
-                  response, and performance optimization
-                </li>
-                <li>
-                  <strong>Custom Support:</strong> Tailored solutions for
-                  enterprise clients
-                </li>
-              </ul>
-              <p>All our projects include 3 months of free basic support.</p>
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="question-text">Do you provide ongoing support and maintenance?</span>
+                    <span class="faq-icon">
+                        <i class="lni lni-plus"></i>
+                        <i class="lni lni-minus"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Yes, we offer comprehensive support packages:</p>
+                        <ul>
+                            <li><strong>Basic Support:</strong> Bug fixes and security updates</li>
+                            <li><strong>Standard Support:</strong> Regular updates, security monitoring, and technical assistance</li>
+                            <li><strong>Premium Support:</strong> 24/7 monitoring, priority response, and performance optimization</li>
+                            <li><strong>Custom Support:</strong> Tailored solutions for enterprise clients</li>
+                        </ul>
+                        <p>All our projects include 3 months of free basic support.</p>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- FAQ Item 4 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="question-text"
-                >Can you develop custom software for specific business
-                needs?</span
-              >
-              <span class="faq-icon">
-                <i class="lni lni-plus"></i>
-                <i class="lni lni-minus"></i>
-              </span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Absolutely! Custom software development is one of our
-                specialties:
-              </p>
-              <ul>
-                <li>We analyze your business processes and requirements</li>
-                <li>Design and develop tailored solutions</li>
-                <li>Implement and integrate with existing systems</li>
-                <li>Provide training and documentation</li>
-                <li>Offer ongoing maintenance and updates</li>
-              </ul>
-              <p>
-                Our team has extensive experience in developing custom ERP, CRM,
-                and inventory management systems.
-              </p>
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="question-text">Can you develop custom software for specific business needs?</span>
+                    <span class="faq-icon">
+                        <i class="lni lni-plus"></i>
+                        <i class="lni lni-minus"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Absolutely! Custom software development is one of our specialties:</p>
+                        <ul>
+                            <li>We analyze your business processes and requirements</li>
+                            <li>Design and develop tailored solutions</li>
+                            <li>Implement and integrate with existing systems</li>
+                            <li>Provide training and documentation</li>
+                            <li>Offer ongoing maintenance and updates</li>
+                        </ul>
+                        <p>Our team has extensive experience in developing custom ERP, CRM, and inventory management systems.</p>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- FAQ Item 5 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="question-text"
-                >What industries have you worked with?</span
-              >
-              <span class="faq-icon">
-                <i class="lni lni-plus"></i>
-                <i class="lni lni-minus"></i>
-              </span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                We have served clients across various sectors in Afghanistan:
-              </p>
-              <ul>
-                <li>
-                  <strong>Manufacturing & Retail</strong> - Inventory and POS
-                  systems
-                </li>
-                <li>
-                  <strong>Healthcare</strong> - Patient management systems
-                </li>
-                <li>
-                  <strong>Education</strong> - Learning management platforms
-                </li>
-                <li>
-                  <strong>Hospitality</strong> - Booking and management systems
-                </li>
-                <li>
-                  <strong>Finance</strong> - Accounting and financial software
-                </li>
-                <li>
-                  <strong>Agriculture</strong> - Supply chain and logistics
-                  solutions
-                </li>
-                <li>
-                  <strong>Government</strong> - Digital transformation projects
-                </li>
-              </ul>
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="question-text">What industries have you worked with?</span>
+                    <span class="faq-icon">
+                        <i class="lni lni-plus"></i>
+                        <i class="lni lni-minus"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>We have served clients across various sectors in Afghanistan:</p>
+                        <ul>
+                            <li><strong>Manufacturing & Retail</strong> - Inventory and POS systems</li>
+                            <li><strong>Healthcare</strong> - Patient management systems</li>
+                            <li><strong>Education</strong> - Learning management platforms</li>
+                            <li><strong>Hospitality</strong> - Booking and management systems</li>
+                            <li><strong>Finance</strong> - Accounting and financial software</li>
+                            <li><strong>Agriculture</strong> - Supply chain and logistics solutions</li>
+                            <li><strong>Government</strong> - Digital transformation projects</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- FAQ Item 6 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="question-text"
-                >How do you ensure the security of the solutions you
-                develop?</span
-              >
-              <span class="faq-icon">
-                <i class="lni lni-plus"></i>
-                <i class="lni lni-minus"></i>
-              </span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Security is our top priority. We implement multiple layers of
-                protection:
-              </p>
-              <ul>
-                <li>Regular security audits and penetration testing</li>
-                <li>SSL/TLS encryption for all data transmissions</li>
-                <li>Secure coding practices and vulnerability assessments</li>
-                <li>Regular security updates and patch management</li>
-                <li>Data backup and disaster recovery plans</li>
-                <li>Compliance with international security standards</li>
-              </ul>
-              <p>
-                We also provide security training for your team to maintain best
-                practices.
-              </p>
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="question-text">How do you ensure the security of the solutions you develop?</span>
+                    <span class="faq-icon">
+                        <i class="lni lni-plus"></i>
+                        <i class="lni lni-minus"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Security is our top priority. We implement multiple layers of protection:</p>
+                        <ul>
+                            <li>Regular security audits and penetration testing</li>
+                            <li>SSL/TLS encryption for all data transmissions</li>
+                            <li>Secure coding practices and vulnerability assessments</li>
+                            <li>Regular security updates and patch management</li>
+                            <li>Data backup and disaster recovery plans</li>
+                            <li>Compliance with international security standards</li>
+                        </ul>
+                        <p>We also provide security training for your team to maintain best practices.</p>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- FAQ Item 7 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="question-text"
-                >What is your approach to project management?</span
-              >
-              <span class="faq-icon">
-                <i class="lni lni-plus"></i>
-                <i class="lni lni-minus"></i>
-              </span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                We follow a structured yet flexible project management
-                methodology:
-              </p>
-              <ul>
-                <li>
-                  <strong>Discovery Phase:</strong> Requirements gathering and
-                  analysis
-                </li>
-                <li>
-                  <strong>Planning Phase:</strong> Project roadmap and timeline
-                  development
-                </li>
-                <li>
-                  <strong>Design Phase:</strong> UI/UX design and architecture
-                  planning
-                </li>
-                <li>
-                  <strong>Development Phase:</strong> Agile development with
-                  regular updates
-                </li>
-                <li>
-                  <strong>Testing Phase:</strong> Quality assurance and user
-                  testing
-                </li>
-                <li>
-                  <strong>Deployment Phase:</strong> Launch and implementation
-                </li>
-                <li>
-                  <strong>Support Phase:</strong> Ongoing maintenance and
-                  optimization
-                </li>
-              </ul>
-              <p>
-                We use modern tools like Jira, Trello, and Slack to keep clients
-                informed throughout the process.
-              </p>
+            <!-- FAQ Item 7 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="question-text">What is your approach to project management?</span>
+                    <span class="faq-icon">
+                        <i class="lni lni-plus"></i>
+                        <i class="lni lni-minus"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>We follow a structured yet flexible project management methodology:</p>
+                        <ul>
+                            <li><strong>Discovery Phase:</strong> Requirements gathering and analysis</li>
+                            <li><strong>Planning Phase:</strong> Project roadmap and timeline development</li>
+                            <li><strong>Design Phase:</strong> UI/UX design and architecture planning</li>
+                            <li><strong>Development Phase:</strong> Agile development with regular updates</li>
+                            <li><strong>Testing Phase:</strong> Quality assurance and user testing</li>
+                            <li><strong>Deployment Phase:</strong> Launch and implementation</li>
+                            <li><strong>Support Phase:</strong> Ongoing maintenance and optimization</li>
+                        </ul>
+                        <p>We use modern tools like Jira, Trello, and Slack to keep clients informed throughout the process.</p>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- FAQ Item 8 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false">
-              <span class="question-text"
-                >Do you offer training for the systems you implement?</span
-              >
-              <span class="faq-icon">
-                <i class="lni lni-plus"></i>
-                <i class="lni lni-minus"></i>
-              </span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes, comprehensive training is part of our service package:</p>
-              <ul>
-                <li>
-                  <strong>Administrator Training:</strong> For system
-                  administrators and IT staff
-                </li>
-                <li>
-                  <strong>End-User Training:</strong> For daily users of the
-                  system
-                </li>
-                <li>
-                  <strong>Custom Training Materials:</strong> User manuals,
-                  video tutorials, and guides
-                </li>
-                <li>
-                  <strong>Ongoing Support:</strong> Help desk and
-                  troubleshooting assistance
-                </li>
-                <li>
-                  <strong>Refresher Sessions:</strong> Additional training as
-                  needed
-                </li>
-              </ul>
-              <p>
-                We ensure your team is confident and proficient in using the
-                solutions we provide.
-              </p>
+            <!-- FAQ Item 8 -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span class="question-text">Do you offer training for the systems you implement?</span>
+                    <span class="faq-icon">
+                        <i class="lni lni-plus"></i>
+                        <i class="lni lni-minus"></i>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Yes, comprehensive training is part of our service package:</p>
+                        <ul>
+                            <li><strong>Administrator Training:</strong> For system administrators and IT staff</li>
+                            <li><strong>End-User Training:</strong> For daily users of the system</li>
+                            <li><strong>Custom Training Materials:</strong> User manuals, video tutorials, and guides</li>
+                            <li><strong>Ongoing Support:</strong> Help desk and troubleshooting assistance</li>
+                            <li><strong>Refresher Sessions:</strong> Additional training as needed</li>
+                        </ul>
+                        <p>We ensure your team is confident and proficient in using the solutions we provide.</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- FAQ CTA -->
         <div class="faq-cta">
-          <div class="faq-cta-content">
-            <h3>Still Have Questions?</h3>
-            <p>
-              Contact our team directly for personalized assistance and detailed
-              information about our services.
-            </p>
-            <a href="#contact" class="btn btn-primary">
-              <i class="lni lni-envelope"></i>
-              Contact Us Now
-            </a>
-          </div>
+            <div class="faq-cta-content">
+                <h3>Still Have Questions?</h3>
+                <p>Contact our team directly for personalized assistance and detailed information about our services.</p>
+                <a href="#contact" class="btn btn-primary">
+                    <i class="lni lni-envelope"></i>
+                    Contact Us Now
+                </a>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <!-- Background Elements -->
-      <div class="faq-bg-elements">
+    <!-- Background Elements -->
+    <div class="faq-bg-elements">
         <div class="bg-shape shape-1"></div>
         <div class="bg-shape shape-2"></div>
         <div class="bg-shape shape-3"></div>
-      </div>
-    </section>
+    </div>
+</section>
     <!-- Testimonials section -->
     <section id="testimonials" class="section-area">
       <div class="container">
@@ -2531,6 +2371,7 @@
             </div>
           </div>
 
+          <!-- Contact Form -->
           <div class="col-12 xl:col-8">
             <div
               class="scroll-revealed bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 z-10 relative shadow-card-1 hover:shadow-lg"
@@ -2546,19 +2387,16 @@
                   sustainable growth.
                 </p>
               </div>
-              <form
-                id="contact-form"
-                action="http://localhost/contact_form/contact_submit.php"
-                method="POST"
-                class="flex flex-col gap-6"
-              >
+              <div id="form-message" class="mb-6 p-4 rounded-md hidden"></div>
+
+              <form id="contact-form" class="flex flex-col gap-6">
                 <div class="row">
                   <div class="col-12 md:col-6">
                     <input
                       type="text"
                       name="name"
                       class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
-                      placeholder="نام شما"
+                      placeholder="Your Name"
                       required
                     />
                   </div>
@@ -2568,7 +2406,7 @@
                       type="email"
                       name="email"
                       class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
-                      placeholder="ایمیل شما"
+                      placeholder="Your Email"
                       required
                     />
                   </div>
@@ -2578,7 +2416,7 @@
                       type="text"
                       name="phone"
                       class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
-                      placeholder="شماره تماس (مثال: +93799442183)"
+                      placeholder="Phone Number (e.g., +93799442183)"
                       required
                     />
                   </div>
@@ -2588,7 +2426,7 @@
                       type="text"
                       name="subject"
                       class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
-                      placeholder="موضوع پیام"
+                      placeholder="Subject"
                       required
                     />
                   </div>
@@ -2598,7 +2436,7 @@
                       name="message"
                       rows="5"
                       class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"
-                      placeholder="متن پیام شما"
+                      placeholder="Your Message"
                       required
                     ></textarea>
                   </div>
@@ -2608,8 +2446,9 @@
                       <button
                         type="submit"
                         class="inline-block px-8 py-4 rounded-md text-lg font-medium bg-gradient-to-r from-primary to-primary-dark text-white hover:shadow-lg transition-all"
+                        id="submit-btn"
                       >
-                        ارسال پیام
+                        Send Message <i class="lni lni-arrow-right ml-2"></i>
                       </button>
                     </div>
                   </div>
@@ -2619,14 +2458,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Map section -->
-    <section id="map" class="w-full h-[500px] overflow-hidden -mt-[12rem]">
-      <object
-        data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206170.0!2d62.2057!3d34.3482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f3cf0c0b8b8b8b8%3A0x1234567890abcdef!2sHerat%2C%20Afghanistan!5e0!3m2!1sen!2s!4v1640000000000!5m2!1sen!2s"
-        class="border-0 w-full h-full"
-      ></object>
     </section>
 
     <!-- Professional Footer -->
@@ -2878,7 +2709,7 @@
       <i class="lni lni-chevron-up"></i>
     </button>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", function () {
         const contactForm = document.querySelector("#contact form");
 
@@ -3068,7 +2899,7 @@
             });
           });
       });
-    </script>
+    </script> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -3080,6 +2911,7 @@
     <script src="./assets/js/scrollreveal.min.js"></script>
 
     <script src="./assets/js/main.js"></script>
+    
     <script>
       // Scroll Reveal
       const sr = ScrollReveal({

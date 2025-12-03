@@ -1,4 +1,3 @@
-/* Professional Footer Styles */
 .professional-footer {
   position: relative;
   background: linear-gradient(
@@ -27,7 +26,6 @@
   z-index: 1;
 }
 
-/* Footer Top Section */
 .footer-top {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -285,7 +283,6 @@
   opacity: 0.9;
 }
 
-/* Social Media Section - ENHANCED & THEME-AWARE STYLES */
 .footer-social-section {
   display: flex;
   flex-direction: column;
@@ -370,7 +367,6 @@
   margin: 0 auto;
 }
 
-/* Enhanced & Theme-aware Social Icon Styles */
 .social-icon {
   position: relative;
   display: block;
@@ -438,7 +434,6 @@
   border: 1px solid rgba(61, 99, 221, 0.3);
 }
 
-/* Theme-aware icon colors */
 .whatsapp .social-icon-inner i {
   color: #25d366;
 }
@@ -468,7 +463,6 @@
   color: #f0f6fc;
 }
 
-/* Enhanced hover effects */
 .social-icon:hover {
   transform: translateY(-8px) scale(1.05);
 }
@@ -495,7 +489,6 @@
   transform: translateX(-50%) scale(1);
 }
 
-/* Glow effect on hover */
 .social-icon::after {
   content: '';
   position: absolute;
@@ -515,7 +508,6 @@
   opacity: 0.4;
 }
 
-/* Footer Bottom */
 .footer-bottom {
   display: flex;
   flex-direction: column;
@@ -601,7 +593,6 @@
   width: 100%;
 }
 
-/* Background Elements */
 .footer-bg-elements {
   position: absolute;
   top: 0;
@@ -671,7 +662,6 @@
   }
 }
 
-/* Responsive Design - Enhanced */
 @media (max-width: 1200px) {
   .social-icons-grid {
     grid-template-columns: repeat(4, 1fr);

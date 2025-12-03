@@ -1,71 +1,97 @@
 
-
-// FAQ Functionality
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('FAQ JS loaded successfully');
+    
+    const faqItems = document.querySelectorAll('.faq-item');
     const faqQuestions = document.querySelectorAll('.faq-question');
     
+    // ابتدا همه آیتم‌ها را ببند
+    faqItems.forEach(item => {
+        const answer = item.querySelector('.faq-answer');
+        const question = item.querySelector('.faq-question');
+        
+        item.classList.remove('active');
+        question.setAttribute('aria-expanded', 'false');
+        answer.classList.remove('active');
+        answer.style.maxHeight = null;
+    });
+    
+    // باز کردن اولین آیتم
+    if (faqItems.length > 0) {
+        const firstItem = faqItems[0];
+        const firstAnswer = firstItem.querySelector('.faq-answer');
+        const firstQuestion = firstItem.querySelector('.faq-question');
+        
+        firstItem.classList.add('active');
+        firstQuestion.setAttribute('aria-expanded', 'true');
+        firstAnswer.classList.add('active');
+        // استفاده از setTimeout برای اطمینان از رندر شدن
+        setTimeout(() => {
+            firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
+        }, 10);
+    }
+    
+    // افزودن event listener به سوالات
     faqQuestions.forEach(question => {
-        question.addEventListener('click', function() {
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            const answer = this.nextElementSibling;
+        question.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             
-            // Close all other FAQ items
-            faqQuestions.forEach(q => {
-                if (q !== this) {
-                    q.setAttribute('aria-expanded', 'false');
-                    q.nextElementSibling.style.maxHeight = '0';
-                    q.nextElementSibling.style.padding = '0';
+            console.log('FAQ clicked:', this.textContent);
+            
+            const faqItem = this.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const isActive = faqItem.classList.contains('active');
+            
+            // بستن همه آیتم‌های دیگر
+            faqItems.forEach(item => {
+                if (item !== faqItem) {
+                    const otherAnswer = item.querySelector('.faq-answer');
+                    const otherQuestion = item.querySelector('.faq-question');
+                    
+                    item.classList.remove('active');
+                    otherQuestion.setAttribute('aria-expanded', 'false');
+                    otherAnswer.classList.remove('active');
+                    otherAnswer.style.maxHeight = null;
                 }
             });
             
-            // Toggle current FAQ item
-            if (isExpanded) {
+            // تغییر وضعیت آیتم فعلی
+            if (isActive) {
+                // بستن
+                faqItem.classList.remove('active');
                 this.setAttribute('aria-expanded', 'false');
-                answer.style.maxHeight = '0';
-                answer.style.padding = '0';
+                answer.classList.remove('active');
+                answer.style.maxHeight = null;
             } else {
+                // باز کردن
+                faqItem.classList.add('active');
                 this.setAttribute('aria-expanded', 'true');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-                answer.style.padding = '0 2rem 1.5rem';
+                answer.classList.add('active');
                 
-                // Smooth scroll to ensure the entire answer is visible
+                // تنظیم ارتفاع با کمی تاخیر
                 setTimeout(() => {
-                    this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }, 300);
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }, 10);
             }
         });
         
-        // Keyboard navigation support
+        // پشتیبانی از کیبورد
         question.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 this.click();
             }
-            
-            // Arrow key navigation between FAQ items
-            if (e.key === 'ArrowDown') {
-                e.preventDefault();
-                const nextItem = this.closest('.faq-item').nextElementSibling;
-                if (nextItem) {
-                    nextItem.querySelector('.faq-question').focus();
-                }
-            }
-            
-            if (e.key === 'ArrowUp') {
-                e.preventDefault();
-                const prevItem = this.closest('.faq-item').previousElementSibling;
-                if (prevItem) {
-                    prevItem.querySelector('.faq-question').focus();
-                }
-            }
         });
     });
     
-    // Auto-expand first FAQ item on page load
-    if (faqQuestions.length > 0) {
-        faqQuestions[0].setAttribute('aria-expanded', 'true');
-        const firstAnswer = faqQuestions[0].nextElementSibling;
-        firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
-        firstAnswer.style.padding = '0 2rem 1.5rem';
-    }
+    // ریست ارتفاع در هنگام تغییر سایز پنجره
+    window.addEventListener('resize', function() {
+        faqItems.forEach(item => {
+            const answer = item.querySelector('.faq-answer');
+            if (item.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
+    });
 });

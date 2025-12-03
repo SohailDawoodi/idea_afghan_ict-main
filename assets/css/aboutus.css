@@ -1,4 +1,4 @@
-/* About Component Styles - Professional & Stunning - OPTIMIZED */
+
 .about-section {
   padding: 4rem 0;
   position: relative;
@@ -16,7 +16,6 @@
     #0f172a;
 }
 
-/* About Header Container */
 .about-header-container {
   width: 100%;
   margin-bottom: 2.5rem;
@@ -25,7 +24,7 @@
   align-items: center;
 }
 
-/* Main Content Wrapper */
+
 .about-main-wrapper {
   display: flex;
   flex-direction: column;
@@ -35,7 +34,7 @@
   margin: 0 auto;
 }
 
-/* Enhanced Image and Content Container */
+
 .about-image-content-container {
   display: grid;
   grid-template-columns: 1.2fr 1.5fr;
@@ -44,7 +43,7 @@
   width: 100%;
 }
 
-/* Stunning Image Container - PRESERVED */
+
 .about-image-container {
   display: flex;
   justify-content: center;
@@ -219,7 +218,7 @@
   letter-spacing: 0.5px;
 }
 
-/* Enhanced Floating Shapes */
+
 .floating-shapes {
   position: absolute;
   top: 0;
@@ -267,7 +266,7 @@
   clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
 }
 
-/* Content Container */
+
 .about-content {
   width: 100%;
   padding-top: 0;
@@ -277,7 +276,6 @@
   margin-bottom: 2rem;
 }
 
-/* تب‌ها - در یک خط در کنار هم */
 .tabs-nav {
   display: flex;
   gap: 0.75rem;
@@ -532,7 +530,6 @@
   font-size: 0.95rem;
 }
 
-/* Actions Container - کمتر پایین‌رفته */
 .about-actions {
   display: flex;
   gap: 1rem;
@@ -585,7 +582,7 @@
   box-shadow: 0 12px 30px rgba(100, 116, 139, 0.3);
 }
 
-/* Professional Animations */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -662,7 +659,6 @@
   }
 }
 
-/* Utility Classes */
 .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -856,8 +852,3 @@
 .rtl .tabs-nav {
   justify-content: flex-end;
 }
-
-
-
-
-/* بعد از کدهای موجود در base.css، این استایل‌ها را اضافه کنید */

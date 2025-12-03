@@ -1,4 +1,3 @@
-/* Enhanced Team Section Styles - Final Version */
 .team-section {
   position: relative;
   padding: clamp(5rem, 8vw, 8rem) 0;
@@ -22,14 +21,13 @@
   height: 380px;
   border-radius: 20px;
   overflow: hidden;
-  background: var(--card-dark); /* تغییر: در تم روشن هم کارت تیره باشد */
+  background: var(--card-dark);
   box-shadow: var(--shadow);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: pointer;
   border: 1px solid rgba(61, 99, 221, 0.1);
 }
 
-/* تغییر: در تم تاریک فقط سایه و border تغییر کند */
 .dark-theme .team-card {
   box-shadow: var(--shadow-dark);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -40,7 +38,6 @@
   box-shadow: 0 25px 50px rgba(61, 99, 221, 0.15);
 }
 
-/* انیمیشن اسکن نرم */
 .team-card::after {
   content: '';
   position: absolute;
@@ -74,7 +71,6 @@
   }
 }
 
-/* انیمیشن درخشان - مشابه فوتر */
 .card-glow {
   position: absolute;
   top: 0;
@@ -117,7 +113,6 @@
   z-index: 2;
 }
 
-/* حالت اول: تصویر کامل با مشخصات روی آن */
 .card-image {
   position: absolute;
   top: 0;
@@ -172,7 +167,6 @@
   transition: all 0.4s ease;
 }
 
-/* حالت اول: مشخصات روی تصویر */
 .main-info {
   position: absolute;
   bottom: 30px;
@@ -203,33 +197,30 @@
   }
 }
 
-/* تغییر: در تم روشن متن آبی، در تم تاریک متن سفید */
 .member-name {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--primary-color); /* رنگ آبی در تم روشن */
+  color: var(--primary-color); 
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .dark-theme .member-name {
-  color: white; /* در تم تاریک سفید */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .member-role {
   font-size: 1rem;
   opacity: 0.9;
-  color: var(--primary-light); /* آبی روشن در تم روشن */
+  color: var(--primary-light); 
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .dark-theme .member-role {
-  color: rgba(255, 255, 255, 0.9); /* در تم تاریک سفید */
+  color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Hover Content - مشخصات و لینک‌ها در پایین */
 .hover-content {
   opacity: 0;
   transform: translateY(20px);
@@ -263,7 +254,6 @@
   margin-top: 1rem;
 }
 
-/* استفاده از استایل مشابه فوتر برای آیکون‌های شبکه‌های اجتماعی */
 .member-social .social-icon {
   position: relative;
   display: block;
@@ -299,14 +289,13 @@
   transition: all 0.3s ease;
   position: relative;
   z-index: 2;
-  color: var(--primary-color); /* تغییر: آبی در تم روشن */
+  color: var(--primary-color); 
 }
 
 .dark-theme .member-social .social-icon i {
-  color: white; /* در تم تاریک سفید */
+  color: white; 
 }
 
-/* حالت هاور: رنگ اصلی هر پلتفرم */
 .member-social .social-icon:hover.linkedin i {
   color: #0077b5;
 }
@@ -319,7 +308,6 @@
   color: #ffffff;
 }
 
-/* افکت‌های هاور مشابه فوتر */
 .member-social .social-icon:hover {
   transform: translateY(-5px);
 }
@@ -334,7 +322,6 @@
   transform: scale(1.2);
 }
 
-/* رنگ‌های خاص برای هر پلتفرم در حالت هاور (پس‌زمینه) */
 .member-social .social-icon.linkedin:hover .social-icon-inner {
   background: rgba(10, 102, 194, 0.2);
   border-color: #0a66c2;
@@ -350,12 +337,10 @@
   border-color: #24292e;
 }
 
-/* Load More */
 .team-card.hidden {
   display: none;
 }
 
-/* انیمیشن فلوتینگ برای کارت‌ها */
 @keyframes floatCard {
   0%, 100% {
     transform: translateY(0);
@@ -381,7 +366,6 @@
   animation-play-state: paused;
 }
 
-/* پس‌زمینه متحرک */
 .team-bg-elements {
   position: absolute;
   top: 0;
@@ -443,7 +427,6 @@
   }
 }
 
-/* دکمه Load More */
 .btn-primary {
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
   color: white;
@@ -461,7 +444,6 @@
   box-shadow: 0 8px 25px rgba(61, 99, 221, 0.3);
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
   .team-grid {
     grid-template-columns: repeat(3, 1fr);

@@ -2,36 +2,20 @@ class ContactForm {
     constructor() {
         this.form = document.getElementById('contact-form');
         this.messageContainer = document.getElementById('form-message');
-        this.csrfToken = this.generateCSRFToken();
-        this.init();
+        this.submitBtn = document.getElementById('submit-btn');
+        this.backendUrl = 'http://localhost/contact-form/contact_submit.php';
+        
+        if (this.form) {
+            this.init();
+        }
     }
 
     init() {
-        if (!this.form) return;
-
-        // Add CSRF token to form
-        this.addCSRFField();
-        
         // Add event listener
         this.form.addEventListener('submit', (e) => this.handleSubmit(e));
         
         // Real-time validation
         this.addRealTimeValidation();
-    }
-
-    generateCSRFToken() {
-        return 'csrf_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
-    }
-
-    addCSRFField() {
-        const csrfInput = document.createElement('input');
-        csrfInput.type = 'hidden';
-        csrfInput.name = 'csrf_token';
-        csrfInput.value = this.csrfToken;
-        this.form.appendChild(csrfInput);
-        
-        // Store in session storage for validation
-        sessionStorage.setItem('csrf_token', this.csrfToken);
     }
 
     addRealTimeValidation() {
@@ -53,10 +37,10 @@ class ContactForm {
             case 'name':
                 if (value.length < 2) {
                     isValid = false;
-                    message = 'نام باید حداقل ۲ کاراکتر باشد';
+                    message = 'Name must be at least 2 characters';
                 } else if (value.length > 100) {
                     isValid = false;
-                    message = 'نام نمی‌تواند بیش از ۱۰۰ کاراکتر باشد';
+                    message = 'Name cannot exceed 100 characters';
                 }
                 break;
                 
@@ -64,7 +48,7 @@ class ContactForm {
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(value)) {
                     isValid = false;
-                    message = 'ایمیل وارد شده معتبر نیست';
+                    message = 'Please enter a valid email';
                 }
                 break;
                 
@@ -72,24 +56,24 @@ class ContactForm {
                 const phoneRegex = /^[\d\s\-\+\(\)]{10,20}$/;
                 if (!phoneRegex.test(value)) {
                     isValid = false;
-                    message = 'شماره تلفن معتبر نیست';
+                    message = 'Please enter a valid phone number';
                 }
                 break;
                 
             case 'subject':
                 if (value.length < 3) {
                     isValid = false;
-                    message = 'موضوع باید حداقل ۳ کاراکتر باشد';
+                    message = 'Subject must be at least 3 characters';
                 }
                 break;
                 
             case 'message':
                 if (value.length < 10) {
                     isValid = false;
-                    message = 'پیام باید حداقل ۱۰ کاراکتر باشد';
+                    message = 'Message must be at least 10 characters';
                 } else if (value.length > 2000) {
                     isValid = false;
-                    message = 'پیام نمی‌تواند بیش از ۲۰۰۰ کاراکتر باشد';
+                    message = 'Message cannot exceed 2000 characters';
                 }
                 break;
         }
@@ -106,25 +90,21 @@ class ContactForm {
     showFieldError(field, message) {
         this.clearFieldError(field);
         
-        field.classList.add('error');
+        field.classList.add('border-red-500');
+        field.classList.remove('border-alpha-light', 'dark:border-alpha-dark');
         
         const errorDiv = document.createElement('div');
-        errorDiv.className = 'field-error';
-        errorDiv.style.cssText = `
-            color: #ef4444;
-            font-size: 13px;
-            margin-top: 5px;
-            padding-right: 5px;
-        `;
+        errorDiv.className = 'text-red-500 text-sm mt-1';
         errorDiv.textContent = message;
         
         field.parentNode.appendChild(errorDiv);
     }
 
     clearFieldError(field) {
-        field.classList.remove('error');
+        field.classList.remove('border-red-500');
+        field.classList.add('border-alpha-light', 'dark:border-alpha-dark');
         
-        const existingError = field.parentNode.querySelector('.field-error');
+        const existingError = field.parentNode.querySelector('.text-red-500');
         if (existingError) {
             existingError.remove();
         }
@@ -147,72 +127,88 @@ class ContactForm {
         e.preventDefault();
         
         if (!this.validateForm()) {
-            this.showMessage('لطفا فیلدهای ضروری را به درستی پر کنید', 'error');
+            this.showSweetAlert('error', 'Please fill all required fields correctly');
             return;
         }
 
-        // Disable form and show loading
+        // Show loading
         this.setFormLoading(true);
         
         try {
-            const formData = new FormData(this.form);
+            // Prepare form data
+            const formData = {
+                name: this.form.querySelector('[name="name"]').value.trim(),
+                email: this.form.querySelector('[name="email"]').value.trim(),
+                phone: this.form.querySelector('[name="phone"]').value.trim(),
+                subject: this.form.querySelector('[name="subject"]').value.trim(),
+                message: this.form.querySelector('[name="message"]').value.trim()
+            };
             
-            const response = await fetch(this.form.action, {
+            // Send AJAX request
+            const response = await fetch(this.backendUrl, {
                 method: 'POST',
-                body: formData,
                 headers: {
+                    'Content-Type': 'application/json',
                     'Accept': 'application/json'
-                }
+                },
+                body: JSON.stringify(formData)
             });
             
             const result = await response.json();
             
             if (result.success) {
-                this.showMessage(result.message, 'success');
+                this.showSweetAlert('success', result.message, result.tracking_id);
                 this.form.reset();
-                
-                // Show tracking ID
-                if (result.tracking_id) {
-                    setTimeout(() => {
-                        this.showMessage(`شماره پیگیری: ${result.tracking_id}`, 'info');
-                    }, 2000);
-                }
             } else {
-                this.showMessage(result.message, 'error');
+                this.showSweetAlert('error', result.message);
             }
         } catch (error) {
             console.error('Error:', error);
-            this.showMessage('خطا در ارتباط با سرور. لطفا دوباره تلاش کنید.', 'error');
+            this.showSweetAlert('error', 'Connection error. Please try again.');
         } finally {
             this.setFormLoading(false);
         }
     }
 
     setFormLoading(isLoading) {
-        const submitBtn = this.form.querySelector('button[type="submit"]');
-        
         if (isLoading) {
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="lni lni-spinner lni-spin"></i> در حال ارسال...';
-            this.form.classList.add('form-loading');
+            this.submitBtn.disabled = true;
+            this.submitBtn.innerHTML = '<i class="lni lni-spinner lni-spin mr-2"></i> Sending...';
+            this.submitBtn.classList.add('opacity-70');
         } else {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = 'ارسال پیام <i class="lni lni-arrow-left"></i>';
-            this.form.classList.remove('form-loading');
+            this.submitBtn.disabled = false;
+            this.submitBtn.innerHTML = 'Send Message <i class="lni lni-arrow-right ml-2"></i>';
+            this.submitBtn.classList.remove('opacity-70');
         }
     }
 
-    showMessage(message, type = 'info') {
-        if (!this.messageContainer) return;
-        
-        this.messageContainer.textContent = message;
-        this.messageContainer.className = `form-message ${type}`;
-        
-        // Auto-hide success messages after 5 seconds
+    showSweetAlert(type, message, trackingId = null) {
         if (type === 'success') {
-            setTimeout(() => {
-                this.messageContainer.style.display = 'none';
-            }, 5000);
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                html: trackingId 
+                    ? `${message}<br><br><strong>Tracking ID:</strong> ${trackingId}`
+                    : message,
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#10b981',
+                timer: 5000,
+                timerProgressBar: true,
+                customClass: {
+                    popup: 'animate__animated animate__fadeIn'
+                }
+            });
+        } else if (type === 'error') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: message,
+                confirmButtonText: 'Try Again',
+                confirmButtonColor: '#ef4444',
+                customClass: {
+                    popup: 'animate__animated animate__shakeX'
+                }
+            });
         }
     }
 }
