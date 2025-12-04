@@ -14,7 +14,7 @@ function sendMail($to, $subject, $message, $replyEmail = null, $replyName = null
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
 
-        // --- YOUR EMAIL ---
+       
         $mail->Username   = 'developersohail6@gmail.com';
         $mail->Password   = 'cffk rwul pqtn wkbu';
         // -------------------
@@ -22,18 +22,15 @@ function sendMail($to, $subject, $message, $replyEmail = null, $replyName = null
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        // Sender
+        
         $mail->setFrom('YOUR_EMAIL@gmail.com', 'Website Contact Form');
 
-        // Receiver
         $mail->addAddress($to);
 
-        // Reply-To
         if ($replyEmail !== null) {
             $mail->addReplyTo($replyEmail, $replyName);
         }
 
-        // Content
         $mail->isHTML(true);
         $mail->Subject = $subject;
         $mail->Body    = nl2br($message);
