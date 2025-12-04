@@ -3,13 +3,13 @@
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 100vw; 
+  box-sizing: border-box; 
   z-index: 1000;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateZ(0);
-  will-change: transform;
 }
 
 .dark-theme .main-header {

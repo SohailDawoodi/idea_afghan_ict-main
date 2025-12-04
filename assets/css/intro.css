@@ -1,3 +1,4 @@
+
 .intro-section {
   padding: clamp(5rem, 8vw, 8rem) 0;
   position: relative;
@@ -914,6 +915,50 @@
   .video-features {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .glass-tv-container {
+    width: 90%;
+  }
+  
+  .tv-brand {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+  }
+  
+  .glass-tv-stand {
+    width: 250px;
+  }
+}
+
+@media (max-width: 992px) {
+  .glass-tv-container {
+    width: 95%;
+  }
+  
+  .glass-tv-frame {
+    padding: 15px;
+  }
+  
+  .tv-controls {
+    gap: 12px;
+  }
+  
+  .tv-control-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+  
+  .glass-tv-stand {
+    width: 200px;
+    bottom: -45px;
+  }
+  
+  .wall-plant {
+    width: 100px;
+    height: 150px;
+    bottom: 40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -939,24 +984,91 @@
   }
 
   .glass-tv-container {
-    width: 95%;
-    max-width: 95%;
+    width: 100%;
+    padding: 0 15px;
+    transform: scale(0.9) perspective(1000px) rotateX(5deg);
   }
-
+  
+  .glass-tv-modal.active .glass-tv-container {
+    transform: scale(0.95) perspective(1000px) rotateX(0deg);
+  }
+  
   .glass-tv-frame {
-    padding: 15px;
-    border-radius: 20px;
+    padding: 12px;
+    border-radius: 18px;
   }
-
+  
+  .glass-tv-screen {
+    border-radius: 14px;
+  }
+  
   .glass-tv-stand {
-    width: 200px;
+    width: 180px;
+    height: 25px;
     bottom: -40px;
   }
-
+  
+  .glass-tv-stand::before {
+    width: 70px;
+    height: 6px;
+  }
+  
+  .tv-controls {
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .tv-control-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .close-modal {
+    width: 42px;
+    height: 42px;
+    font-size: 1.3rem;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .tv-brand {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    bottom: 15px;
+  }
+  
+  .tv-speakers {
+    width: 70%;
+    bottom: 12px;
+  }
+  
   .wall-plant {
     width: 80px;
     height: 120px;
     bottom: 30px;
+  }
+  
+  .plant-left {
+    left: 5%;
+  }
+  
+  .plant-right {
+    right: 5%;
+  }
+  
+  .wall-shelf {
+    width: 150px;
+    height: 6px;
+    bottom: 120px;
+  }
+  
+  .tv-element {
+    display: none;
+  }
+  
+  .glass-tv-modal::before {
+    background-size: 20px 20px;
   }
 
   .intro-header {
@@ -970,6 +1082,83 @@
   .section-subtitle {
     font-size: 1.1rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .glass-tv-container {
+    transform: scale(0.85);
+  }
+  
+  .glass-tv-modal.active .glass-tv-container {
+    transform: scale(0.9);
+  }
+  
+  .glass-tv-frame {
+    padding: 10px;
+    border-radius: 16px;
+  }
+  
+  .glass-tv-screen {
+    border-radius: 12px;
+  }
+  
+  .glass-tv-stand {
+    width: 150px;
+    height: 20px;
+    bottom: -35px;
+  }
+  
+  .glass-tv-stand::before {
+    width: 60px;
+    height: 5px;
+  }
+  
+  .tv-controls {
+    margin-top: 15px;
+    gap: 8px;
+  }
+  
+  .tv-control-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+  
+  .close-modal {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .tv-brand {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    bottom: 12px;
+  }
+  
+  .tv-speakers {
+    width: 80%;
+    bottom: 10px;
+  }
+  
+  .wall-plant {
+    width: 60px;
+    height: 90px;
+    bottom: 20px;
+  }
+  
+  .wall-shelf {
+    display: none;
+  }
+  
+  .tv-glow {
+    width: 100%;
+    height: 100%;
+    filter: blur(15px);
   }
 }
 
@@ -989,5 +1178,135 @@
 
   .feature-card p {
     font-size: 0.95rem;
+  }
+  
+  .glass-tv-container {
+    transform: scale(0.8);
+  }
+  
+  .glass-tv-modal.active .glass-tv-container {
+    transform: scale(0.85);
+  }
+  
+  .tv-control-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+  
+  .close-modal {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .tv-brand {
+    font-size: 0.6rem;
+  }
+  
+  .glass-tv-stand {
+    width: 120px;
+  }
+}
+
+@media (max-width: 400px) {
+  .glass-tv-container {
+    transform: scale(0.75);
+  }
+  
+  .glass-tv-modal.active .glass-tv-container {
+    transform: scale(0.8);
+  }
+  
+  .tv-control-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 0.8rem;
+  }
+  
+  .close-modal {
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+  }
+  
+  .tv-brand {
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-height: 700px) and (orientation: portrait) {
+  .glass-tv-container {
+    transform: scale(0.8) perspective(1000px) rotateX(5deg);
+  }
+  
+  .glass-tv-modal.active .glass-tv-container {
+    transform: scale(0.85) perspective(1000px) rotateX(0deg);
+  }
+  
+  .glass-tv-frame {
+    padding: 10px;
+  }
+  
+  .glass-tv-stand {
+    bottom: -30px;
+  }
+  
+  .wall-plant {
+    bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .glass-tv-container {
+    width: 85%;
+    transform: scale(0.85);
+  }
+  
+  .glass-tv-modal.active .glass-tv-container {
+    transform: scale(0.9);
+  }
+  
+  .glass-tv-stand {
+    width: 220px;
+    bottom: -35px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .glass-tv-container {
+    width: 88%;
+  }
+  
+  .glass-tv-stand {
+    width: 280px;
+  }
+}
+
+.glass-tv-screen video {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .glass-tv-screen video {
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .glass-tv-screen video {
+    max-height: 50vh;
+  }
+}
+
+@media (max-height: 600px) {
+  .glass-tv-screen video {
+    max-height: 55vh;
+  }
+  
+  .glass-tv-stand {
+    bottom: -25px;
   }
 }

@@ -282,3 +282,60 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+
+// انیمیشن اسکرول
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollRevealedElements = document.querySelectorAll('.scroll-revealed');
+  
+  const revealOnScroll = () => {
+    scrollRevealedElements.forEach((element, index) => {
+      element.style.setProperty('--item-index', index);
+      
+      const elementTop = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (elementTop < windowHeight - 100) {
+        element.classList.add('visible');
+      }
+    });
+  };
+  
+  // اجرای اولیه
+  revealOnScroll();
+  
+  // اجرا در حین اسکرول
+  window.addEventListener('scroll', revealOnScroll);
+  
+  // فرم تماس
+  const contactForm = document.getElementById('contact-form');
+  const formMessage = document.getElementById('form-message');
+  const submitBtn = document.getElementById('submit-btn');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // شبیه‌سازی ارسال فرم
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'در حال ارسال...';
+      
+      setTimeout(() => {
+        formMessage.classList.remove('hidden');
+        formMessage.innerHTML = '<p style="color: green;">پیام شما با موفقیت ارسال شد! به زودی با شما تماس می‌گیریم.</p>';
+        formMessage.style.backgroundColor = '#d4edda';
+        formMessage.style.borderColor = '#c3e6cb';
+        
+        contactForm.reset();
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'ارسال پیام <i class="lni lni-arrow-right ml-2"></i>';
+        
+        // پنهان کردن پیام بعد از 5 ثانیه
+        setTimeout(() => {
+          formMessage.classList.add('hidden');
+        }, 5000);
+      }, 1500);
+    });
+  }
+});

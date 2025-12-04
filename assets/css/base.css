@@ -23,6 +23,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 body {
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
